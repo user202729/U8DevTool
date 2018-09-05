@@ -1,0 +1,2 @@
+del *.s
+del *.ram

@@ -1,0 +1,1 @@
+srec_cat.exe %1 -binary -crop 0x08000 0x18000 -o data.ram -motorola -line-length=46 -address-length=3 -header "U8 DEBUGGER" -execution-start-address 0x0000
