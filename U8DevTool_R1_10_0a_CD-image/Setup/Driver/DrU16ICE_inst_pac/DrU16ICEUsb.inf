@@ -1,0 +1,171 @@
+; uEaseUsb.inf (v6.00.6000.16386)
+;
+; Installation file (.inf) for  Dr.U8ICE USB Driver
+;
+;Copyright (C) 2008-2012 LAPIS Semiconductor Co., Ltd.
+; All rights reserved.
+;
+ 
+[Version] 
+Signature = "$Windows NT$" 
+Class=USB
+ClassGUID={36fc9e60-c465-11cf-8056-444553540000}
+Provider=%LAPISsemi% 
+DriverVer=02/08/2012,1.0.0000
+CatalogFile=dru16iceusb.cat
+
+; ================= Class section =====================
+;[ClassInstall32]
+;Addreg=USBClassReg 
+
+;[ClassInstall32.ntamd64]
+;Addreg=USBClassReg 
+
+;[SampleClassReg]
+;[USBClassReg]
+;HKR,,,0,%ClassName%
+;HKR,,Icon,,-5
+
+[DestinationDirs] 
+DrU16ICEUsb.Files.Ext= 12
+
+; ================= Device section =====================
+
+[Manufacturer] 
+%MfgName%=LAPISsemi,NTx86,NTamd64
+
+; For NT
+[LAPISsemi]
+%USB\VID_04B5&PID_800C%=DrU16ICEUsb.Dev, USB\VID_04B5&PID_800C
+; For XP
+[LAPISsemi.NTx86]
+%USB\VID_04B5&PID_800C%=DrU16ICEUsb.Dev, USB\VID_04B5&PID_800C
+; For 7
+[LAPISsemi.NTamd64]
+%USB\VID_04B5&PID_800C%=DrU16ICEUsb.Dev, USB\VID_04B5&PID_800C
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; インストール先指定ブロック　nt ntx86 NTamd64 ntia64 環境名+CPU
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[DrU16ICEUsb.Dev.NTx86]
+CopyFiles = DrU16ICEUsb.Files.Ext
+
+
+[DrU16ICEUsb.Dev.NTamd64]
+CopyFiles = DrU16ICEUsb.Files.Ext
+
+[DrU16ICEUsb.Files.Ext]
+DrU16ICEUsb.sys
+
+;　サービスブロック
+[DrU16ICEUsb.Dev.NTx86.Services]
+AddService = DrU16ICEUsb,0x00000002,DrU16ICEUsb.AddService
+
+[DrU16ICEUsb.Dev.NTamd64.Services]
+AddService = DrU16ICEUsb,0x00000002,DrU16ICEUsb.AddService
+
+[DrU16ICEUsb.AddService] 
+ServiceType = %SERVICE_KERNEL_DRIVER% 
+StartType = %SERVICE_DEMAND_START% 
+ErrorControl = %SERVICE_ERROR_NORMAL% 
+ServiceBinary  = %10%\System32\Drivers\DrU16ICEUsb.sys
+AddReg         = DrU16ICEUsb.AddReg
+LoadOrderGroup = Base
+
+
+[DrU16ICEUsb.AddReg]
+HKR,,DevLoader,,*ntkern
+HKR,,NTMPDriver,,DrU16ICEUsb.sys
+HKR,"Parameters","MaximumTransferSize",0x10001,4096
+HKR,"Parameters","DebugLevel",0x10001,2
+;HKR,"Parameters","BulkUsbEnable",0x10001,1
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; ソース指定ブロック　x86 amd64 ia64 CPU
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;[SourceDisksNames.NTx86]
+[SourceDisksNames.x86]
+;[SourceDisksNames]
+1=%Desc_x860%,,,\i386
+
+[SourceDisksFiles.x86]
+;[SourceDisksFiles]
+DrU16ICEUsb.sys = 1;
+
+
+[SourceDisksNames.amd64]
+;[SourceDisksNames]
+1=%Desc_x860%,,,\amd64
+
+[SourceDisksFiles.amd64]
+;[SourceDisksFiles]
+DrU16ICEUsb.sys = 1;
+
+
+;[RamU8Usb_EventLog_Inst] 
+;AddReg = RamU8Usb_EventLog_Inst.AddReg 
+ 
+;[RamU8Usb_EventLog_Inst.AddReg] 
+;HKR,,EventMessageFile,%REG_EXPAND_SZ%,"%%SystemRoot%%\System32\IoLogMsg.dll" 
+;HKR,,TypesSupported,%REG_DWORD%,7
+
+;-------------- WDF Coinstaller installation
+[DestinationDirs]
+CoInstaller_CopyFiles = 11
+
+[DrU16ICEUsb.Dev.NTx86.CoInstallers]
+AddReg=CoInstaller_AddReg
+CopyFiles=CoInstaller_CopyFiles
+
+[DrU16ICEUsb.Dev.NTamd64.CoInstallers]
+AddReg=CoInstaller_AddReg
+CopyFiles=CoInstaller_CopyFiles
+
+[CoInstaller_CopyFiles]
+WdfCoInstaller01009.dll
+
+[SourceDisksFiles]
+;WdfCoInstaller01009.dll ; make sure the number matches with SourceDisksNames
+WdfCoInstaller01009.dll=1 ; make sure the number matches with SourceDisksNames
+
+[CoInstaller_AddReg]
+HKR,,CoInstallers32,0x00010000, "WdfCoInstaller01009.dll,WdfCoInstaller"
+
+[DrU16ICEUsb.Dev.NTx86.Wdf]
+KmdfService = DrU16ICEUsb, DrU16ICEUsb_wdfsect
+
+[DrU16ICEUsb.Dev.NTamd64.Wdf]
+KmdfService = DrU16ICEUsb, DrU16ICEUsb_wdfsect
+
+[DrU16ICEUsb_wdfsect]
+KmdfLibraryVersion = 1.9
+
+;---------------------------------------------------------------;
+
+[Strings] 
+
+;  *******Localizable Strings******* 
+LAPISsemi= "LAPIS Semiconductor Co., Ltd." 
+MfgName = "LAPIS Semiconductor Co., Ltd."
+Desc_x860= "U16DEV" 
+
+;ClassName       = "USB Device"
+ClassName       = "USB"
+USB\VID_04B5&PID_800C = "LAPISsemi Dr.U16ICE"
+
+;  *******Non Localizable Strings******* 
+
+SERVICE_BOOT_START = 0x0 
+SERVICE_SYSTEM_START = 0x1 
+SERVICE_AUTO_START = 0x2 
+SERVICE_DEMAND_START = 0x3 
+SERVICE_DISABLED = 0x4 
+
+SERVICE_KERNEL_DRIVER = 0x1 
+SERVICE_ERROR_IGNORE = 0x0 
+SERVICE_ERROR_NORMAL = 0x1 
+SERVICE_ERROR_SEVERE = 0x2 
+SERVICE_ERROR_CRITICAL = 0x3 
+
+REG_EXPAND_SZ = 0x00020000 
+REG_DWORD = 0x00010001 

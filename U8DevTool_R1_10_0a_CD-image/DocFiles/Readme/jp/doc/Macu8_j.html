@@ -1,0 +1,1692 @@
+<!-- saved from url=(0026)http://www.lapis-semi.com/us/ -->
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=shift_jis">
+<link rel=File-List href="Macu8_j.files/filelist.xml">
+<link rel=Edit-Time-Data href="Macu8_j.files/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>MACU8 アセンブラパッケージについて</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>LAPIS Semiconductor Co., Ltd.</o:Author>
+  <o:LastAuthor>a990932</o:LastAuthor>
+  <o:Revision>35</o:Revision>
+  <o:TotalTime>623</o:TotalTime>
+  <o:LastPrinted>2009-11-11T11:19:00Z</o:LastPrinted>
+  <o:Created>2007-10-04T09:43:00Z</o:Created>
+  <o:LastSaved>2013-05-07T10:36:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>723</o:Words>
+  <o:Characters>4125</o:Characters>
+  <o:Company>LAPIS Semiconductor Co., Ltd.</o:Company>
+  <o:Lines>34</o:Lines>
+  <o:Paragraphs>9</o:Paragraphs>
+  <o:CharactersWithSpaces>4839</o:CharactersWithSpaces>
+  <o:Version>11.9999</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:Compatibility>
+   <w:UseFELayout/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:"ＭＳ 明朝";
+	panose-1:2 2 6 9 4 2 5 8 3 4;
+	mso-font-alt:"MS Mincho";
+	mso-font-charset:128;
+	mso-generic-font-family:roman;
+	mso-font-pitch:fixed;
+	mso-font-signature:-1610612033 1757936891 16 0 131231 0;}
+@font-face
+	{font-family:Century;
+	panose-1:2 4 6 4 5 5 5 2 3 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:647 0 0 0 159 0;}
+@font-face
+	{font-family:"ＭＳ Ｐゴシック";
+	panose-1:2 11 6 0 7 2 5 8 2 4;
+	mso-font-charset:128;
+	mso-generic-font-family:modern;
+	mso-font-pitch:variable;
+	mso-font-signature:-1610612033 1757936891 16 0 131231 0;}
+@font-face
+	{font-family:"\@ＭＳ Ｐゴシック";
+	panose-1:2 11 6 0 7 2 5 8 2 4;
+	mso-font-charset:128;
+	mso-generic-font-family:modern;
+	mso-font-pitch:variable;
+	mso-font-signature:-1610612033 1757936891 16 0 131231 0;}
+@font-face
+	{font-family:"\@ＭＳ 明朝";
+	panose-1:2 2 6 9 4 2 5 8 3 4;
+	mso-font-charset:128;
+	mso-generic-font-family:roman;
+	mso-font-pitch:fixed;
+	mso-font-signature:-1610612033 1757936891 16 0 131231 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0mm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"ＭＳ Ｐゴシック";
+	mso-bidi-font-family:"ＭＳ Ｐゴシック";}
+h1
+	{mso-margin-top-alt:auto;
+	margin-right:0mm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0mm;
+	mso-pagination:widow-orphan;
+	mso-outline-level:1;
+	font-size:24.0pt;
+	font-family:"ＭＳ Ｐゴシック";
+	mso-bidi-font-family:"ＭＳ Ｐゴシック";
+	font-weight:bold;}
+h2
+	{mso-margin-top-alt:auto;
+	margin-right:0mm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0mm;
+	mso-pagination:widow-orphan;
+	mso-outline-level:2;
+	background:yellow;
+	font-size:18.0pt;
+	font-family:"ＭＳ Ｐゴシック";
+	mso-bidi-font-family:"ＭＳ Ｐゴシック";
+	color:black;
+	font-weight:bold;}
+h3
+	{mso-margin-top-alt:auto;
+	margin-right:0mm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0mm;
+	mso-pagination:widow-orphan;
+	mso-outline-level:3;
+	font-size:13.5pt;
+	font-family:"ＭＳ Ｐゴシック";
+	mso-bidi-font-family:"ＭＳ Ｐゴシック";
+	font-weight:bold;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+p
+	{mso-margin-top-alt:auto;
+	margin-right:0mm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0mm;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"ＭＳ Ｐゴシック";
+	mso-bidi-font-family:"ＭＳ Ｐゴシック";}
+p.note, li.note, div.note
+	{mso-style-name:note;
+	mso-margin-top-alt:auto;
+	margin-right:0mm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0mm;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"ＭＳ Ｐゴシック";
+	mso-bidi-font-family:"ＭＳ Ｐゴシック";}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:99.25pt 30.0mm 30.0mm 30.0mm;
+	mso-header-margin:42.55pt;
+	mso-footer-margin:49.6pt;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:36857719;
+	mso-list-type:hybrid;
+	mso-list-template-ids:519443384 -907899344 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l0:level1
+	{mso-level-text:"\(%1\)";
+	mso-level-tab-stop:60.0pt;
+	mso-level-number-position:left;
+	margin-left:60.0pt;
+	text-indent:-18.0pt;
+	mso-ansi-font-weight:normal;}
+@list l0:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1
+	{mso-list-id:162623631;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-766213234 -902368144 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l1:level1
+	{mso-level-text:"\(%1\)";
+	mso-level-tab-stop:60.0pt;
+	mso-level-number-position:left;
+	margin-left:60.0pt;
+	text-indent:-18.0pt;}
+@list l1:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2
+	{mso-list-id:164171734;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1854241418 -902368144 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l2:level1
+	{mso-level-text:"\(%1\)";
+	mso-level-tab-stop:60.0pt;
+	mso-level-number-position:left;
+	margin-left:60.0pt;
+	text-indent:-18.0pt;}
+@list l2:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3
+	{mso-list-id:246042702;
+	mso-list-type:hybrid;
+	mso-list-template-ids:523371888 -902368144 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l3:level1
+	{mso-level-text:"\(%1\)";
+	mso-level-tab-stop:60.0pt;
+	mso-level-number-position:left;
+	margin-left:60.0pt;
+	text-indent:-18.0pt;}
+@list l3:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l4
+	{mso-list-id:331497180;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1944595514 -902368144 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l4:level1
+	{mso-level-text:"\(%1\)";
+	mso-level-tab-stop:60.0pt;
+	mso-level-number-position:left;
+	margin-left:60.0pt;
+	text-indent:-18.0pt;}
+@list l4:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l4:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l4:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l4:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l4:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l4:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l4:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l4:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l5
+	{mso-list-id:420684250;
+	mso-list-template-ids:-1595223436;}
+@list l5:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l5:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:"Courier New";
+	mso-bidi-font-family:"Times New Roman";}
+@list l5:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l5:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l5:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l5:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l5:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l5:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l5:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l6
+	{mso-list-id:818768887;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1690342472 -902368144 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l6:level1
+	{mso-level-text:"\(%1\)";
+	mso-level-tab-stop:60.0pt;
+	mso-level-number-position:left;
+	margin-left:60.0pt;
+	text-indent:-18.0pt;}
+@list l6:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l6:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l6:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l6:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l6:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l6:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l6:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l6:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l7
+	{mso-list-id:897861875;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-848243908 -902368144 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l7:level1
+	{mso-level-text:"\(%1\)";
+	mso-level-tab-stop:60.0pt;
+	mso-level-number-position:left;
+	margin-left:60.0pt;
+	text-indent:-18.0pt;}
+@list l7:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l7:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l7:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l7:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l7:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l7:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l7:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l7:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l8
+	{mso-list-id:1227767995;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-340382412 -902368144 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l8:level1
+	{mso-level-text:"\(%1\)";
+	mso-level-tab-stop:60.0pt;
+	mso-level-number-position:left;
+	margin-left:60.0pt;
+	text-indent:-18.0pt;}
+@list l8:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l8:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l8:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l8:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l8:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l8:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l8:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l8:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l9
+	{mso-list-id:1253976100;
+	mso-list-type:hybrid;
+	mso-list-template-ids:795270000 -902368144 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l9:level1
+	{mso-level-text:"\(%1\)";
+	mso-level-tab-stop:60.0pt;
+	mso-level-number-position:left;
+	margin-left:60.0pt;
+	text-indent:-18.0pt;}
+@list l9:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l9:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l9:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l9:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l9:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l9:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l9:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l9:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l10
+	{mso-list-id:1256941026;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1740851998 -1520285310 67698699 67698701 67698689 67698699 67698701 67698689 67698699 67698701;}
+@list l10:level1
+	{mso-level-start-at:6;
+	mso-level-number-format:bullet;
+	mso-level-text:■;
+	mso-level-tab-stop:18.0pt;
+	mso-level-number-position:left;
+	margin-left:18.0pt;
+	text-indent:-18.0pt;
+	font-family:"ＭＳ Ｐゴシック";
+	mso-bidi-font-family:"ＭＳ Ｐゴシック";}
+@list l10:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0D8;
+	mso-level-tab-stop:42.0pt;
+	mso-level-number-position:left;
+	margin-left:42.0pt;
+	text-indent:-21.0pt;
+	font-family:Wingdings;}
+@list l10:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B2;
+	mso-level-tab-stop:63.0pt;
+	mso-level-number-position:left;
+	margin-left:63.0pt;
+	text-indent:-21.0pt;
+	font-family:Wingdings;}
+@list l10:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F06C;
+	mso-level-tab-stop:84.0pt;
+	mso-level-number-position:left;
+	margin-left:84.0pt;
+	text-indent:-21.0pt;
+	font-family:Wingdings;}
+@list l10:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l10:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l10:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l10:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l10:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l11
+	{mso-list-id:1426339805;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1417378082 -902368144 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l11:level1
+	{mso-level-text:"\(%1\)";
+	mso-level-tab-stop:60.0pt;
+	mso-level-number-position:left;
+	margin-left:60.0pt;
+	text-indent:-18.0pt;}
+@list l11:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l11:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l11:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l11:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l11:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l11:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l11:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l11:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l12
+	{mso-list-id:1485657127;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1250092370 -902368144 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l12:level1
+	{mso-level-text:"\(%1\)";
+	mso-level-tab-stop:60.0pt;
+	mso-level-number-position:left;
+	margin-left:60.0pt;
+	text-indent:-18.0pt;}
+@list l12:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l12:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l12:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l12:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l12:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l12:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l12:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l12:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l13
+	{mso-list-id:1552427500;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-109656934 -902368144 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l13:level1
+	{mso-level-text:"\(%1\)";
+	mso-level-tab-stop:60.0pt;
+	mso-level-number-position:left;
+	margin-left:60.0pt;
+	text-indent:-18.0pt;}
+@list l13:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l13:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l13:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l13:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l13:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l13:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l13:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l13:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l14
+	{mso-list-id:1555963192;
+	mso-list-type:hybrid;
+	mso-list-template-ids:464317266 -902368144 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l14:level1
+	{mso-level-text:"\(%1\)";
+	mso-level-tab-stop:60.0pt;
+	mso-level-number-position:left;
+	margin-left:60.0pt;
+	text-indent:-18.0pt;}
+@list l14:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l14:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l14:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l14:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l14:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l14:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l14:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l14:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l15
+	{mso-list-id:1668048172;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1250705342 -902368144 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l15:level1
+	{mso-level-text:"\(%1\)";
+	mso-level-tab-stop:60.0pt;
+	mso-level-number-position:left;
+	margin-left:60.0pt;
+	text-indent:-18.0pt;}
+@list l15:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l15:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l15:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l15:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l15:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l15:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l15:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l15:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l16
+	{mso-list-id:1683126490;
+	mso-list-type:hybrid;
+	mso-list-template-ids:570181808 -902368144 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l16:level1
+	{mso-level-text:"\(%1\)";
+	mso-level-tab-stop:60.0pt;
+	mso-level-number-position:left;
+	margin-left:60.0pt;
+	text-indent:-18.0pt;}
+@list l16:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l16:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l16:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l16:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l16:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l16:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l16:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l16:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l17
+	{mso-list-id:1809203263;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-416238226 -907899344 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l17:level1
+	{mso-level-text:"\(%1\)";
+	mso-level-tab-stop:60.0pt;
+	mso-level-number-position:left;
+	margin-left:60.0pt;
+	text-indent:-18.0pt;
+	mso-ansi-font-weight:normal;}
+@list l17:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l17:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l17:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l17:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l17:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l17:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l17:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l17:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l18
+	{mso-list-id:2088378105;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-281100158 -902368144 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l18:level1
+	{mso-level-text:"\(%1\)";
+	mso-level-tab-stop:60.0pt;
+	mso-level-number-position:left;
+	margin-left:60.0pt;
+	text-indent:-18.0pt;}
+@list l18:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l18:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l18:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l18:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l18:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l18:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l18:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l18:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+ol
+	{margin-bottom:0mm;}
+ul
+	{margin-bottom:0mm;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:標準の表;
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0mm 5.4pt 0mm 5.4pt;
+	mso-para-margin:0mm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]-->
+<meta name="Microsoft Border" content=none>
+<!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="17410">
+  <v:textbox inset="5.85pt,.7pt,5.85pt,.7pt"/>
+ </o:shapedefaults></xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body bgcolor=white lang=JA link=blue vlink=blue style='tab-interval:42.0pt'>
+
+<div class=Section1>
+
+<table class=MsoNormalTable border=0 cellpadding=0 width="100%"
+ style='width:100.0%;mso-cellspacing:1.5pt;mso-padding-alt:0mm 5.4pt 0mm 5.4pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;mso-yfti-lastrow:yes'>
+  <td width="99%" style='width:99.54%;background:black;padding:.75pt .75pt .75pt .75pt'>
+  <h1 align=center style='margin-top:7.5pt;margin-right:0mm;margin-bottom:7.5pt;
+  margin-left:0mm;text-align:center'><strong><span lang=EN-US style='font-family:
+  "ＭＳ Ｐゴシック";mso-bidi-font-family:"ＭＳ Ｐゴシック";color:white'>MACU8</span></strong><strong><span
+  style='font-family:"ＭＳ Ｐゴシック";mso-bidi-font-family:"ＭＳ Ｐゴシック";color:white'>アセンブラパッケージについて</span></strong><strong><span
+  lang=EN-US style='font-family:"ＭＳ Ｐゴシック";mso-bidi-font-family:"ＭＳ Ｐゴシック"'><o:p></o:p></span></strong></h1>
+  </td>
+ </tr>
+</table>
+
+<p class=note style='margin-left:297.65pt'>このファイルには、マニュアルに間に合わなかった最新情報や、バージョンアップについてなどの重要な情報が記述されています。<span
+lang=EN-US>MACU8</span>アセンブラパッケージをご使用になる前に必ずご一読ください。 </p>
+
+<div class=MsoNormal align=center style='text-align:center'><span lang=EN-US>
+
+<hr size=2 width="100%" align=center>
+
+</span></div>
+
+<h2>目次</h2>
+
+<p><b><span lang=EN-US><a href="#_1._関連するドキュメント">1. <span lang=EN-US><span
+lang=EN-US>関連するドキュメント</span></span></a></span></b></p>
+
+<p><b><span lang=EN-US><a href="#_2._DCLファイル">2. DCL<span lang=EN-US><span
+lang=EN-US>ファイル</span></span></a><o:p></o:p></span></b></p>
+
+<p><b><span lang=EN-US><a href="#_3._更新内容">3. <span lang=EN-US><span
+lang=EN-US>更新内容</span></span></a><o:p></o:p></span></b></p>
+
+<p><b><span lang=EN-US><a href="#_4._エラーファイルによるタグジャンプ">4. <span lang=EN-US><span
+lang=EN-US>エラーファイルによるタグジャンプ</span></span></a><o:p></o:p></span></b></p>
+
+<p><b><span lang=EN-US><a href="#_5._マニュアルに記載されていない追加情報">5. <span lang=EN-US><span
+lang=EN-US>マニュアルに記載されていない追加情報</span></span></a></span></b><span
+class=MsoHyperlink><span lang=EN-US><o:p></o:p></span></span></p>
+
+<p><b><span lang=EN-US><a href="#_6._制限事項">6. <span lang=EN-US><span
+lang=EN-US>制限事項</span></span></a></span></b><span class=MsoHyperlink><span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span lang=EN-US>
+
+<hr size=2 width="100%" align=center>
+
+</span></div>
+
+<h2><a name="_1._関連するドキュメント"></a><span lang=EN-US>1. </span>関連するドキュメント</h2>
+
+<p><a name=1></a><a name="_1.1_IDEU8統合化開発環境情報"></a><a name="1_1"></a><span
+lang=EN-US>MACU8</span>アセンブラパッケージに関するドキュメントとして、以下のものがあります。</p>
+
+<blockquote style='margin-top:5.0pt;margin-bottom:5.0pt'>
+
+<p class=MsoNormal><span lang=EN-US>- MACU8_J.HTML (MACU8</span>アセンブラパッケージについて<span
+lang=EN-US>) </span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'>この文書。最新情報や特記事項</p>
+
+<p class=MsoNormal><span lang=EN-US>- MACU8</span>アセンブラパッケージ ユーザーズマニュアル </p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US>MACU8</span>アセンブラパッケージの使用方法</p>
+
+<p class=MsoNormal><span lang=EN-US>- HTU8<span style='mso-spacerun:yes'>&nbsp;
+</span></span>ユーザーズマニュアル </p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US>HTU8</span>の使用方法および<span
+lang=EN-US>ROM</span>コードデータの作成方法</p>
+
+<p class=MsoNormal><span lang=EN-US>- DCLU8_J.HTML </span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US>DCL</span>ファイルの名前の決定方法。マイクロコンピュータに固有の情報がどのように<span
+lang=EN-US>DCL</span>ファイルに記述されているかの説明</p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+</blockquote>
+
+<div class=MsoNormal align=center style='text-align:center'><span lang=EN-US>
+
+<hr size=2 width="100%" align=center>
+
+</span></div>
+
+<h2><a name="_2._DCLファイル"></a><span lang=EN-US>2. DCL</span>ファイル</h2>
+
+<p><span lang=EN-US>MACU8</span>アセンブラパッケージは、<span lang=EN-US>nX-U8/100</span>をコアにもつすべての機種に対応します。</p>
+
+<p>これは、機種ごとに異なる部分に対する定義を、各ソフトウェアの実行時に外部から与えることによって実現しているからです。異なる部分は、メモリ構成、<span
+lang=EN-US>SFR</span>の名前と属性、および使用可能な命令などです。これらの定義を含むファイルが<span lang=EN-US>DCL</span>ファイルです。１つの機種には１つの<span
+lang=EN-US>DCL</span>ファイルが用意されています。</p>
+
+<p><span lang=EN-US>DCL</span>ファイルは、アセンブラによって読み込まれます。その他のソフトウェアはアセンブラが作成したオブジェクトファイルを通じて、<span
+lang=EN-US>DCL</span>ファイルで定義されている情報のうち、処理に必要なものを受け取ります。</p>
+
+<p><span lang=EN-US>DCL</span>ファイルは、ソフトウェアによって使用されるだけでなく、ドキュメントとしての役割も持ち合わせています。たとえば、プログラムで使用できる<span
+lang=EN-US>SFR</span>の名前は、<span lang=EN-US>DCL</span>ファイルを読むことによって知ることができます。<span
+lang=EN-US>DCL</span>ファイルの読み方については、<span lang=EN-US>DCLU8_J.HTML</span>ファイルを参照してください。<span
+lang=EN-US>DCL</span>ファイルはテキストファイルなので、画面やプリンタなどに出力することができます。</p>
+
+<p><span lang=EN-US>DCL</span>ファイルは、ソフトウェアの処理を制御するための重要なファイルですので、内容を書き換えないでください。</p>
+
+<div class=MsoNormal align=center style='text-align:center'><span lang=EN-US>
+
+<hr size=2 width="100%" align=center>
+
+</span></div>
+
+<h2><a name="_3._注意事項"></a><a name="_3._更新内容"></a><span lang=EN-US>3. </span>更新内容</h2>
+
+<p><a name=3></a>今回のリリースでは、<span lang=EN-US>RLU8</span>および<span lang=EN-US>RASU8</span>の内容を更新しています。</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;mso-list:l10 level1 lfo1;
+tab-stops:list 18.0pt'><![if !supportLists]><span lang=EN-US><span
+style='mso-list:Ignore'>■<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US>RLU8<o:p></o:p></span></b></span></p>
+
+<ul style='margin-top:0mm' type=disc>
+ <li class=MsoNormal style='mso-list:l5 level1 lfo2;tab-stops:list 36.0pt'><span
+     lang=EN-US>RLU8 V1.51<b><o:p></o:p></b></span></li>
+</ul>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l0 level1 lfo3;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US><span
+style='mso-list:Ignore'>(1)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR>関数・テーブルが参照されているにも関わらずリンク対象外と扱う場合がある問題を改修しました。</span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l0 level1 lfo3;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US><span
+style='mso-list:Ignore'>(2)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR>割付可能な<span lang=EN-US>ROM</span>が<span
+lang=EN-US>#0</span>にだけしか存在しない場合に、<span lang=EN-US>ROM Window</span>領域に空きがあるにも関わらず<span
+lang=EN-US>TABLE</span>セグメントが割り付けられない問題を改修しました。これに伴い、<span lang=EN-US>TABLE</span>セグメントの優先度を変更しています。<span
+lang=EN-US>V1.50</span>以前と同じ優先度で割り付ける場合には、新規に追加した<span lang=EN-US>/CP</span>オプションを指定してください。</span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l0 level1 lfo3;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US><span
+style='mso-list:Ignore'>(3)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR>リンク時にエラーを検出したときに、アプリケーションエラーが発生し、強制終了する問題を改修しました。</span></p>
+
+<p style='margin-left:12.0pt;mso-para-margin-left:1.0gd'>以下は過去にリリースされたバージョンの更新内容です。</p>
+
+<ul style='margin-top:0mm' type=disc>
+ <li class=MsoNormal style='mso-list:l5 level1 lfo2;tab-stops:list 36.0pt'><span
+     lang=EN-US>RLU8 V1.50 <b><o:p></o:p></b></span></li>
+</ul>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l17 level1 lfo4;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US><span
+style='mso-list:Ignore'>(1)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR>関数・テーブルの参照関係をチェックし、参照されない関数・テーブルをリンクしない機能を追加しました。<span
+lang=EN-US><br>
+</span>この機能を使用するには、<span lang=EN-US>CCU8 V3.30</span>、<span lang=EN-US>RASU8
+V1.60</span>および<span lang=EN-US>RLU8 V1.50</span>が必要です。<span lang=EN-US><br>
+</span>デフォルトの機能として動作するため、オプションの指定は不要です。</span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l17 level1 lfo4;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>(2)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR><span lang=EN-US>/LA</span>オプションを追加しました。<span
+lang=EN-US><br>
+</span>関数・テーブルの参照関係をチェックせずに、すべての関数・テーブルをリンクするには、<span lang=EN-US>/LA</span>オプションを指定します。<b><span
+lang=EN-US><o:p></o:p></span></b></span></p>
+
+<ul style='margin-top:0mm' type=disc>
+ <li class=MsoNormal style='mso-list:l5 level1 lfo2;tab-stops:list 36.0pt'><span
+     lang=EN-US>RLU8 V1.40 <b><o:p></o:p></b></span></li>
+</ul>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l1 level1 lfo5;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US><span
+style='mso-list:Ignore'>(1)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR>コピーライト表記を新会社名<span lang=EN-US
+style='mso-bidi-font-weight:bold'>(LAPIS Semiconductor)</span>に変更しました。機能の変更はありません。</span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<ul style='margin-top:0mm' type=disc>
+ <li class=MsoNormal style='mso-list:l5 level1 lfo2;tab-stops:list 36.0pt'><span
+     lang=EN-US>RLU8 V1.30 <b><o:p></o:p></b></span></li>
+</ul>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l2 level1 lfo6;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US><span
+style='mso-list:Ignore'>(1)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR>コピーライト表記を新会社名<span lang=EN-US
+style='mso-bidi-font-weight:bold'>(OKI SEMICONDUCTOR)</span>に変更しました。機能の変更はありません。</span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<ul style='margin-top:0mm' type=disc>
+ <li class=MsoNormal style='mso-list:l5 level1 lfo2;tab-stops:list 36.0pt'><span
+     lang=EN-US>RLU8 V1.20 <b><o:p></o:p></b></span></li>
+</ul>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l13 level1 lfo7;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US><span
+style='mso-list:Ignore'>(1)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR><span style='mso-bidi-font-weight:
+bold'>コンパイラのバージョン情報をマップファイルに出力するように変更いたしました。コンパイラのバージョン情報は、アセンブラのバージョン情報と並んで出力されます。コンパイラのバージョン情報がオブジェクトファイルに含まれていない場合、マップファイルには”<span
+lang=EN-US>-.- -</span>”が出力されます。</span></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l13 level1 lfo7;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US><span
+style='mso-list:Ignore'>(2)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR><span lang=EN-US style='mso-bidi-font-weight:
+bold'>C</span><span style='mso-bidi-font-weight:bold'>ソースのシンボル情報をマップファイルに出力するように変更しました。<span
+lang=EN-US>C</span>ソースのシンボル情報は、<span lang=EN-US>/SD</span>オプションが指定されたときに出力されます。シンボル情報の出力形式は、アセンブリソースのシンボル情報と同じ形式で出力されます。</span></span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;mso-list:l10 level1 lfo1;
+tab-stops:list 18.0pt'><![if !supportLists]><span lang=EN-US><span
+style='mso-list:Ignore'>■<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US>RASU8<o:p></o:p></span></b></span></p>
+
+<ul style='margin-top:0mm' type=disc>
+ <li class=MsoNormal style='mso-list:l5 level1 lfo2;tab-stops:list 36.0pt'><span
+     lang=EN-US>RASU8 V1.61 <b><o:p></o:p></b></span></li>
+</ul>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l14 level1 lfo8;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>(1)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR><span style='mso-bidi-font-weight:
+bold'>アブソリュートプリントファイルを作成する際のチェック機能を改修しました。<span lang=EN-US>RASU8 V1.61</span>以上のアセンブラを使用する場合、<span
+lang=EN-US>ABL</span>ファイルは<span lang=EN-US>RLU8 V1.51</span>以上のバージョンで生成したものを使用してください。<span
+lang=EN-US><o:p></o:p></span></span></span></p>
+
+<p style='margin-left:12.0pt;mso-para-margin-left:1.0gd'>以下は過去にリリースされたバージョンの更新内容です。<span
+lang=EN-US style='mso-bidi-font-weight:bold'><o:p></o:p></span></p>
+
+<ul style='margin-top:0mm' type=disc>
+ <li class=MsoNormal style='mso-list:l5 level1 lfo2;tab-stops:list 36.0pt'><span
+     lang=EN-US>RASU8 V1.60 <b><o:p></o:p></b></span></li>
+</ul>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l7 level1 lfo9;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>(1)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR><span lang=EN-US style='mso-bidi-font-weight:
+bold'>RASU8</span><span style='mso-bidi-font-weight:bold'>が認識するシンボルの文字数を常に<span
+lang=EN-US>255</span>文字にしました。<span lang=EN-US><br>
+/SL</span>オプションを指定しても無効になります。<span lang=EN-US><o:p></o:p></span></span></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l7 level1 lfo9;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>(2)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR><span style='mso-bidi-font-weight:
+bold'>参照されない関数・テーブルをリンクしない機能により、アブソリュートプリントファイルの参照されない関数・テーブルに対するアドレスは、アスタリスク<span
+lang=EN-US>(**:****)</span>で表示します。<span lang=EN-US><o:p></o:p></span></span></span></p>
+
+<ul style='margin-top:0mm' type=disc>
+ <li class=MsoNormal style='mso-list:l5 level1 lfo2;tab-stops:list 36.0pt'><span
+     lang=EN-US>RASU8 V1.50 <b><o:p></o:p></b></span></li>
+</ul>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l16 level1 lfo10;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>(1)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR><span style='mso-bidi-font-weight:
+bold'>コピーライト表記を新会社名<span lang=EN-US>(LAPIS Semiconductor)</span>に変更しました。機能の変更はありません。<span
+lang=EN-US><o:p></o:p></span></span></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<ul style='margin-top:0mm' type=disc>
+ <li class=MsoNormal style='mso-list:l5 level1 lfo2;tab-stops:list 36.0pt'><span
+     lang=EN-US>RASU8 V1.40 <b><o:p></o:p></b></span></li>
+</ul>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l4 level1 lfo11;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>(1)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR><span style='mso-bidi-font-weight:
+bold'>セグメント擬似命令<span lang=EN-US>(CSEG</span>など<span lang=EN-US>)</span>が最初に記述されていない場合、<span
+lang=EN-US>ORG</span>擬似命令のオペランドのアドレスチェックが正しく機能しない問題を改修しました。<span lang=EN-US><o:p></o:p></span></span></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l4 level1 lfo11;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>(2)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR><span style='mso-bidi-font-weight:
+bold'>コピーライト表記を新会社名<span lang=EN-US>(OKI SEMICONDUCTOR)</span>に変更しました。<span
+lang=EN-US><o:p></o:p></span></span></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<ul style='margin-top:0mm' type=disc>
+ <li class=MsoNormal style='mso-list:l5 level1 lfo2;tab-stops:list 36.0pt'><span
+     lang=EN-US>RASU8 V1.30 <b><o:p></o:p></b></span></li>
+</ul>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l15 level1 lfo12;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>(1)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR><span lang=EN-US style='mso-bidi-font-weight:
+bold'>CCU8</span><span style='mso-bidi-font-weight:bold'>の<span lang=EN-US>C</span>デバッグ情報変更に伴う変更を行いました。<span
+lang=EN-US><o:p></o:p></span></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p>今回のリリースでは、以下のソフトウェアは更新されていません。</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;mso-list:l10 level1 lfo1;
+tab-stops:list 18.0pt'><![if !supportLists]><span lang=EN-US><span
+style='mso-list:Ignore'>■<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US>OHU8<o:p></o:p></span></b></span></p>
+
+<p style='margin-left:12.0pt;mso-para-margin-left:1.0gd'>以下は過去にリリースされたバージョンの更新内容です。<b><span
+lang=EN-US><o:p></o:p></span></b></p>
+
+<ul style='margin-top:0mm' type=disc>
+ <li class=MsoNormal style='mso-list:l5 level1 lfo2;tab-stops:list 36.0pt'><span
+     lang=EN-US>OHU8 V1.20 <b><o:p></o:p></b></span></li>
+</ul>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l12 level1 lfo13;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>(1)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR>コピーライト表記を新会社名<span lang=EN-US
+style='mso-bidi-font-weight:bold'>(LAPIS Semiconductor)</span>に変更しました。機能の変更はありません。<span
+lang=EN-US style='mso-bidi-font-weight:bold'><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt'><b><span lang=EN-US><o:p>&nbsp;</o:p></span></b></p>
+
+<ul style='margin-top:0mm' type=disc>
+ <li class=MsoNormal style='mso-list:l5 level1 lfo2;tab-stops:list 36.0pt'><span
+     lang=EN-US>OHU8 V1.10 <b><o:p></o:p></b></span></li>
+</ul>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l18 level1 lfo14;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US><span
+style='mso-list:Ignore'>(1)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR>コピーライト表記を新会社名<span lang=EN-US
+style='mso-bidi-font-weight:bold'>(OKI SEMICONDUCTOR)</span>に変更しました。この変更に伴い、モトローラ<span
+lang=EN-US>S</span>フォーマットの<span lang=EN-US>S0</span>レコードの出力が変更されています。他に機能の変更はありません。</span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;mso-list:l10 level1 lfo1;
+tab-stops:list 18.0pt'><![if !supportLists]><span lang=EN-US><span
+style='mso-list:Ignore'>■<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US>LIBU8<o:p></o:p></span></b></span></p>
+
+<p style='margin-left:12.0pt;mso-para-margin-left:1.0gd'>以下は過去にリリースされたバージョンの更新内容です。<b><span
+lang=EN-US><o:p></o:p></span></b></p>
+
+<ul style='margin-top:0mm' type=disc>
+ <li class=MsoNormal style='mso-list:l5 level1 lfo2;tab-stops:list 36.0pt'><span
+     lang=EN-US>LIBU8 V1.20 <b><o:p></o:p></b></span></li>
+</ul>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l3 level1 lfo15;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US><span
+style='mso-list:Ignore'>(1)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR>コピーライト表記を新会社名<span lang=EN-US
+style='mso-bidi-font-weight:bold'>(LAPIS Semiconductor)</span>に変更しました。機能の変更はありません。</span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<ul style='margin-top:0mm' type=disc>
+ <li class=MsoNormal style='mso-list:l5 level1 lfo2;tab-stops:list 36.0pt'><span
+     lang=EN-US>LIBU8 V1.10 <b><o:p></o:p></b></span></li>
+</ul>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l8 level1 lfo16;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US><span
+style='mso-list:Ignore'>(1)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR>コピーライト表記を新会社名<span lang=EN-US
+style='mso-bidi-font-weight:bold'>(OKI SEMICONDUCTOR)</span>に変更しました。機能の変更はありません。</span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;mso-list:l10 level1 lfo1;
+tab-stops:list 18.0pt'><![if !supportLists]><span lang=EN-US><span
+style='mso-list:Ignore'>■<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US>HTU8<o:p></o:p></span></b></span></p>
+
+<p style='margin-left:12.0pt;mso-para-margin-left:1.0gd'>以下は過去にリリースされたバージョンの更新内容です。<b><span
+lang=EN-US><o:p></o:p></span></b></p>
+
+<ul style='margin-top:0mm' type=disc>
+ <li class=MsoNormal style='mso-list:l5 level1 lfo2;tab-stops:list 36.0pt'><span
+     lang=EN-US>HTU8 V1.20 <b><o:p></o:p></b></span></li>
+</ul>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l6 level1 lfo17;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US><span
+style='mso-list:Ignore'>(1)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR>コピーライト表記を新会社名<span lang=EN-US
+style='mso-bidi-font-weight:bold'>(LAPIS Semiconductor)</span>に変更しました。機能の変更はありません。</span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<ul style='margin-top:0mm' type=disc>
+ <li class=MsoNormal style='mso-list:l5 level1 lfo2;tab-stops:list 36.0pt'><span
+     lang=EN-US>HTU8 V1.10 <b><o:p></o:p></b></span></li>
+</ul>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l9 level1 lfo18;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US><span
+style='mso-list:Ignore'>(1)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR>複数の入力ファイルを扱えるように対応しました。</span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l9 level1 lfo18;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US><span
+style='mso-list:Ignore'>(2)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR>出力ファイル名を指定するオプション<span lang=EN-US>(/F)</span>を追加しました。</span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l9 level1 lfo18;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US><span
+style='mso-list:Ignore'>(3)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR>入力ファイル中の特定の範囲のデータを読み込んで、指定したアドレスに配置するオプション<span
+lang=EN-US>(/AL)</span>を追加しました。</span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l9 level1 lfo18;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US><span
+style='mso-list:Ignore'>(4)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR>応答ファイルを扱えるように対応しました。</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;mso-para-margin-left:3.0gd'>詳細については、『<span
+lang=EN-US>HTU8 </span>ユーザーズマニュアル』を参照してください。</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;mso-para-margin-left:3.0gd'><span
+lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<ul style='margin-top:0mm' type=disc>
+ <li class=MsoNormal style='mso-list:l5 level1 lfo2;tab-stops:list 36.0pt'><span
+     lang=EN-US>HTU8 V1.00 <b><o:p></o:p></b></span></li>
+</ul>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l11 level1 lfo19;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US><span
+style='mso-list:Ignore'>(1)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR><span lang=EN-US>U8</span>用の<span
+lang=EN-US>ROM</span>コードデータを作成するためのツールとして、新規に追加しました。</span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span lang=EN-US>
+
+<hr size=2 width="100%" align=center>
+
+</span></div>
+
+<h2><a name="_4._エラーファイルによるタグジャンプ"></a><span lang=EN-US>4. </span>エラーファイルによるタグジャンプ</h2>
+
+<p>一部のエディタは、現在カーソルが置かれている行にあるファイル名と行番号の並びから自動的にそのファイルをオープンし、その行を表示する機能を持っています。<span
+lang=EN-US>RASU8</span>が作成するエラーファイルを使って、この機能を利用することができます。この機能についての詳細は、使用するエディタのマニュアルを参照してください。</p>
+
+<div class=MsoNormal align=center style='text-align:center'><span lang=EN-US>
+
+<hr size=2 width="100%" align=center>
+
+</span></div>
+
+<h2><a name="_2._マニュアルに記載されていない追加情報"></a><a name="_5._マニュアルに記載されていない追加情報"></a><span
+lang=EN-US>5. </span>マニュアルに記載されていない追加情報</h2>
+
+<p><a name=2></a>マニュアルに記載されていない追加情報はありません。</p>
+
+<div class=MsoNormal align=center style='text-align:center'><span lang=EN-US>
+
+<hr size=2 width="100%" align=center>
+
+</span></div>
+
+<h2><a name="_4._制限事項"></a><a name="_6._制限事項"></a><span lang=EN-US>6. </span>制限事項</h2>
+
+<p>現バージョンの<span lang=EN-US>RLU8</span>には、以下の制限事項があります。</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;mso-list:l10 level1 lfo1;
+tab-stops:list 18.0pt'><![if !supportLists]><span lang=EN-US><span
+style='mso-list:Ignore'>■<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US>RLU8<o:p></o:p></span></b></span></p>
+
+<p class=MsoNormal style='margin-left:24.1pt;text-indent:-24.1pt;mso-char-indent-count:
+-2.0'><b style='mso-bidi-font-weight:normal'><span lang=EN-US style='mso-bidi-font-size:
+10.5pt'><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span></span></b><b
+style='mso-bidi-font-weight:normal'><span style='mso-bidi-font-size:10.5pt'>変数を絶対番地に割り付けている場合に、インターナルエラーが発生する場合があります。<span
+lang=EN-US><o:p></o:p></span></span></b></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>[</span>発生条件<span
+lang=EN-US>]</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'>①<span lang=EN-US> absolute</span>プラグマ、<span
+class=SpellE><span lang=EN-US>segnoinit</span></span>プラグマ、または<span
+class=SpellE><span lang=EN-US>seginit</span></span>プラグマのいずれかにて変数を絶対番地に割り付けている。</p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'>② 以下のいずれかの記述が上記①と同じファイルに存在する。</p>
+
+<p class=MsoNormal style='margin-left:45.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>(a) interrupt</span>プラグマにて割り込み関数を定義している。</p>
+
+<p class=MsoNormal style='margin-left:45.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>(b) <span class=SpellE>swi</span></span>プラグマにてソフトウェア割り込み関数を定義している。</p>
+
+<p class=MsoNormal style='margin-left:45.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>(c) <span class=SpellE>segconst</span></span>プラグマにて<span
+lang=EN-US>const</span>変数を絶対番地に割り付けており、その変数に対する初期値として別の<span lang=EN-US>const</span>変数や関数のアドレスを与えている。</p>
+
+<p class=MsoNormal style='margin-left:45.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'>　　例えば、以下のような記述です。</p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>static void <span
+class=SpellE>test_func</span>(void) { }</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>#<span class=SpellE>pragma</span>
+<span class=SpellE>segconst</span> 0x8000</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>void (* const <span
+class=SpellE>fp</span>)() = <span class=SpellE>test_func</span>;</span></p>
+
+<p class=MsoNormal style='margin-left:45.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>[</span>発生例<span
+lang=EN-US>]</span></p>
+
+<p class=MsoNormal style='margin-left:45.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>unsigned char skip;</span></p>
+
+<p class=MsoNormal style='margin-left:45.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>#<span class=SpellE>pragma</span>
+absolute skip 0x0E000</span></p>
+
+<p class=MsoNormal style='margin-left:45.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>static void <span
+class=SpellE>int_nmi</span>(void);</span></p>
+
+<p class=MsoNormal style='margin-left:45.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>#<span class=SpellE>pragma</span>
+interrupt <span class=SpellE>int_nmi</span> 0x0a 1</span></p>
+
+<p class=MsoNormal style='margin-left:45.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>static void <span
+class=SpellE>int_nmi</span>(void)</span></p>
+
+<p class=MsoNormal style='margin-left:45.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>{ </span></p>
+
+<p class=MsoNormal style='margin-left:45.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>}</span></p>
+
+<p class=MsoNormal style='margin-left:45.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>[</span>回避策<span
+lang=EN-US>]</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'>以下のいずれかの方法で回避してください。</p>
+
+<p class=MsoNormal style='margin-left:81.0pt;mso-para-margin-left:2.25gd;
+text-align:justify;text-justify:inter-ideograph;text-indent:-54.0pt;mso-char-indent-count:
+-4.5;mso-pagination:none'>回避策①：<span class=SpellE><span lang=EN-US>segnoinit</span></span>プラグマまたは<span
+class=SpellE><span lang=EN-US>seginit</span></span>プラグマを用いて名前付きで定義したセグメントに変数を割り付け、リンク時にアドレスに割り付けるようにする。</p>
+
+<p class=MsoNormal style='margin-left:81.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'>以下に例を示します。</p>
+
+<p class=MsoNormal style='margin-left:81.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'>手順１：上記の発生例のソースファイルを以下のように修正します。</p>
+
+<p class=MsoNormal style='margin-left:108.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>#<span class=SpellE>pragma</span>
+<span class=SpellE>segnoinit</span> &quot;DATA_0E000&quot;</span></p>
+
+<p class=MsoNormal style='margin-left:108.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>unsigned char skip;</span></p>
+
+<p class=MsoNormal style='margin-left:108.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>#<span class=SpellE>pragma</span>
+<span class=SpellE>segnoinit</span></span></p>
+
+<p class=MsoNormal style='margin-left:108.0pt;mso-para-margin-left:6.75gd;
+text-align:justify;text-justify:inter-ideograph;text-indent:-27.0pt;mso-char-indent-count:
+-2.25;mso-pagination:none'>手順２：<span lang=EN-US>IDEU8</span>の<span lang=EN-US>[</span>ターゲットオプション<span
+lang=EN-US>]</span>の<span lang=EN-US>[</span>セグメント<span lang=EN-US>]</span>タブにて、「優先的に割り付ける<span
+lang=EN-US>DATA</span>セグメント」をチェックし、そのフィールドに以下のように指定してください。</p>
+
+<p class=MsoNormal style='margin-left:108.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>DATA_0E000-0E000h</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'>回避策②：<span lang=EN-US>/LA</span>オプションを指定する。</p>
+
+<p class=MsoNormal style='margin-left:81.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>IDEU8</span>の<span
+lang=EN-US>[</span>ターゲットオプション<span lang=EN-US>]</span>の<span lang=EN-US>[</span>一般<span
+lang=EN-US>]</span>タブにて、「追加オプション」フィールドに<span lang=EN-US> /LA </span>を指定してください。ただし、このオプションを指定した場合、参照されない関数やテーブルもリンクされます。</p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span lang=EN-US>
+
+<hr size=2 width="100%" align=center>
+
+</span></div>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph'><span
+lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p align=right style='text-align:right'>作成日<span lang=EN-US> : 2013</span>年<span
+lang=EN-US>5</span>月<span lang=EN-US>7</span>日<span lang=EN-US><br>
+Copyright 2008-2013, LAPIS Semiconductor Co., Ltd.</span></p>
+
+</div>
+
+</body>
+
+</html>

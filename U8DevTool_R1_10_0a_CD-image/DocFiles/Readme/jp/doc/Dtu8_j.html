@@ -1,0 +1,1490 @@
+<!-- saved from url=(0026)http://www.lapis-semi.com/us/ -->
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=shift_jis">
+<link rel=File-List href="Dtu8_j.files/filelist.xml">
+<link rel=Edit-Time-Data href="Dtu8_j.files/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>DTU8 デバッガについて</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>LAPIS Semiconductor Co., Ltd.</o:Author>
+  <o:LastAuthor>LAPIS Semiconductor Co., Ltd.</o:LastAuthor>
+  <o:Revision>26</o:Revision>
+  <o:TotalTime>2480</o:TotalTime>
+  <o:LastPrinted>2012-08-27T12:46:00Z</o:LastPrinted>
+  <o:Created>2012-01-30T02:03:00Z</o:Created>
+  <o:LastSaved>2012-12-27T08:06:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>1549</o:Words>
+  <o:Characters>8832</o:Characters>
+  <o:Company>LAPIS Semiconductor Co., Ltd.</o:Company>
+  <o:Lines>73</o:Lines>
+  <o:Paragraphs>20</o:Paragraphs>
+  <o:CharactersWithSpaces>10361</o:CharactersWithSpaces>
+  <o:Version>11.9999</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:Zoom>BestFit</w:Zoom>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:Compatibility>
+   <w:UseFELayout/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"ＭＳ 明朝";
+	panose-1:2 2 6 9 4 2 5 8 3 4;
+	mso-font-alt:"MS Mincho";
+	mso-font-charset:128;
+	mso-generic-font-family:roman;
+	mso-font-pitch:fixed;
+	mso-font-signature:-536870145 1791491579 18 0 131231 0;}
+@font-face
+	{font-family:"ＭＳ ゴシック";
+	panose-1:2 11 6 9 7 2 5 8 2 4;
+	mso-font-alt:"MS Gothic";
+	mso-font-charset:128;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:-536870145 1791491579 18 0 131231 0;}
+@font-face
+	{font-family:Century;
+	panose-1:2 4 6 4 5 5 5 2 3 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:647 0 0 0 159 0;}
+@font-face
+	{font-family:"ＭＳ Ｐゴシック";
+	panose-1:2 11 6 0 7 2 5 8 2 4;
+	mso-font-charset:128;
+	mso-generic-font-family:modern;
+	mso-font-pitch:variable;
+	mso-font-signature:-536870145 1791491579 18 0 131231 0;}
+@font-face
+	{font-family:"\@ＭＳ ゴシック";
+	panose-1:2 11 6 9 7 2 5 8 2 4;
+	mso-font-charset:128;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:-536870145 1791491579 18 0 131231 0;}
+@font-face
+	{font-family:"\@ＭＳ Ｐゴシック";
+	panose-1:2 11 6 0 7 2 5 8 2 4;
+	mso-font-charset:128;
+	mso-generic-font-family:modern;
+	mso-font-pitch:variable;
+	mso-font-signature:-536870145 1791491579 18 0 131231 0;}
+@font-face
+	{font-family:"\@ＭＳ 明朝";
+	panose-1:2 2 6 9 4 2 5 8 3 4;
+	mso-font-charset:128;
+	mso-generic-font-family:roman;
+	mso-font-pitch:fixed;
+	mso-font-signature:-536870145 1791491579 18 0 131231 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0mm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"ＭＳ Ｐゴシック";
+	mso-bidi-font-family:"ＭＳ Ｐゴシック";}
+h1
+	{mso-margin-top-alt:auto;
+	margin-right:0mm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0mm;
+	mso-pagination:widow-orphan;
+	mso-outline-level:1;
+	font-size:24.0pt;
+	font-family:"ＭＳ Ｐゴシック";
+	mso-bidi-font-family:"ＭＳ Ｐゴシック";
+	font-weight:bold;}
+h2
+	{mso-margin-top-alt:auto;
+	margin-right:0mm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0mm;
+	mso-pagination:widow-orphan;
+	mso-outline-level:2;
+	background:yellow;
+	font-size:18.0pt;
+	font-family:"ＭＳ Ｐゴシック";
+	mso-bidi-font-family:"ＭＳ Ｐゴシック";
+	color:black;
+	font-weight:bold;}
+h3
+	{mso-margin-top-alt:auto;
+	margin-right:0mm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0mm;
+	mso-pagination:widow-orphan;
+	mso-outline-level:3;
+	font-size:13.5pt;
+	font-family:"ＭＳ Ｐゴシック";
+	mso-bidi-font-family:"ＭＳ Ｐゴシック";
+	font-weight:bold;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+p.MsoDocumentMap, li.MsoDocumentMap, div.MsoDocumentMap
+	{mso-style-noshow:yes;
+	margin:0mm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	background:navy;
+	font-size:12.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"ＭＳ ゴシック";
+	mso-bidi-font-family:"Times New Roman";}
+p
+	{mso-margin-top-alt:auto;
+	margin-right:0mm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0mm;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"ＭＳ Ｐゴシック";
+	mso-bidi-font-family:"ＭＳ Ｐゴシック";}
+p.note, li.note, div.note
+	{mso-style-name:note;
+	mso-margin-top-alt:auto;
+	margin-right:0mm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0mm;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"ＭＳ Ｐゴシック";
+	mso-bidi-font-family:"ＭＳ Ｐゴシック";}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:99.25pt 30.0mm 30.0mm 30.0mm;
+	mso-header-margin:42.55pt;
+	mso-footer-margin:49.6pt;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:420684250;
+	mso-list-template-ids:-1595223436;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l0:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:"Courier New";
+	mso-bidi-font-family:"Times New Roman";}
+@list l0:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1
+	{mso-list-id:838884451;
+	mso-list-type:hybrid;
+	mso-list-template-ids:601232798 -1609949556 67698699 67698701 67698689 67698699 67698701 67698689 67698699 67698701;}
+@list l1:level1
+	{mso-level-start-at:10;
+	mso-level-number-format:bullet;
+	mso-level-text:-;
+	mso-level-tab-stop:60.0pt;
+	mso-level-number-position:left;
+	margin-left:60.0pt;
+	text-indent:-18.0pt;
+	font-family:"ＭＳ Ｐゴシック";
+	mso-bidi-font-family:"ＭＳ Ｐゴシック";}
+@list l1:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2
+	{mso-list-id:1408380810;
+	mso-list-type:hybrid;
+	mso-list-template-ids:2030760258 244627984 67698699 67698701 67698689 67698699 67698701 67698689 67698699 67698701;}
+@list l2:level1
+	{mso-level-start-at:0;
+	mso-level-number-format:bullet;
+	mso-level-text:・;
+	mso-level-tab-stop:60.0pt;
+	mso-level-number-position:left;
+	margin-left:60.0pt;
+	text-indent:-18.0pt;
+	font-family:"ＭＳ Ｐゴシック";
+	mso-bidi-font-family:"ＭＳ Ｐゴシック";}
+@list l2:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3
+	{mso-list-id:2032415471;
+	mso-list-type:hybrid;
+	mso-list-template-ids:904803324 -501809742 67698699 67698701 67698689 67698699 67698701 67698689 67698699 67698701;}
+@list l3:level1
+	{mso-level-start-at:0;
+	mso-level-number-format:bullet;
+	mso-level-text:・;
+	mso-level-tab-stop:60.0pt;
+	mso-level-number-position:left;
+	margin-left:60.0pt;
+	text-indent:-18.0pt;
+	font-family:"ＭＳ Ｐゴシック";
+	mso-bidi-font-family:"ＭＳ Ｐゴシック";}
+@list l3:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l4
+	{mso-list-id:2099867746;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1145793066 -675632864 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l4:level1
+	{mso-level-number-format:decimal-enclosed-circle;
+	mso-level-text:%1;
+	mso-level-tab-stop:54.0pt;
+	mso-level-number-position:left;
+	margin-left:54.0pt;
+	text-indent:-18.0pt;}
+@list l4:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l4:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l4:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l4:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l4:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l4:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l4:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l4:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+ol
+	{margin-bottom:0mm;}
+ul
+	{margin-bottom:0mm;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:標準の表;
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0mm 5.4pt 0mm 5.4pt;
+	mso-para-margin:0mm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]-->
+<meta name="Microsoft Border" content=none>
+<!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="25602">
+  <v:textbox inset="5.85pt,.7pt,5.85pt,.7pt"/>
+ </o:shapedefaults></xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body bgcolor=white lang=JA link=blue vlink=blue style='tab-interval:42.0pt'>
+
+<div class=Section1>
+
+<table class=MsoNormalTable border=0 cellpadding=0 width="100%"
+ style='width:100.0%;mso-cellspacing:1.5pt;mso-padding-alt:0mm 5.4pt 0mm 5.4pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;mso-yfti-lastrow:yes'>
+  <td width="90%" style='width:90.0%;background:black;padding:.75pt .75pt .75pt .75pt'>
+  <h1 align=center style='margin-top:7.5pt;margin-right:0mm;margin-bottom:7.5pt;
+  margin-left:0mm;text-align:center'><strong><span lang=EN-US style='font-family:
+  "ＭＳ Ｐゴシック";mso-bidi-font-family:"ＭＳ Ｐゴシック";color:white'>DTU8</span></strong><strong><span
+  style='font-family:"ＭＳ Ｐゴシック";mso-bidi-font-family:"ＭＳ Ｐゴシック";color:white'>デバッガについて</span></strong><strong><span
+  lang=EN-US style='font-family:"ＭＳ Ｐゴシック";mso-bidi-font-family:"ＭＳ Ｐゴシック"'><o:p></o:p></span></strong></h1>
+  </td>
+ </tr>
+</table>
+
+<p class=note style='margin-left:297.65pt'>このファイルには、マニュアルに記載されていない最新情報や、バージョンアップについてなどの重要な情報が記述されています。<span
+lang=EN-US>DTU8</span>デバッガをご使用になる前に必ずご一読ください。 </p>
+
+<div class=MsoNormal align=center style='text-align:center'><span lang=EN-US>
+
+<hr size=2 width="100%" align=center>
+
+</span></div>
+
+<h2>目次</h2>
+
+<p><b><span lang=EN-US><a href="#_1.関連するドキュメント">1.<span lang=EN-US><span
+lang=EN-US>関連するドキュメント</span></span></a></span></b></p>
+
+<p><b><span lang=EN-US><a href="#_2.エミュレータ使用時の補足">2.<span lang=EN-US><span
+lang=EN-US>エミュレータ使用時の補足</span></span></a></span></b><span lang=EN-US><br>
+<a href="#_2.1_起動順序">2.1 <span lang=EN-US><span lang=EN-US>起動順序</span></span></a><br>
+<a href="#_2.2_終了順序">2.2 <span lang=EN-US><span lang=EN-US>終了順序</span></span></a></span></p>
+
+<p><b><span lang=EN-US><a href="#_3._更新内容">3.<span lang=EN-US><span lang=EN-US>更新内容</span></span></a><o:p></o:p></span></b></p>
+
+<p><b><span lang=EN-US><a href="#_3._マニュアルに記載されていない追加情報">4.<span lang=EN-US><span
+lang=EN-US>マニュアルに記載されていない追加情報</span></span></a><o:p></o:p></span></b></p>
+
+<p><b><span lang=EN-US><a href="#_4._注意事項">5.<span lang=EN-US><span lang=EN-US>制限事項</span></span></a><o:p></o:p></span></b></p>
+
+<p><b><span lang=EN-US><a href="#_5._注意事項">6.<span lang=EN-US><span lang=EN-US>注意事項</span></span></a><u><span
+style='color:blue'><br>
+</span></u></span></b><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;</span></span></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span lang=EN-US>
+
+<hr size=2 width="100%" align=center>
+
+</span></div>
+
+<h2><a name="_1.関連するドキュメント"></a><span lang=EN-US>1.</span>関連するドキュメント</h2>
+
+<p><span lang=EN-US>DTU8</span>デバッガに関するドキュメントとして、以下のものがあります。</p>
+
+<blockquote style='margin-top:5.0pt;margin-bottom:5.0pt'>
+
+<p class=MsoNormal><span lang=EN-US>- DTU8_J.HTML (DTU8</span>デバッガについて<span
+lang=EN-US>) </span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'>この文書。最新情報や特記事項</p>
+
+<p class=MsoNormal><span lang=EN-US>- DTU8</span>ユーザーズマニュアル </p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US>DTU8</span>デバッガの使用方法</p>
+
+<p class=MsoNormal><span lang=EN-US>- DTU8</span>デバッガのオンラインヘルプ </p>
+
+<p class=MsoNormal style='margin-left:36.0pt'>全機能<span lang=EN-US>(</span>メニュー、ウィンドウ、ダイアログボックス<span
+lang=EN-US>)</span>の機能リファレンス</p>
+
+</blockquote>
+
+<div class=MsoNormal align=center style='text-align:center'><span lang=EN-US>
+
+<hr size=2 width="100%" align=center>
+
+</span></div>
+
+<h2><a name="_2.エミュレータ使用時の補足"></a><span lang=EN-US>2.</span>エミュレータ使用時の補足</h2>
+
+<p class=MsoNormal><span lang=EN-US>DTU8</span>デバッガをエミュレータと接続して使用する際の考慮点を列挙します。</p>
+
+<p class=note style='margin-left:297.65pt'><em><span style='font-family:"ＭＳ Ｐゴシック";
+mso-bidi-font-family:"ＭＳ Ｐゴシック";color:red'>ご注意</span></em><i><span lang=EN-US
+style='color:red'><br>
+</span><span style='color:red'>エミュレータ<em><span style='font-family:"ＭＳ Ｐゴシック";
+mso-bidi-font-family:"ＭＳ Ｐゴシック"'>の使用方法や注意点は、ハードウェアに関するドキュメント<span lang=EN-US>(</span>ユーザーズマニュアル等<span
+lang=EN-US>)</span>に説明されていますので、そちらも、参照してください。</span></em></span></i> </p>
+
+<div class=MsoNormal align=center style='text-align:center'><span lang=EN-US>
+
+<hr size=2 width="100%" align=center>
+
+</span></div>
+
+<h3><a name="_2.1_起動順序"></a><span lang=EN-US>2.1 </span>起動順序</h3>
+
+<p class=MsoNormal><span lang=EN-US>(1) </span>インストールの確認</p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US>U8</span>開発ツールのセットアッププログラムで<span
+lang=EN-US>DTU8</span>デバッガをインストール後、<span lang=EN-US>[</span>スタート<span
+lang=EN-US>][</span>すべてのプログラム<span lang=EN-US>]</span>メニューの<span lang=EN-US>[U8
+Tools]</span>の中に、<span lang=EN-US>[nX-U8]</span>グループが登録されていることを確認してください。 </p>
+
+<p class=MsoNormal><span lang=EN-US>(2) </span>エミュレータの起動</p>
+
+<p class=MsoNormal style='margin-left:36.0pt'>エミュレータの電源を投入してください。</p>
+
+<p class=MsoNormal><span lang=EN-US>(3) DTU8</span>デバッガの起動</p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US>[</span>スタート<span
+lang=EN-US>][</span>すべてのプログラム<span lang=EN-US>]</span>メニューの<span lang=EN-US>[U8
+Tools]</span>→<span lang=EN-US>[nX-U8]</span>→<span lang=EN-US>[DTU8 Debugger]</span>アイコンを指定して、<span
+lang=EN-US>DTU8</span>デバッガを起動してください。</p>
+
+<p class=MsoNormal><span lang=EN-US>(4) DTU8</span>デバッガとエミュレータの接続</p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US>DTU8</span>デバッガが表示する<span
+lang=EN-US>[</span>通信設定<span lang=EN-US>]</span>ダイアログの<span lang=EN-US>[</span>ターゲット<span
+lang=EN-US>ICE]</span>リストから使用するエミュレータを選択し、<span lang=EN-US>[OK]</span>ボタンをクリックしてください。</p>
+
+<div class=MsoNormal align=center style='text-align:center'><span lang=EN-US>
+
+<hr size=2 width="100%" align=center>
+
+</span></div>
+
+<h3><a name="_2.2_終了順序"></a><span lang=EN-US>2.2 </span>終了順序</h3>
+
+<p><span lang=EN-US>DTU8</span>デバッガを終了する前に、エミュレータの電源を切断しないでください。<span
+lang=EN-US><br>
+</span>これは、<span lang=EN-US>DTU8</span>デバッガ終了時に、エミュレータと通信を行うためです。</p>
+
+<div class=MsoNormal align=center style='text-align:center'><span lang=EN-US>
+
+<hr size=2 width="100%" align=center>
+
+</span></div>
+
+<h2><a name="_3._更新内容"></a><span lang=EN-US>3. </span>更新内容</h2>
+
+<p>今回のリリースでは、以下の内容が更新されています。</p>
+
+<ul style='margin-top:0mm' type=disc>
+ <li class=MsoNormal style='mso-list:l0 level1 lfo1;tab-stops:list 36.0pt'><b
+     style='mso-bidi-font-weight:normal'><span lang=EN-US>DTU8 V5.10<span
+     style='mso-bidi-font-weight:bold'><o:p></o:p></span></span></b></li>
+</ul>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l3 level1 lfo2;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>・<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='mso-bidi-font-weight:
+bold'>Dr.U8ICE/Dr.U16ICE/uEASE/nanoEASE</span><span style='mso-bidi-font-weight:
+bold'>モードにおいて、ブレークポイントブレーク全体を無効化する機能を有効にしました。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l3 level1 lfo2;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>・<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='mso-bidi-font-weight:bold'>ブレーク時に自動でコードメモリの内容を最新の状態にするオプションを、「ツール｜環境設定」の「その他」タブへ追加しました。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l3 level1 lfo2;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>・<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='mso-bidi-font-weight:bold'>プログラムファイルロード時に書き込みできない領域のデータがある場合は、エラーとせずその領域に対する書き込みをスキップするようにしました。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p>以降は過去にリリースされたバージョンの更新内容です。</p>
+
+<ul style='margin-top:0mm' type=disc>
+ <li class=MsoNormal style='mso-list:l0 level1 lfo1;tab-stops:list 36.0pt'><b
+     style='mso-bidi-font-weight:normal'><span lang=EN-US>DTU8 V5.00<span
+     style='mso-bidi-font-weight:bold'><o:p></o:p></span></span></b></li>
+</ul>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l2 level1 lfo3;
+tab-stops:54.0pt list 60.0pt'><![if !supportLists]><span lang=EN-US><span
+style='mso-list:Ignore'>・<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US>nX-U16</span>コアのシミュレーションモード時において、トレースウィンドウの<span
+lang=EN-US>RAM</span>データを<span lang=EN-US>16</span>ビット表示に変更しました。</p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l2 level1 lfo3;
+tab-stops:54.0pt list 60.0pt'><![if !supportLists]><span lang=EN-US
+style='mso-bidi-font-weight:bold'><span style='mso-list:Ignore'>・<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='mso-bidi-font-weight:bold'>シミュレーションモード時において、<span lang=EN-US>HALT/STOP</span>モード中にブレークが発生した場合に、<span
+lang=EN-US>HALT/STOP</span>モードが解除されない不具合を修正しました。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<ul style='margin-top:0mm' type=disc>
+ <li class=MsoNormal style='mso-list:l0 level1 lfo1;tab-stops:list 36.0pt'><b
+     style='mso-bidi-font-weight:normal'><span lang=EN-US>DTU8 V4.50<span
+     style='mso-bidi-font-weight:bold'><o:p></o:p></span></span></b></li>
+</ul>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l2 level1 lfo3;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US><span
+style='mso-list:Ignore'>・<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US>Dr.U16ICE</span>および<span
+class=SpellE><span lang=EN-US>Dr.ICE</span></span><span lang=EN-US>(<span
+class=SpellE>Ashling</span> nX-U8 ICE)</span>に対応しました。</p>
+
+<ul style='margin-top:0mm' type=disc>
+ <li class=MsoNormal style='mso-list:l0 level1 lfo1;tab-stops:list 36.0pt'><b
+     style='mso-bidi-font-weight:normal'><span lang=EN-US>DTU8 V4.20<span
+     style='mso-bidi-font-weight:bold'><o:p></o:p></span></span></b></li>
+</ul>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l2 level1 lfo3;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US><span
+style='mso-list:Ignore'>・<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span class=SpellE><span lang=EN-US>nanoEASE</span></span>に対応しました。</p>
+
+<ul style='margin-top:0mm' type=disc>
+ <li class=MsoNormal style='mso-list:l0 level1 lfo1;tab-stops:list 36.0pt'><b
+     style='mso-bidi-font-weight:normal'><span lang=EN-US>DTU8 V4.10<span
+     style='mso-bidi-font-weight:bold'><o:p></o:p></span></span></b></li>
+</ul>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l2 level1 lfo3;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US><span
+style='mso-list:Ignore'>・<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>シミュレーション機能の動作が命令レベルからサイクルレベルになりました。</p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l2 level1 lfo3;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>・<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>コピーライト表記を新会社名（<span lang=EN-US>LAPIS
+Semiconductor Co., Ltd.</span>）に変更しました。<span lang=EN-US style='mso-bidi-font-weight:
+bold'><o:p></o:p></span></p>
+
+<ul style='margin-top:0mm' type=disc>
+ <li class=MsoNormal style='mso-list:l0 level1 lfo1;tab-stops:list 36.0pt'><b
+     style='mso-bidi-font-weight:normal'><span lang=EN-US>DTU8 V4.03<span
+     style='mso-bidi-font-weight:bold'><o:p></o:p></span></span></b></li>
+</ul>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l2 level1 lfo3;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>・<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='mso-bidi-font-weight:bold'>ソフトウェアブレークポイントを物理セグメント<span
+lang=EN-US>#1</span>以上のメモリに設定したときに、設定した物理セグメント以外の物理セグメントの内容が表示されているとエミュレーション開始時に不正なコードが書き込まれる不具合を修正しました。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l2 level1 lfo3;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>・<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US>DTU8 V4.02<span
+style='mso-bidi-font-weight:bold'><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l2 level1 lfo3;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>・<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='mso-bidi-font-family:
+"ＭＳ 明朝"'>Dr.U8ICE</span><span style='mso-bidi-font-family:"ＭＳ 明朝"'>正式版に対応しました。</span><span
+lang=EN-US style='mso-bidi-font-weight:bold'><o:p></o:p></span></p>
+
+<ul style='margin-top:0mm' type=disc>
+ <li class=MsoNormal style='mso-list:l0 level1 lfo1;tab-stops:list 36.0pt'><b
+     style='mso-bidi-font-weight:normal'><span lang=EN-US>DTU8 V4.01<span
+     style='mso-bidi-font-weight:bold'><o:p></o:p></span></span></b></li>
+</ul>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l2 level1 lfo3;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US><span
+style='mso-list:Ignore'>・<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US>RAM</span><span
+style='mso-ascii-font-family:"ＭＳ 明朝";mso-bidi-font-family:"ＭＳ 明朝"'>マッチブレーク２でパスカウントが設定されているとき、</span><span
+lang=EN-US>RAM</span><span style='mso-ascii-font-family:"ＭＳ 明朝";mso-bidi-font-family:
+"ＭＳ 明朝"'>マッチブレーク２以外の要因でブレークが発生すると、</span><span lang=EN-US>RAM</span><span
+style='mso-ascii-font-family:"ＭＳ 明朝";mso-bidi-font-family:"ＭＳ 明朝"'>マッチブレーク２のパスカウントのカウント値が設定値に再設定される不具合を修正しました。</span><span
+lang=EN-US style='font-family:"ＭＳ 明朝";mso-fareast-font-family:"ＭＳ Ｐゴシック";
+mso-hansi-font-family:"ＭＳ Ｐゴシック";mso-bidi-font-family:"ＭＳ 明朝"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l2 level1 lfo3;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US><span
+style='mso-list:Ignore'>・<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>プログラム実行中に<span lang=EN-US style='font-family:
+Century;mso-hansi-font-family:"ＭＳ Ｐゴシック";mso-bidi-font-family:Century'>DTU8</span>を終了し、ブレークする前に<span
+lang=EN-US style='font-family:Century;mso-hansi-font-family:"ＭＳ Ｐゴシック";
+mso-bidi-font-family:Century'>DTU8</span>を再起動すると、その後正常にデバッグすることができなくなる不具合を修正しました。</p>
+
+<ul style='margin-top:0mm' type=disc>
+ <li class=MsoNormal style='mso-list:l0 level1 lfo1;tab-stops:list 36.0pt'><b
+     style='mso-bidi-font-weight:normal'><span lang=EN-US>DTU8 V4.00<span
+     style='mso-bidi-font-weight:bold'><o:p></o:p></span></span></b></li>
+</ul>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l2 level1 lfo3;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>・<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='mso-bidi-font-weight:
+bold'>Dr.U8 ICE</span><span style='mso-bidi-font-weight:bold'>に対応しました。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l2 level1 lfo3;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>・<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='mso-bidi-font-weight:bold'>リアルタイム<span
+lang=EN-US>RAM</span>モニタ機能を追加しました。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l2 level1 lfo3;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>・<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='mso-bidi-font-weight:bold'>リアルタイム<span
+lang=EN-US>LCD</span>モニタ機能を追加しました。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l2 level1 lfo3;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>・<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='mso-bidi-font-weight:bold'>プログラムファイルロード時のオプションで「空き領域の値」に「固定値」を指定したとき、フラッシュメモリのうちファイル中にデータのないすべての領域を固定値で埋めるようにしました。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l2 level1 lfo3;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>・<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='mso-bidi-font-weight:bold'>「カーソルまで実行」のときにアドレスブレークを有効にしました。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l2 level1 lfo3;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>・<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='mso-bidi-font-weight:bold'>シミュレータモードでのリアルタイム<span
+lang=EN-US>RAM</span>ウォッチの登録可能データ数を、最大<span lang=EN-US>16</span>バイトから最大<span
+lang=EN-US>16</span>ポイント（<span lang=EN-US>1/2/4</span>バイト）に変更しました。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l2 level1 lfo3;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='mso-bidi-font-size:
+10.5pt'><span style='mso-list:Ignore'>・<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='mso-bidi-font-weight:bold'>更新モードを追加しました。</span><span
+lang=EN-US style='mso-bidi-font-size:10.5pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l2 level1 lfo3;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='mso-bidi-font-size:
+10.5pt'><span style='mso-list:Ignore'>・<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='mso-bidi-font-weight:bold'>ブレークポイント設定時の「ハードウェアブレークポイント」と「ソフトウェアブレークポイント」を選択する操作をなくしました。ブレークポイント設定時に使用可能なハードウェアブレークポイントがあれば自動で選択されます。</span><span
+lang=EN-US style='mso-bidi-font-size:10.5pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l2 level1 lfo3;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='mso-bidi-font-size:
+10.5pt'><span style='mso-list:Ignore'>・<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;</span></span><span style='mso-bidi-font-size:
+10.5pt'>シンボルリスト上で予約語を選択したときに<span lang=EN-US>&quot;</span>すべて削除<span
+lang=EN-US>&quot;</span>ボタンが有効になる場合がある不具合を修正しました。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<ul style='margin-top:0mm' type=disc>
+ <li class=MsoNormal style='mso-list:l0 level1 lfo1;tab-stops:list 36.0pt'><b
+     style='mso-bidi-font-weight:normal'><span lang=EN-US>DTU8 V3.10<span
+     style='mso-bidi-font-weight:bold'><o:p></o:p></span></span></b></li>
+</ul>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l2 level1 lfo3;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>・<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='mso-bidi-font-weight:bold'>ソフトウェアブレークポイントを設定してエミュレーションを開始すると一部のプログラムメモリが<span
+lang=EN-US>0xFF</span>もしくは<span lang=EN-US>0x00</span>に書き変わってしまい正常にプログラムが動作しなくなることがある不具合を修正しました。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l2 level1 lfo3;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>・<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='mso-bidi-font-weight:bold'>通信設定ダイアログを表示しない設定で<span
+lang=EN-US>DTU8</span>を起動すると機種情報ファイルの読み込みに失敗し<span lang=EN-US>DTU8</span>が起動しないことがある不具合を修正しました。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l2 level1 lfo3;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>・<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='mso-bidi-font-weight:bold'>エミュレーション実行を強制ブレークした時にソースウィンドウの表示が<span
+lang=EN-US>PC</span>を追跡しないことがある不具合を修正しました。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<ul style='margin-top:0mm' type=disc>
+ <li class=MsoNormal style='mso-list:l0 level1 lfo1;tab-stops:list 36.0pt'><b
+     style='mso-bidi-font-weight:normal'><span lang=EN-US>DTU8 V3.00<span
+     style='mso-bidi-font-weight:bold'><o:p></o:p></span></span></b></li>
+</ul>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l2 level1 lfo3;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>・<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='mso-bidi-font-weight:bold'>機種情報ファイルの新しい形式に対応しました。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l2 level1 lfo3;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>・<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='mso-bidi-font-weight:bold'>プログラムファイルロード時にトレースメモリをクリアするオプションを追加しました。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l2 level1 lfo3;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>・<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='mso-bidi-font-weight:
+bold'>FLASH</span><span style='mso-bidi-font-weight:bold'>メモリへのプログラムファイルロード時に、ファイル中に含まれる最小アドレスから最大アドレスの間でファイル中にデータが無い領域に対し、現在のメモリ内容のまま変更しないようにするオプションを追加しました。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l2 level1 lfo3;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>・<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='mso-bidi-font-weight:
+bold'>FLASH</span><span style='mso-bidi-font-weight:bold'>メモリに対し、書き換え禁止領域を設定できるようにしました。プログラムファイルをロードした場合、書き換え禁止領域のデータは無視されます。メモリウィンドウや逆アセンブルウィンドウ上で書き換え禁止領域を変更しようとした場合はエラーとなります。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l2 level1 lfo3;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>・<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='mso-bidi-font-weight:bold'>デバイスリセット機能を追加しました。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l2 level1 lfo3;
+tab-stops:list 60.0pt'><a name="OLE_LINK3"><![if !supportLists]><span
+lang=EN-US style='mso-bidi-font-weight:bold'><span style='mso-list:Ignore'>・<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]></a><span class=SpellE><span style='mso-bookmark:
+OLE_LINK3'><span lang=EN-US style='mso-bidi-font-weight:bold'>uEASE</span></span></span><span
+style='mso-bookmark:OLE_LINK3'><span style='mso-bidi-font-weight:bold'>ファームウェアのアップデート機能を追加しました。<span
+lang=EN-US><o:p></o:p></span></span></span></p>
+
+<span style='mso-bookmark:OLE_LINK3'></span>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l2 level1 lfo3;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>・<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='mso-bidi-font-weight:bold'>トレースウィンドウにおいて、ソース表示が最新の内容に更新されないことがある不具合を修正しました。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<ul style='margin-top:0mm' type=disc>
+ <li class=MsoNormal style='mso-list:l0 level1 lfo1;tab-stops:list 36.0pt'><b
+     style='mso-bidi-font-weight:normal'><span lang=EN-US>DTU8 V2.52 <span
+     style='mso-bidi-font-weight:bold'><o:p></o:p></span></span></b></li>
+</ul>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l2 level1 lfo3;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>・<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='mso-bidi-font-weight:bold'>プログラム空間がマスク<span
+lang=EN-US>ROM</span>または<span lang=EN-US>SRAM</span>のターゲットに<span class=SpellE><span
+lang=EN-US>uEASE</span></span>モードで接続している場合に発生する以下の不具合を修正しました。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt;mso-para-margin-left:3.5gd;
+text-indent:24.0pt;mso-char-indent-count:2.0'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>- </span><span style='mso-bidi-font-weight:
+bold'>ソフトウェアブレークポイントを設定後プログラム実行すると<span lang=EN-US>DTU8</span>が強制終了する。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<ul style='margin-top:0mm' type=disc>
+ <li class=MsoNormal style='mso-list:l0 level1 lfo1;tab-stops:list 36.0pt'><b
+     style='mso-bidi-font-weight:normal'><span lang=EN-US>DTU8 V2.51 <span
+     style='mso-bidi-font-weight:bold'><o:p></o:p></span></span></b></li>
+</ul>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l2 level1 lfo3;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>・<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='mso-bidi-font-weight:
+bold'>[</span><span style='mso-bidi-font-weight:bold'>スクリプトコマンドの実行<span
+lang=EN-US>]</span>ダイアログからのマクロコマンド入力に関して、前回のコマンドの処理が終わるまで次のコマンド入力を受け付けないように修正しました。前回のコマンドの処理が終わらないうちに次のコマンドを入力すると、エラーメッセージを出力します。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l2 level1 lfo3;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>・<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='mso-bidi-font-weight:
+bold'>SAV</span><span style='mso-bidi-font-weight:bold'>コマンドにて引数にアドレスを指定しない場合に、セグメント<span
+lang=EN-US>1</span>以上の領域の内容が保存されない問題を改修しました。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l2 level1 lfo3;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>・<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='mso-bidi-font-weight:bold'>シンボルリストダイアログおよびマクロコマンドの<span
+lang=EN-US>SSYM</span>コマンドでシンボルを登録する場合に、二重登録できないように修正しました。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<ul style='margin-top:0mm' type=disc>
+ <li class=MsoNormal style='mso-list:l0 level1 lfo1;tab-stops:list 36.0pt'><b
+     style='mso-bidi-font-weight:normal'><span lang=EN-US>DTU8 V2.50 <span
+     style='mso-bidi-font-weight:bold'><o:p></o:p></span></span></b></li>
+</ul>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l2 level1 lfo3;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>・<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='mso-bidi-font-weight:bold'>ステップアウト機能をサポートしました。この機能は<span
+lang=EN-US>C</span>ソースウィンドウ上でのみ使用可能です。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l2 level1 lfo3;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>・<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span class=SpellE><span lang=EN-US
+style='mso-bidi-font-weight:bold'>uEASE</span></span><span style='mso-bidi-font-weight:
+bold'>モードでのマクロスクリプトコマンドをサポートしました。<span class=SpellE><span lang=EN-US>uEASE</span></span>モードにて使用可能なマクロスクリプトコマンドについては、『<span
+lang=EN-US>DTU8 </span>ユーザーズマニュアル』を参照してください。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<ul style='margin-top:0mm' type=disc>
+ <li class=MsoNormal style='mso-list:l0 level1 lfo1;tab-stops:list 36.0pt'><b
+     style='mso-bidi-font-weight:normal'><span lang=EN-US>DTU8 V2.42 <span
+     style='mso-bidi-font-weight:bold'><o:p></o:p></span></span></b></li>
+</ul>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l2 level1 lfo3;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>・<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='mso-bidi-font-weight:bold'>プログラム実行中にアドレスブレーク、データマッチブレーク以外のブレークが発生した場合において、アドレスブレークまたはデータマッチブレークのパスカウント値が、ブレーク条件の設定ダイアログで設定した初期値に戻される問題を改修しました。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<ul style='margin-top:0mm' type=disc>
+ <li class=MsoNormal style='mso-list:l0 level1 lfo1;tab-stops:list 36.0pt'><b
+     style='mso-bidi-font-weight:normal'><span lang=EN-US>DTU8 V2.41 <span
+     style='mso-bidi-font-weight:bold'><o:p></o:p></span></span></b></li>
+</ul>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l2 level1 lfo3;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>・<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='mso-bidi-font-weight:bold'>コード<span
+lang=EN-US>/</span>データ<span lang=EN-US>/</span>セグメント<span lang=EN-US>1</span>以上のメモリウィンドウを開く際に、エラーメッセージが連続して出力される問題を改修しました。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<ul style='margin-top:0mm' type=disc>
+ <li class=MsoNormal style='mso-list:l0 level1 lfo1;tab-stops:list 36.0pt'><b
+     style='mso-bidi-font-weight:normal'><span lang=EN-US>DTU8 V2.40 <span
+     style='mso-bidi-font-weight:bold'><o:p></o:p></span></span></b></li>
+</ul>
+
+<p class=MsoNormal style='margin-left:42.0pt'><span style='mso-bidi-font-weight:
+bold'>・パワーダウンブレーク、<span lang=EN-US>ROM/RAM</span>の<span lang=EN-US>N/A</span>アクセスブレークが設定できない問題を改修しました。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt'><span style='mso-bidi-font-weight:
+bold'>シミュレーションモードで起動した場合、下記操作により実行開始アドレスの命令コードがブレーク命令に書き換えられてしまう不具合を修正しました。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;mso-para-margin-left:5.0gd'><span
+style='mso-bidi-font-weight:bold'>　<span lang=EN-US>1.</span>　プログラムを一度実行させ、ブレークポイントでブレークさせる。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;mso-para-margin-left:5.0gd'><span
+style='mso-bidi-font-weight:bold'>　<span lang=EN-US>2.</span>　ブレークした同じアドレスに「カーソルまで実行」をおこない、ブレークさせる。
+<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:84.0pt;mso-para-margin-left:7.0gd'><span
+lang=EN-US style='mso-bidi-font-weight:bold'>(</span><span style='mso-bidi-font-weight:
+bold'>この操作は、ソースウィンドウ上でブレークアドレスを右クリックしてポップアップメニューから「カーソルまで実行」を選択することで実行できます。<span
+lang=EN-US>)<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;mso-para-margin-left:5.0gd'><span
+style='mso-bidi-font-weight:bold'>　<span lang=EN-US>3.</span>　リセットして再度実行すると、実行開始アドレスの命令コードがブレーク命令に書き換わります。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt'><span style='mso-bidi-font-weight:
+bold'>・シミュレーションモードで起動した場合、トレースウィンドウの検索で検索条件にマッチしなかった時にメッセージを表示しない不具合を修正しました。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt'><span style='mso-bidi-font-weight:
+bold'>シミュレーションモードで起動した場合、以下の操作を実施後、ステータスウィンドウに表示されるブレークアドレスの値が正しく更新されない不具合を修正しました。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:54.0pt;mso-para-margin-left:4.5gd'><span
+style='mso-bidi-font-weight:bold'>　<span lang=EN-US> 1.</span>　プログラムを一度実行させ、ブレークポイントでブレークさせる。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:54.0pt;mso-para-margin-left:4.5gd'><span
+style='mso-bidi-font-weight:bold'>　<span lang=EN-US> 2.</span>　リセット後、強制ブレークさせると、前にブレークしたアドレスが表示されてしまいます。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<ul style='margin-top:0mm' type=disc>
+ <li class=MsoNormal style='mso-list:l0 level1 lfo1;tab-stops:list 36.0pt'><b
+     style='mso-bidi-font-weight:normal'><span lang=EN-US>DTU8 V2.30 <span
+     style='mso-bidi-font-weight:bold'><o:p></o:p></span></span></b></li>
+</ul>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l2 level1 lfo3;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>・<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='mso-bidi-font-weight:bold'>オンチップデバッグエミュレータ（<span
+class=SpellE><span lang=EN-US>uEASE</span></span>）に対応しました。<span class=SpellE><span
+lang=EN-US>uEASE</span></span>を使用してターゲットチップ上のプログラムをデバッグするときには、<span lang=EN-US>DTU8</span>起動時の<span
+lang=EN-US>[</span>通信設定<span lang=EN-US>]</span>ダイアログにてターゲット<span lang=EN-US>ICE</span>として<span
+class=SpellE><span lang=EN-US>uEASE</span></span>を選択します。詳細については、『<span
+lang=EN-US>DTU8</span>ユーザーズマニュアル』を参照してください。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l2 level1 lfo3;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>・<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='mso-bidi-font-weight:
+bold'>[</span><span style='mso-bidi-font-weight:bold'>通信設定<span lang=EN-US>]</span>ダイアログの<span
+lang=EN-US>[</span>ターゲット<span lang=EN-US>ICE]</span>リストに表示されるインサーキットエミュレータの種類を<span
+class=SpellE><span lang=EN-US>Dr.ICE</span></span>に統合しました。<span lang=EN-US>DTU8
+V2.20</span>以前のバージョンで<span class=SpellE><span lang=EN-US>Ashling</span></span><span
+lang=EN-US><span style='mso-spacerun:yes'>&nbsp; </span>nX-U8 ICE</span>を選択していた場合は、本バージョン以降より<span
+class=SpellE><span lang=EN-US>Dr.ICE</span></span>を選択するようにしてください。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l2 level1 lfo3;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>・<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='mso-bidi-font-weight:bold'>ステップイン実行において、ステップイン実行の対象外とするライブラリとしてＣ標準ライブラリを追加しました。以前のバージョンでは、ステップイン実行において、エミュレーションライブラリに対してのみ常にステップオーバーするように指定するオプションを用意していましたが、ステップオーバー対象のライブラリを、エミュレーションライブラリと<span
+lang=EN-US>C</span>標準ライブラリに変更しました。これに伴い、オプションを変更しています。<span lang=EN-US>[</span>環境設定<span
+lang=EN-US>]</span>ダイアログの<span lang=EN-US>[</span>その他<span lang=EN-US>]</span>タブのオプションを、「<span
+lang=EN-US>C</span>ソースレベルでは常に<span lang=EN-US>C</span>ライブラリをステップオーバー実行する」に変更しています（以前のバージョンの該当オプションは「エミュレーションライブラリは常にステップオーバーする」でした）。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<ul style='margin-top:0mm' type=disc>
+ <li class=MsoNormal style='mso-list:l0 level1 lfo1;tab-stops:list 36.0pt'><b
+     style='mso-bidi-font-weight:normal'><span lang=EN-US>DTU8 V2.20 <span
+     style='mso-bidi-font-weight:bold'><o:p></o:p></span></span></b></li>
+</ul>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l2 level1 lfo3;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>・<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='mso-bidi-font-weight:bold'>レジスタに割り付けられたローカル変数、関数引数をウォッチウィンドウに登録できるようになりました。ウォッチウィンドウへの登録方法は、従来の方法と同じです。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l2 level1 lfo3;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>・<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='mso-bidi-font-weight:bold'>デバッグ時のソースウィンドウを常に表示するように変更しました。ソース切り替えウィンドウを閉じる場合には、<span
+lang=EN-US>[</span>キャンセル<span lang=EN-US>]</span>ボタンをクリックするか、タイトルバーに置かれている<span
+lang=EN-US>[</span>閉じる<span lang=EN-US>]</span>ボタンをクリックしてください。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l2 level1 lfo3;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>・<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='mso-bidi-font-weight:
+bold'>DTU8</span><span style='mso-bidi-font-weight:bold'>のシミュレーションモードに、割り込みシミュレーションの機能を追加いたしました。<span
+lang=EN-US>[</span>表示<span lang=EN-US>]</span>メニューの<span lang=EN-US>[</span>割り込み<span
+lang=EN-US>]</span>を選択することにより、割り込みウィンドウが表示されます。詳細については、『<span lang=EN-US>DTU8</span>ユーザーズマニュアル』を参照してください。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span lang=EN-US>
+
+<hr size=2 width="100%" align=center>
+
+</span></div>
+
+<h2><a name="_3._マニュアルに記載されていない追加情報"></a><span lang=EN-US>4. </span>マニュアルに記載されていない追加情報</h2>
+
+<p style='margin-left:42.0pt;mso-para-margin-left:.5gd;text-indent:-36.0pt;
+mso-char-indent-count:-3.0;mso-layout-grid-align:none'>マニュアルに記載されていない追加情報はありません。</p>
+
+<div class=MsoNormal align=center style='text-align:center'><span lang=EN-US>
+
+<hr size=2 width="100%" align=center>
+
+</span></div>
+
+<h2><a name="_4._注意事項"></a><span lang=EN-US>5. </span>制限事項</h2>
+
+<p><a name="_Toc175576049">現バージョンの<span lang=EN-US>DTU8</span>には、以下の制限事項があります。</a></p>
+
+<p class=MsoNormal style='margin-left:24.1pt;text-indent:-24.1pt;mso-char-indent-count:
+-2.0'><span style='mso-bookmark:_Toc175576049'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='mso-bidi-font-size:10.5pt'>(1) </span></b></span><span
+style='mso-bookmark:_Toc175576049'><b style='mso-bidi-font-weight:normal'><span
+style='mso-bidi-font-size:10.5pt'>セルフ書き込み機能などを使用して<span lang=EN-US>DTU8</span>の機能を介さずメモリ内容が変更された場合、コードメモリを更新してください<span
+lang=EN-US><o:p></o:p></span></span></b></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;mso-para-margin-left:3.0gd'><span
+style='mso-bookmark:_Toc175576049'>セルフ書き込み機能などを使用して<span lang=EN-US>DTU8</span>の機能を介さずメモリ内容が変更された場合、<span
+lang=EN-US>DTU8</span>は変更を認識できません。メモリ内容を表示したり、プログラムファイルに保存する場合は、<span
+style='mso-bidi-font-weight:bold'>「ツール」メニューの「環境設定」の「その他」タブの「ウィンドウメニューの“最新の状態に更新”を選択したときにコードメモリも更新する」を有効にした上で、</span>一度、ウィンドウメニューの「最新の状態に更新」を実行し、メモリ内容を更新してください。また、<span
+style='mso-bidi-font-weight:bold'>ブレーク時に自動でコードメモリの内容を最新の状態にしたい場合は、上記設定と同時に「ツール」メニューの「環境設定」の「その他」タブの”ブレーク時に自動で更新する”オプションを有効にしてください。<span
+lang=EN-US><o:p></o:p></span></span></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;mso-para-margin-left:3.0gd'><span
+style='mso-bookmark:_Toc175576049'><span style='mso-bidi-font-weight:bold'>なお、コードメモリを更新するとトレースウィンドウに表示している逆アセンブル表示は、セルフ書き換え前のトレースデータであっても書き換え後のメモリ内容に応じたニーモニックになります。</span></span></p>
+
+<p class=MsoNormal style='margin-left:24.1pt;text-indent:-24.1pt;mso-char-indent-count:
+-2.0'><span style='mso-bookmark:_Toc175576049'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='mso-bidi-font-size:10.5pt'><o:p>&nbsp;</o:p></span></b></span></p>
+
+<p class=MsoNormal style='margin-left:24.1pt;text-indent:-24.1pt;mso-char-indent-count:
+-2.0'><span style='mso-bookmark:_Toc175576049'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='mso-bidi-font-size:10.5pt'>(2) Dr.U16ICE</span></b></span><span
+style='mso-bookmark:_Toc175576049'><b style='mso-bidi-font-weight:normal'><span
+style='mso-bidi-font-size:10.5pt'>モードにおいて、エミュレーション中にリアルタイムタブに切り替えできません<span
+lang=EN-US><o:p></o:p></span></span></b></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;mso-para-margin-left:3.0gd'><span
+style='mso-bookmark:_Toc175576049'><span lang=EN-US>Dr.U16ICE</span>において、エミュレーション中にウォッチウィンドウの他のタブからリアルタイムタブに表示を切り替えできません。エミュレーション中にリアルタイムタブの値を参照される場合は、エミュレーション開始前にリアルタイムタブに表示を切り替えてください。なお、「ツール」メニューから「環境設定」を選択し、「その他」タブの「プログラム実行開始時にウォッチウィンドウのリアルタイムタブをアクティブにする」をオンにしておくことで、エミュレーション開始時に自動でリアルタイムタブが表示されるようになります。</span></p>
+
+<p class=MsoNormal style='margin-left:24.1pt;text-indent:-24.1pt;mso-char-indent-count:
+-2.0'><span style='mso-bookmark:_Toc175576049'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='mso-bidi-font-size:10.5pt'><o:p>&nbsp;</o:p></span></b></span></p>
+
+<p class=MsoNormal style='margin-left:24.1pt;text-indent:-24.1pt;mso-char-indent-count:
+-2.0'><span style='mso-bookmark:_Toc175576049'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='mso-bidi-font-size:10.5pt'>(3) Dr.U16ICE</span></b></span><span
+style='mso-bookmark:_Toc175576049'><b style='mso-bidi-font-weight:normal'><span
+style='mso-bidi-font-size:10.5pt'>モードにおいて、ステータスウィンドウでカバレッジの値を参照するときは必ず<span
+lang=EN-US>[Calc.]</span>ボタンを押してください<span lang=EN-US><o:p></o:p></span></span></b></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;mso-para-margin-left:3.0gd'><span
+style='mso-bookmark:_Toc175576049'>エミュレーションやステップでのブレーク後にステータスウィンドウのカバレッジの値を参照するときは、必ず<span
+lang=EN-US>[Calc.]</span>ボタンを押してカバレッジの値を更新してください。</span></p>
+
+<p class=MsoNormal style='margin-left:24.1pt;text-indent:-24.1pt;mso-char-indent-count:
+-2.0'><span style='mso-bookmark:_Toc175576049'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='mso-bidi-font-size:10.5pt'><o:p>&nbsp;</o:p></span></b></span></p>
+
+<p class=MsoNormal style='margin-left:24.1pt;text-indent:-24.1pt;mso-char-indent-count:
+-2.0'><span style='mso-bookmark:_Toc175576049'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='mso-bidi-font-size:10.5pt'>(4)
+Dr.U8ICE/Dr.U16ICE/uEASE/nanoEASE</span></b></span><span style='mso-bookmark:
+_Toc175576049'><b style='mso-bidi-font-weight:normal'><span style='mso-bidi-font-size:
+10.5pt'>モードにおいて、セグメント<span lang=EN-US>8</span>以上のミラー領域に対し物理セグメント<span
+lang=EN-US>1</span>以上のメモリウィンドウではフィルできません<span lang=EN-US><o:p></o:p></span></span></b></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;mso-para-margin-left:3.0gd'><span
+style='mso-bookmark:_Toc175576049'><span lang=EN-US style='mso-bidi-font-size:
+10.5pt'>Dr.U8ICE/Dr.U16ICE/uEASE/nanoEASE</span></span><span style='mso-bookmark:
+_Toc175576049'><span style='mso-bidi-font-size:10.5pt'>モードにおいて、セグメント<span
+lang=EN-US>8</span>以上のミラー領域に対し物理セグメント<span lang=EN-US>1</span>以上のメモリウィンドウのコンテキストメニューの「フィル」および「物理セグメント<span
+lang=EN-US>1</span>以上のメモリの変更」で範囲指定してのメモリ変更はできません。ミラー領域の参照元であるセグメント<span
+lang=EN-US>0</span>～<span lang=EN-US>7</span>のメモリを書き換えてください。</span></span></p>
+
+<p class=MsoNormal style='margin-left:24.1pt;text-indent:-24.1pt;mso-char-indent-count:
+-2.0'><span style='mso-bookmark:_Toc175576049'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='mso-bidi-font-size:10.5pt'><o:p>&nbsp;</o:p></span></b></span></p>
+
+<p class=MsoNormal style='margin-left:24.1pt;text-indent:-24.1pt;mso-char-indent-count:
+-2.0'><span style='mso-bookmark:_Toc175576049'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='mso-bidi-font-size:10.5pt'>(5)
+Dr.U8ICE/Dr.U16ICE/uEASE/nanoEASE</span></b></span><span style='mso-bookmark:
+_Toc175576049'><b style='mso-bidi-font-weight:normal'><span style='mso-bidi-font-size:
+10.5pt'>モードにおいて、ステップオーバー中に割り込みが発生した場合は割り込みルーチンの先頭でブレークします<span lang=EN-US><o:p></o:p></span></span></b></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;mso-para-margin-left:3.0gd'><span
+style='mso-bookmark:_Toc175576049'><span lang=EN-US style='mso-bidi-font-size:
+10.5pt'>Dr.U8ICE/Dr.U16ICE/uEASE/nanoEASE</span></span><span style='mso-bookmark:
+_Toc175576049'><span style='mso-bidi-font-size:10.5pt'>モードにおいて、ステップオーバー中に割り込みが発生した場合はステップオーバー開始したアドレスの次の命令ではなく、割り込みルーチンの先頭でブレークします。</span><span
+lang=EN-US style='color:red'><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:24.1pt;text-indent:-24.1pt;mso-char-indent-count:
+-2.0'><span style='mso-bookmark:_Toc175576049'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='mso-bidi-font-size:10.5pt'><o:p>&nbsp;</o:p></span></b></span></p>
+
+<p class=MsoNormal style='margin-left:24.1pt;text-indent:-24.1pt;mso-char-indent-count:
+-2.0'><span style='mso-bookmark:_Toc175576049'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='mso-bidi-font-size:10.5pt'>(6) </span></b></span><span
+style='mso-bookmark:_Toc175576049'><b style='mso-bidi-font-weight:normal'><span
+style='mso-bidi-font-size:10.5pt'>プログラムファイルの読み込み時の「ロード後リセットする」オプションがオフになる場合があります。<span
+lang=EN-US><o:p></o:p></span></span></b></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;mso-para-margin-left:3.0gd'><span
+style='mso-bookmark:_Toc175576049'>プログラムファイルの読み込みに失敗すると、<span lang=EN-US>[</span>ファイル<span
+lang=EN-US>]</span>メニューの<span lang=EN-US>[</span>プログラムファイルの読み込み<span
+lang=EN-US>]</span>で表示される「プログラムファイルの読み込み」ダイアログにある「ロード後リセットする」オプションがオフになります。プログラムファイルロード後にリセットしたい場合は、再度「ロード後リセットする」チェックボックスをオンにしてプログラムファイルをロードしてください。</span></p>
+
+<p class=MsoNormal style='text-indent:32.5pt'><span style='mso-bookmark:_Toc175576049'><span
+lang=EN-US><o:p>&nbsp;</o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:24.1pt;text-indent:-24.1pt;mso-char-indent-count:
+-2.0'><span style='mso-bookmark:_Toc175576049'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='mso-bidi-font-size:10.5pt'>(7) </span></b></span><span
+style='mso-bookmark:_Toc175576049'><b style='mso-bidi-font-weight:normal'><span
+style='mso-bidi-font-size:10.5pt'>初期状態ではプログラムファイルの保存時にパブリックシンボルが保存されません。<span
+lang=EN-US><o:p></o:p></span></span></b></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;mso-para-margin-left:3.0gd'><span
+style='mso-bookmark:_Toc175576049'><span lang=EN-US>[</span>ファイル<span
+lang=EN-US>]</span>メニューの<span lang=EN-US>[</span>プログラムファイルの保存<span lang=EN-US>]</span>で表示される「プログラムファイルの保存」ダイアログにおいて、初期状態では「パブリックシンボルを保存する」チェックボックスがオフになっています。シンボル情報をプログラムファイルに保存したい場合は、「パブリックシンボルを保存する」チェックボックスをオンにしてプログラムファイルを保存してください。</span></p>
+
+<p class=MsoNormal style='margin-left:24.1pt;text-indent:-24.1pt;mso-char-indent-count:
+-2.0'><span style='mso-bookmark:_Toc175576049'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='mso-bidi-font-size:10.5pt'><o:p>&nbsp;</o:p></span></b></span></p>
+
+<p class=MsoNormal style='margin-left:24.1pt;text-indent:-24.1pt;mso-char-indent-count:
+-2.0'><span style='mso-bookmark:_Toc175576049'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='mso-bidi-font-size:10.5pt'>(8) </span></b></span><span
+style='mso-bookmark:_Toc175576049'><b style='mso-bidi-font-weight:normal'><span
+style='mso-bidi-font-size:10.5pt'>コンパイラの最適化等の影響により、デバッガにて変数を正しく参照できない場合があります</span></b></span><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='mso-bidi-font-size:
+10.5pt'><o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:33.0pt;mso-para-margin-left:2.75gd;
+text-align:justify;text-justify:inter-ideograph;mso-pagination:none'><span
+lang=EN-US>CCU8</span>コンパイラの最適化の影響によりローカル変数がレジスタに割り付けられた場合、ローカル変数に対するデバッグ情報の整合が取れなくなる場合があります。この場合、<span
+lang=EN-US>DTU8</span>デバッガでその変数を正しく参照できなくなります。変数の値を参照したい場合は、最適化なしの設定で再コンパイルしてください。</p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:24.1pt;text-indent:-24.1pt;mso-char-indent-count:
+-2.0'><b style='mso-bidi-font-weight:normal'><span lang=EN-US style='mso-bidi-font-size:
+10.5pt'>(9) DTU8</span></b><b style='mso-bidi-font-weight:normal'><span
+style='mso-bidi-font-size:10.5pt'>のシミュレーションモード時に<span lang=EN-US>HALT/STOP</span>モードに移行すると割り込みの自動発生が機能しません<span
+lang=EN-US><o:p></o:p></span></span></b></p>
+
+<p class=MsoNormal style='margin-left:33.0pt;mso-para-margin-left:2.75gd;
+text-align:justify;text-justify:inter-ideograph;mso-pagination:none'><span
+lang=EN-US>DTU8</span>デバッガのシミュレーションモード時において、<span lang=EN-US>HALT/STOP</span>モードに移行した場合に、割り込みの自動発生が機能しません。<span
+lang=EN-US>HALT/STOP</span>モードに移行すると、命令実行が行われないことにより、サイクル数がカウントアップされなくなるためです。</p>
+
+<p class=MsoNormal style='margin-left:33.0pt;mso-para-margin-left:2.75gd;
+text-align:justify;text-justify:inter-ideograph;mso-pagination:none'><span
+lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:80.5pt;mso-para-margin-left:2.71gd;
+text-indent:-48.0pt;mso-char-indent-count:-4.0'>上記制限については、次のいずれかの方法で回避してください。</p>
+
+<p class=MsoNormal style='margin-left:84.0pt;mso-para-margin-left:3.0gd;
+text-indent:-48.0pt;mso-char-indent-count:-4.0'>回避策１：割り込みボタンをクリックして割り込みを起こさせ、<span
+lang=EN-US>HALT/STOP</span>モードを解除してください。</p>
+
+<p class=MsoNormal style='margin-left:84.0pt;mso-para-margin-left:3.0gd;
+text-indent:-48.0pt;mso-char-indent-count:-4.0'>回避策２：<span lang=EN-US>HALT/STOP</span>モードに移行しないように、お客様のプログラムを変更してください。</p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:24.1pt;text-indent:-24.1pt;mso-char-indent-count:
+-2.0'><b style='mso-bidi-font-weight:normal'><span lang=EN-US style='mso-bidi-font-size:
+10.5pt'>(10) [</span></b><b style='mso-bidi-font-weight:normal'><span
+style='mso-bidi-font-size:10.5pt'>シンボル<span lang=EN-US>]</span>ダイアログにて、<span
+lang=EN-US>BIT</span>属性のシンボルを選択してそのアドレスにジャンプすることはできません<span lang=EN-US><o:p></o:p></span></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;mso-para-margin-left:3.0gd'><span
+lang=EN-US>[</span>ツール<span lang=EN-US>]</span>メニューの<span lang=EN-US>[</span>シンボルリスト<span
+lang=EN-US>]</span>を選択して表示される<span lang=EN-US>[</span>シンボル<span lang=EN-US>]</span>ダイアログにて、<span
+lang=EN-US>BIT</span>属性のシンボルを選択してそのアドレスにジャンプすることはできません。</p>
+
+<p class=MsoNormal style='text-indent:32.5pt'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:24.1pt;text-indent:-24.1pt;mso-char-indent-count:
+-2.0'><b style='mso-bidi-font-weight:normal'><span lang=EN-US style='mso-bidi-font-size:
+10.5pt'>(11) </span></b><b style='mso-bidi-font-weight:normal'><span
+style='mso-bidi-font-size:10.5pt'>ソースウィンドウなどの複製可能なウィンドウに対して以下の操作を行うと、複製したウィンドウが一箇所に重なって表示される場合があります<span
+lang=EN-US><o:p></o:p></span></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;mso-para-margin-left:3.0gd'>操作<span
+lang=EN-US>1: </span>ウィンドウを最小化した後、マウスでドラッグして場所を移動させる。</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;mso-para-margin-left:3.0gd'>操作<span
+lang=EN-US>2: </span>ウィンドウのサイズを元に戻し、<span lang=EN-US>[</span>ウィンドウ<span
+lang=EN-US>]</span>メニューの<span lang=EN-US>[</span>ウィンドウの複製<span lang=EN-US>]</span>を選択して、そのウィンドウを複製する。</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;mso-para-margin-left:3.0gd'>操作<span
+lang=EN-US>3: </span>複製したウィンドウを最小化する。</p>
+
+<p class=MsoNormal style='text-indent:32.5pt'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:24.1pt;text-indent:-24.1pt;mso-char-indent-count:
+-2.0'><b style='mso-bidi-font-weight:normal'><span lang=EN-US style='mso-bidi-font-size:
+10.5pt'>(12) </span></b><b style='mso-bidi-font-weight:normal'><span
+style='mso-bidi-font-size:10.5pt'>ステップオーバー実行中は、ウィンドウメニューの<span lang=EN-US>[</span>アクティブウィンドウを閉じる<span
+lang=EN-US>]</span>が使用できない場合があります<span lang=EN-US><o:p></o:p></span></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;mso-para-margin-left:3.0gd'>ステップオーバー実行中において、１つのソースウィンドウしか表示していない場合に、ウィンドウメニューの<span
+lang=EN-US>[</span>アクティブウィンドウを閉じる<span lang=EN-US>]</span>がグレーアウト表示され、ソースウィンドウを閉じることができない場合があります。その場合はブレーク後にウィンドウを閉じてください。</p>
+
+<p class=MsoNormal style='text-indent:32.5pt'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:24.1pt;text-indent:-24.1pt;mso-char-indent-count:
+-2.0'><b style='mso-bidi-font-weight:normal'><span lang=EN-US style='mso-bidi-font-size:
+10.5pt'>(13) </span></b><b style='mso-bidi-font-weight:normal'><span
+style='mso-bidi-font-size:10.5pt'>プログラムメモリ空間が物理セグメント<span lang=EN-US>0</span>のみで、かつ物理セグメント<span
+lang=EN-US>1</span>以上のメモリに<span lang=EN-US>ROM</span>参照領域を持つ機種の場合、<span
+lang=EN-US>[</span>プログラムファイルの保存<span lang=EN-US>]</span>を実行するとセグメント<span
+lang=EN-US>1</span>以上のメモリのデータも含めて保存します。<span lang=EN-US><o:p></o:p></span></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;mso-para-margin-left:3.0gd'>このまま保存したプログラムを読み込むと、プログラムの読み込み時にエラーが発生する場合があります。エラーを回避するためには、<span
+lang=EN-US>[</span>プログラムファイルの保存<span lang=EN-US>]</span>ダイアログの<span lang=EN-US>[</span>保存する範囲<span
+lang=EN-US>]</span>で物理セグメント<span lang=EN-US>0</span>のみの範囲を指定してください。</p>
+
+<p class=MsoNormal style='text-indent:32.5pt'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:24.1pt;text-indent:-24.1pt;mso-char-indent-count:
+-2.0'><b style='mso-bidi-font-weight:normal'><span lang=EN-US style='mso-bidi-font-size:
+10.5pt'>(14)</span></b><span lang=EN-US> </span><b style='mso-bidi-font-weight:
+normal'>メモリの内容を表示させるときにターゲットとの通信エラーが発生した場合、正しくない値を表示する場合があります。</b><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='mso-bidi-font-size:
+10.5pt'><o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;mso-para-margin-left:3.0gd'>以下の操作を行ってメモリの内容を表示させるときにターゲットとの通信エラーが発生した場合、値の表示箇所にエラーを表す<span
+lang=EN-US>&quot;**&quot;</span>を表示せず、正しくない値を表示する場合があります。</p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l1 level1 lfo4;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US><span
+style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>コードメモリウィンドウ、データメモリウィンドウ、物理セグメント<span lang=EN-US>1</span>以上のメモリウィンドウのコンテキストメニューの<span
+lang=EN-US>&quot;</span>ジャンプ<span lang=EN-US>&quot;</span>を実行する。</p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l1 level1 lfo4;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US><span
+style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>ウォッチウィンドウに変数を登録する。</p>
+
+<p class=MsoNormal style='text-indent:32.5pt'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:24.1pt;text-indent:-24.1pt;mso-char-indent-count:
+-2.0'><b style='mso-bidi-font-weight:normal'><span lang=EN-US style='mso-bidi-font-size:
+10.5pt'>(15) </span></b><b style='mso-bidi-font-weight:normal'><span
+style='mso-bidi-font-size:10.5pt'>構造体・共用体・<span class=SpellE><span lang=EN-US>enum</span></span>を戻り値とする関数をウォッチウィンドウなどで表示させると、誤った情報を表示します</span>。</b><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='mso-bidi-font-size:
+10.5pt'><o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;mso-para-margin-left:3.0gd'>ウォッチウィンドウおよびマクロコマンドの<span
+lang=EN-US>WATCH</span>コマンドで、構造体・共用体・<span class=SpellE><span lang=EN-US>enum</span></span>を戻り値とする関数を表示すると、誤った情報を表示します。構造体・共用体・<span
+class=SpellE><span lang=EN-US>enum</span></span>を戻り値とする関数は<span lang=EN-US>WATCH</span>コマンドで値を表示させないでください。</p>
+
+<p class=MsoNormal style='text-indent:32.5pt'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:24.1pt;text-indent:-24.1pt;mso-char-indent-count:
+-2.0'><a name="OLE_LINK2"></a><a name="OLE_LINK1"><span style='mso-bookmark:
+OLE_LINK2'><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='mso-bidi-font-size:10.5pt'>(16) WATCH</span></b></span></a><span
+style='mso-bookmark:OLE_LINK1'><span style='mso-bookmark:OLE_LINK2'><b
+style='mso-bidi-font-weight:normal'><span style='mso-bidi-font-size:10.5pt'>コマンドにてレジスタに割り付けられたローカル変数を指定した場合、正しい情報が表示されません。<span
+lang=EN-US><o:p></o:p></span></span></b></span></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;mso-para-margin-left:3.0gd'><span
+style='mso-bookmark:OLE_LINK1'><span style='mso-bookmark:OLE_LINK2'>マクロコマンドの<span
+lang=EN-US>WATCH</span>コマンドで、レジスタに割り付けられたローカル変数を指定した場合、”<span lang=EN-US>Address</span>”欄に割り付けられたレジスタの名前は表示されず誤った値が表示されます。変数の値を参照したい場合は、以下の操作を行い変数がローカル変数に割り付けられるようにしてください。</span></span></p>
+
+<span style='mso-bookmark:OLE_LINK2'></span><span style='mso-bookmark:OLE_LINK1'></span>
+
+<p class=MsoNormal style='margin-left:36.0pt;mso-para-margin-left:3.0gd'>操作<span
+lang=EN-US>1: IDEU8</span>を起動し、「プロジェクト」メニューから「オプション」→「コンパイル／アセンブル」を選択。</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;mso-para-margin-left:3.0gd'>操作<span
+lang=EN-US>2: </span>「最適化」タブを選択し、「<span lang=EN-US>register</span>宣言されていないローカル変数を、すべてスタックへ割り付ける」オプションをオンにする。</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;mso-para-margin-left:3.0gd'>操作<span
+lang=EN-US>3: </span>プログラムを再ビルドする。</p>
+
+<p class=MsoNormal style='text-indent:32.5pt'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:24.1pt;text-indent:-24.1pt;mso-char-indent-count:
+-2.0'><b style='mso-bidi-font-weight:normal'><span lang=EN-US style='mso-bidi-font-size:
+10.5pt'>(17) <span class=SpellE>uEASE</span></span></b><b style='mso-bidi-font-weight:
+normal'><span style='mso-bidi-font-size:10.5pt'>使用時の周波数コントロールレジスタ（<span
+lang=EN-US>FCON0,1</span>）に関して<span lang=EN-US><o:p></o:p></span></span></b></p>
+
+<p class=MsoNormal style='margin-left:54.0pt;text-indent:-18.0pt;mso-list:l4 level1 lfo5;
+tab-stops:list 54.0pt'><![if !supportLists]><span lang=EN-US><span
+style='mso-list:Ignore'>①<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US>FCON0</span>の<span lang=EN-US>OSCM0/OSCM1</span>ビットに対して、実装していないクロックモードに設定したプログラムを、ターゲット<span
+lang=EN-US>LSI</span>のフラッシュメモリに書き込まないで下さい。このプログラムを書き込んでエミュレーションを実行した場合、<span
+lang=EN-US>CPU</span>へクロックが供給されないため実行に関する操作が出来なくなります。また、このプログラムを書き込んだターゲット<span
+lang=EN-US>LSI</span>では、<span lang=EN-US>DTU8+uEASE</span>は起動出来ません。これらの場合、エラー番号：<span
+lang=EN-US>6300H</span>が表示されます。このプログラムを書き込んでエラーが発生した場合は、<span class=SpellE><span
+lang=EN-US>FWuEASE+uEASE</span></span>でフラッシュメモリを消去または変更して下さい。</p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:54.0pt;text-indent:-18.0pt;mso-list:l4 level1 lfo5;
+tab-stops:list 54.0pt'><![if !supportLists]><span lang=EN-US><span
+style='mso-list:Ignore'>①<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US>FCON0</span>の<span lang=EN-US>OSCM0/OSCM1</span>ビットは、<span
+lang=EN-US>DTU8</span>上の<span lang=EN-US>SFR</span>ウィンドウでは変更出来ません。</p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:54.0pt;text-indent:-18.0pt;mso-list:l4 level1 lfo5;
+tab-stops:list 54.0pt'><![if !supportLists]><span lang=EN-US><span
+style='mso-list:Ignore'>②<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US>FCON1</span>の<span lang=EN-US>ENOSC</span>と<span
+lang=EN-US>SYSCLK</span>とが<span lang=EN-US>1</span>の状態で、<span lang=EN-US>DTU8</span>上の<span
+lang=EN-US>SFR</span>ウィンドウで<span lang=EN-US>ENOSC</span>を<span lang=EN-US>0</span>に設定しても、<span
+lang=EN-US>SYSCLK</span>の表示は<span lang=EN-US>1</span>のままです。ただし、ターゲット<span
+lang=EN-US>LSI</span>内部の<span lang=EN-US>SYSCLK</span>は<span lang=EN-US>0</span>になっています。従って、エミュレーションは、<span
+lang=EN-US>SFR</span>ウィンドウで操作した通り、<span lang=EN-US>SYSCLK</span>が<span
+lang=EN-US>0</span>の状態で実行されます。</p>
+
+<p class=MsoNormal style='text-indent:32.5pt'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:24.1pt;text-indent:-24.1pt;mso-char-indent-count:
+-2.0'><b style='mso-bidi-font-weight:normal'><span lang=EN-US style='mso-bidi-font-size:
+10.5pt'>(18) </span></b><b style='mso-bidi-font-weight:normal'><span
+style='mso-bidi-font-size:10.5pt'>逆アセンブルウィンドウの「コードメモリの変更」ダイアログで、アドレス範囲を指定して変更する場合、正しく変更できない場合があります<span
+lang=EN-US><o:p></o:p></span></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;mso-para-margin-left:3.0gd'>コードメモリやセグメント<span
+lang=EN-US>1</span>以上のメモリを変更する場合は、コードメモリウィンドウやセグメント<span lang=EN-US>1</span>以上のメモリウィンドウから変更してください。</p>
+
+<p class=MsoNormal style='text-indent:32.5pt'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-indent:32.5pt'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span lang=EN-US>
+
+<hr size=2 width="100%" align=center>
+
+</span></div>
+
+<h2><a name="_5._注意事項"></a><span lang=EN-US>6. </span>注意事項</h2>
+
+<p style='margin-left:18.0pt;text-indent:-18.0pt;mso-char-indent-count:-1.5'><span
+lang=EN-US>(1) </span>現バージョンの<span lang=EN-US>DTU8</span>では、現バージョン以前の<span
+lang=EN-US>DTU8</span>で保存されたプロジェクトファイルを読み込むことができます。<span lang=EN-US><br>
+</span>ただし、現バージョンの<span lang=EN-US>DTU8</span>で保存されたプロジェクトファイルを、現バージョンよりも前の<span
+lang=EN-US>DTU8</span>で読み込むことはできませんので、注意してください。</p>
+
+<p style='margin-left:12.0pt;text-indent:-12.0pt;mso-char-indent-count:-1.0'><span
+lang=EN-US>(2) </span>テスト領域への書き込みは行わないでください。テスト領域への書き込みを行った場合、<span lang=EN-US>DTU8</span>の動作は保証しません。</p>
+
+<p style='margin-left:12.0pt;text-indent:-12.0pt;mso-char-indent-count:-1.0'><span
+lang=EN-US>(3) </span>正規の手順以外の操作を行わないでください。行った場合、<span lang=EN-US>DTU8</span>の動作は保証しません。</p>
+
+<div class=MsoNormal align=center style='text-align:center'><span lang=EN-US>
+
+<hr size=2 width="100%" align=center>
+
+</span></div>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p align=right style='text-align:right'>作成日<span lang=EN-US> : 2012</span>年<span
+lang=EN-US>12</span>月<span lang=EN-US>26</span>日<span lang=EN-US><br>
+Copyright 2008-2012, LAPIS Semiconductor Co., Ltd.</span></p>
+
+</div>
+
+</body>
+
+</html>

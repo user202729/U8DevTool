@@ -1,0 +1,1699 @@
+<!-- saved from url=(0026)http://www.lapis-semi.com/us/ -->
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<link rel=File-List href="Macu8_e.files/filelist.xml">
+<link rel=Edit-Time-Data href="Macu8_e.files/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>MACU8 Assembler Package</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>OKI SEMICONDUCTOR CO., LTD.</o:Author>
+  <o:LastAuthor>a990932</o:LastAuthor>
+  <o:Revision>64</o:Revision>
+  <o:TotalTime>395</o:TotalTime>
+  <o:Created>2007-10-04T09:43:00Z</o:Created>
+  <o:LastSaved>2013-05-07T10:35:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>1318</o:Words>
+  <o:Characters>7519</o:Characters>
+  <o:Company>OKI SEMICONDUCTOR CO., LTD.</o:Company>
+  <o:Lines>62</o:Lines>
+  <o:Paragraphs>17</o:Paragraphs>
+  <o:CharactersWithSpaces>8820</o:CharactersWithSpaces>
+  <o:Version>11.9999</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:Compatibility>
+   <w:UseFELayout/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--table.MSONORMALTABLE
+	{mso-style-name:•W€‚Ì•\;
+	mso-tstyle-rowband-size:0;}
+
+ /* Font Definitions */
+ @font-face
+	{font-family:"MS Mincho";
+	panose-1:2 2 6 9 4 2 5 8 3 4;
+	mso-font-alt:"MS Mincho";
+	mso-font-charset:128;
+	mso-generic-font-family:roman;
+	mso-font-pitch:fixed;
+	mso-font-signature:-1610612033 1757936891 16 0 131231 0;}
+@font-face
+	{font-family:Century;
+	panose-1:2 4 6 4 5 5 5 2 3 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:647 0 0 0 159 0;}
+@font-face
+	{font-family:"MS PGothic";
+	panose-1:2 11 6 0 7 2 5 8 2 4;
+	mso-font-charset:128;
+	mso-generic-font-family:modern;
+	mso-font-pitch:variable;
+	mso-font-signature:-1610612033 1757936891 16 0 131231 0;}
+@font-face
+	{font-family:"MS PGothic";
+	panose-1:2 11 6 0 7 2 5 8 2 4;
+	mso-font-charset:128;
+	mso-generic-font-family:modern;
+	mso-font-pitch:variable;
+	mso-font-signature:-1610612033 1757936891 16 0 131231 0;}
+@font-face
+	{font-family:"MS Mincho";
+	panose-1:2 2 6 9 4 2 5 8 3 4;
+	mso-font-charset:128;
+	mso-generic-font-family:roman;
+	mso-font-pitch:fixed;
+	mso-font-signature:-1610612033 1757936891 16 0 131231 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0mm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"MS PGothic";
+	mso-bidi-font-family:"Times New Roman";}
+h1
+	{mso-margin-top-alt:auto;
+	margin-right:0mm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0mm;
+	mso-pagination:widow-orphan;
+	mso-outline-level:1;
+	font-size:24.0pt;
+	font-family:"MS PGothic";
+	mso-bidi-font-family:"MS PGothic";
+	font-weight:bold;}
+h2
+	{mso-margin-top-alt:auto;
+	margin-right:0mm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0mm;
+	mso-pagination:widow-orphan;
+	mso-outline-level:2;
+	background:yellow;
+	font-size:18.0pt;
+	font-family:"MS PGothic";
+	mso-bidi-font-family:"MS PGothic";
+	color:black;
+	font-weight:bold;}
+h3
+	{mso-margin-top-alt:auto;
+	margin-right:0mm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0mm;
+	mso-pagination:widow-orphan;
+	mso-outline-level:3;
+	font-size:13.5pt;
+	font-family:"MS PGothic";
+	mso-bidi-font-family:"MS PGothic";
+	font-weight:bold;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:center 212.6pt right 425.2pt;
+	layout-grid-mode:char;
+	font-size:12.0pt;
+	font-family:"MS PGothic";
+	mso-bidi-font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+p
+	{mso-margin-top-alt:auto;
+	margin-right:0mm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0mm;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"MS PGothic";
+	mso-bidi-font-family:"Times New Roman";}
+p.note, li.note, div.note
+	{mso-style-name:note;
+	mso-margin-top-alt:auto;
+	margin-right:0mm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0mm;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"MS PGothic";
+	mso-bidi-font-family:"Times New Roman";}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+ /* Page Definitions */
+ @page
+	{mso-page-border-surround-header:no;
+	mso-page-border-surround-footer:no;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:99.25pt 30.0mm 30.0mm 30.0mm;
+	mso-header-margin:42.55pt;
+	mso-footer-margin:49.6pt;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:163398520;
+	mso-list-type:hybrid;
+	mso-list-template-ids:219030250 1914600144 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l0:level1
+	{mso-level-text:"\(%1\)";
+	mso-level-tab-stop:60.0pt;
+	mso-level-number-position:left;
+	margin-left:60.0pt;
+	text-indent:-18.0pt;
+	color:windowtext;}
+@list l0:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1
+	{mso-list-id:252785942;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1339760100 -902368144 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l1:level1
+	{mso-level-text:"\(%1\)";
+	mso-level-tab-stop:60.0pt;
+	mso-level-number-position:left;
+	margin-left:60.0pt;
+	text-indent:-18.0pt;}
+@list l1:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2
+	{mso-list-id:259140169;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-711403542 -902368144 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l2:level1
+	{mso-level-text:"\(%1\)";
+	mso-level-tab-stop:60.0pt;
+	mso-level-number-position:left;
+	margin-left:60.0pt;
+	text-indent:-18.0pt;}
+@list l2:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3
+	{mso-list-id:288324013;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1941132058 -902368144 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l3:level1
+	{mso-level-text:"\(%1\)";
+	mso-level-tab-stop:60.0pt;
+	mso-level-number-position:left;
+	margin-left:60.0pt;
+	text-indent:-18.0pt;}
+@list l3:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l4
+	{mso-list-id:362676229;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-996012272 -902368144 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l4:level1
+	{mso-level-text:"\(%1\)";
+	mso-level-tab-stop:60.0pt;
+	mso-level-number-position:left;
+	margin-left:60.0pt;
+	text-indent:-18.0pt;}
+@list l4:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l4:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l4:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l4:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l4:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l4:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l4:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l4:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l5
+	{mso-list-id:1089888838;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1178953078 -902368144 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l5:level1
+	{mso-level-text:"\(%1\)";
+	mso-level-tab-stop:60.0pt;
+	mso-level-number-position:left;
+	margin-left:60.0pt;
+	text-indent:-18.0pt;}
+@list l5:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l5:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l5:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l5:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l5:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l5:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l5:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l5:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l6
+	{mso-list-id:1454014238;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-658210448 -902368144 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l6:level1
+	{mso-level-text:"\(%1\)";
+	mso-level-tab-stop:60.0pt;
+	mso-level-number-position:left;
+	margin-left:60.0pt;
+	text-indent:-18.0pt;}
+@list l6:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l6:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l6:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l6:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l6:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l6:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l6:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l6:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l7
+	{mso-list-id:1555963192;
+	mso-list-type:hybrid;
+	mso-list-template-ids:464317266 -902368144 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l7:level1
+	{mso-level-text:"\(%1\)";
+	mso-level-tab-stop:60.0pt;
+	mso-level-number-position:left;
+	margin-left:60.0pt;
+	text-indent:-18.0pt;}
+@list l7:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l7:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l7:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l7:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l7:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l7:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l7:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l7:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l8
+	{mso-list-id:1686128267;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1748779294 1914600144 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l8:level1
+	{mso-level-text:"\(%1\)";
+	mso-level-tab-stop:60.0pt;
+	mso-level-number-position:left;
+	margin-left:60.0pt;
+	text-indent:-18.0pt;
+	color:windowtext;}
+@list l8:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l8:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l8:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l8:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l8:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l8:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l8:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l8:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l9
+	{mso-list-id:1718699052;
+	mso-list-type:hybrid;
+	mso-list-template-ids:282241312 -902368144 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l9:level1
+	{mso-level-text:"\(%1\)";
+	mso-level-tab-stop:60.0pt;
+	mso-level-number-position:left;
+	margin-left:60.0pt;
+	text-indent:-18.0pt;}
+@list l9:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l9:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l9:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l9:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l9:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l9:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l9:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l9:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l10
+	{mso-list-id:1791514154;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1389094546 -902368144 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l10:level1
+	{mso-level-text:"\(%1\)";
+	mso-level-tab-stop:60.0pt;
+	mso-level-number-position:left;
+	margin-left:60.0pt;
+	text-indent:-18.0pt;}
+@list l10:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l10:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l10:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l10:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l10:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l10:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l10:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l10:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l11
+	{mso-list-id:1926068999;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-48842420 -902368144 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l11:level1
+	{mso-level-text:"\(%1\)";
+	mso-level-tab-stop:60.0pt;
+	mso-level-number-position:left;
+	margin-left:60.0pt;
+	text-indent:-18.0pt;}
+@list l11:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l11:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l11:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l11:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l11:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l11:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l11:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l11:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l12
+	{mso-list-id:1944415606;
+	mso-list-type:hybrid;
+	mso-list-template-ids:522213254 -902368144 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l12:level1
+	{mso-level-text:"\(%1\)";
+	mso-level-tab-stop:60.0pt;
+	mso-level-number-position:left;
+	margin-left:60.0pt;
+	text-indent:-18.0pt;}
+@list l12:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l12:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l12:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l12:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l12:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l12:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l12:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l12:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l13
+	{mso-list-id:1996952658;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1791948554 -902368144 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l13:level1
+	{mso-level-text:"\(%1\)";
+	mso-level-tab-stop:60.0pt;
+	mso-level-number-position:left;
+	margin-left:60.0pt;
+	text-indent:-18.0pt;}
+@list l13:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l13:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l13:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l13:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l13:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l13:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l13:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l13:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l14
+	{mso-list-id:2076276170;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1088431502 1914600144 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l14:level1
+	{mso-level-text:"\(%1\)";
+	mso-level-tab-stop:60.0pt;
+	mso-level-number-position:left;
+	margin-left:60.0pt;
+	text-indent:-18.0pt;
+	color:windowtext;}
+@list l14:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l14:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l14:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l14:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l14:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l14:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l14:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l14:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l15
+	{mso-list-id:2102724163;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1310839978 1914600144 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l15:level1
+	{mso-level-text:"\(%1\)";
+	mso-level-tab-stop:60.0pt;
+	mso-level-number-position:left;
+	margin-left:60.0pt;
+	text-indent:-18.0pt;
+	color:windowtext;}
+@list l15:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l15:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l15:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l15:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l15:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l15:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l15:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l15:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+ol
+	{margin-bottom:0mm;}
+ul
+	{margin-bottom:0mm;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:\6A19\6E96\306E\8868;
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0mm 5.4pt 0mm 5.4pt;
+	mso-para-margin:0mm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+table.TableNormal
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0mm 5.4pt 0mm 5.4pt;
+	mso-para-margin:0mm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]-->
+<meta name="Microsoft Border" content=none>
+<!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="8194">
+  <v:textbox inset="5.85pt,.7pt,5.85pt,.7pt"/>
+ </o:shapedefaults></xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body bgcolor=white lang=JA link=blue vlink=blue style='tab-interval:42.0pt'>
+
+<div class=Section1>
+
+<table class=TableNormal border=0 cellpadding=0 width="100%" style='width:100.0%;
+ mso-cellspacing:1.5pt;mso-padding-alt:0mm 5.4pt 0mm 5.4pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;mso-yfti-lastrow:yes'>
+  <td width="99%" style='width:99.76%;background:black;padding:.75pt .75pt .75pt .75pt'>
+  <h1 align=center style='margin-top:7.5pt;margin-right:0mm;margin-bottom:7.5pt;
+  margin-left:0mm;text-align:center'><strong><span lang=EN-US style='font-family:
+  "MS PGothic";mso-bidi-font-family:"MS PGothic";color:white'>MACU8 Assembler
+  Package</span></strong><strong><span lang=EN-US style='font-family:"MS PGothic";
+  mso-bidi-font-family:"MS PGothic"'><o:p></o:p></span></strong></h1>
+  </td>
+ </tr>
+</table>
+
+<p class=note style='margin-left:297.65pt'><span lang=EN-US style='font-family:
+"Times New Roman"'>This document contains important information about
+revisions, upgrades, and other matters that did not make it into the printed
+manuals. Please read this before using the MACU8 assembler package.<o:p></o:p></span></p>
+
+<p class=note style='margin-left:297.65pt'><span lang=EN-US style='font-family:
+"Times New Roman"'><span style='mso-spacerun:yes'> </span><o:p></o:p></span></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='font-family:"Times New Roman"'>
+
+<hr size=2 width="100%" align=center>
+
+</span></div>
+
+<h2><span lang=EN-US style='font-family:"Times New Roman"'>Contents<o:p></o:p></span></h2>
+
+<p><b><span lang=EN-US style='font-family:"Times New Roman"'><a
+href="#_1._Related_Documents">1. Related Documents</a></span><span
+class=MsoHyperlink><span lang=EN-US><o:p></o:p></span></span></b></p>
+
+<p><b><span lang=EN-US style='font-family:"Times New Roman"'><a
+href="#_2._DCL_files">2. DCL files</a><span class=MsoHyperlink><o:p></o:p></span></span></b></p>
+
+<p><b><span lang=EN-US style='font-family:"Times New Roman"'><a
+href="#_3._Updated_Contents">3. Updated Contents</a></span></b></p>
+
+<p><b><span lang=EN-US style='font-family:"Times New Roman"'><a
+href="#_4._Tag_jumps_using_error_file">4. Tag jumps using error file</a></span></b><span
+class=MsoHyperlink><span lang=EN-US><o:p></o:p></span></span></p>
+
+<p><b><span lang=EN-US style='font-family:"Times New Roman"'><a
+href="#_5._Additional_information_that_is_n">5. Additional information that is
+not provided in the manual</a></span></b><span class=MsoHyperlink><span
+lang=EN-US style='font-family:"Times New Roman"'><o:p></o:p></span></span></p>
+
+<p><b><span lang=EN-US style='font-family:"Times New Roman"'><a
+href="#_6._Restrictions">6. Restrictions</a></span></b><span
+class=MsoHyperlink><span lang=EN-US style='font-family:"Times New Roman"'><o:p></o:p></span></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='font-family:"Times New Roman"'>
+
+<hr size=2 width="100%" align=center>
+
+</span></div>
+
+<h2><a name="_1._ŠÖ˜A‚·‚éƒhƒLƒ…ƒƒ“ƒg"></a><a name="_1._Related_Documents"></a><span
+lang=EN-US style='font-family:"Times New Roman"'>1. Related Documents<o:p></o:p></span></h2>
+
+<p><a name=1></a><a name="_1.1_IDEU8“‡‰»ŠJ”­ŠÂ‹«î•ñ"></a><a name="1_1"></a><span
+lang=EN-US style='font-family:"Times New Roman"'>There are the following related
+documentation has relation to the MACU8 assembler package.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0mm;margin-right:36.0pt;margin-bottom:
+0mm;margin-left:36.0pt;margin-bottom:.0001pt'><span lang=EN-US
+style='font-family:"Times New Roman"'>- MACU8_E.HTML (This document) <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:48.0pt;mso-para-margin-left:4.0gd'><span
+lang=EN-US style='font-family:"Times New Roman";mso-fareast-font-family:"Times New Roman"'>This
+describes information related to the MACU8 assembler package.</span><span
+lang=EN-US style='font-family:"Times New Roman"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0mm;margin-right:36.0pt;margin-bottom:
+0mm;margin-left:36.0pt;margin-bottom:.0001pt'><span lang=EN-US
+style='font-family:"Times New Roman"'>- MACU8 Assembler package User's Manual <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:48.0pt;mso-para-margin-left:4.0gd'><span
+lang=EN-US style='font-family:"Times New Roman";mso-fareast-font-family:"Times New Roman"'>This
+describes how to use the RASU8 assembler, RLU8 linker, LIBU8 librarian, and
+OHU8 object converter.</span><span lang=EN-US style='font-family:"Times New Roman"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0mm;margin-right:36.0pt;margin-bottom:
+0mm;margin-left:36.0pt;margin-bottom:.0001pt'><span lang=EN-US
+style='font-family:"Times New Roman";color:red'>-</span><span lang=EN-US
+style='font-family:"Times New Roman"'> HTU8 User's Manual <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:48.0pt;mso-para-margin-left:4.0gd'><span
+lang=EN-US style='font-family:"Times New Roman"'>This describes how to use the
+HTU8 and how to generate the flash ROM code data.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0mm;margin-right:36.0pt;margin-bottom:
+0mm;margin-left:36.0pt;margin-bottom:.0001pt'><span lang=EN-US
+style='font-family:"Times New Roman"'>- DCLU8_E.HTML <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:48.0pt;mso-para-margin-left:4.0gd'><span
+lang=EN-US style='font-family:"Times New Roman";mso-fareast-font-family:"Times New Roman"'>This
+describes how information specific to the microcontroller is described in the
+DCL file.</span><span lang=EN-US style='font-family:"Times New Roman"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0mm;margin-right:36.0pt;margin-bottom:
+0mm;margin-left:72.0pt;margin-bottom:.0001pt'><span lang=EN-US
+style='font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='font-family:"Times New Roman"'>
+
+<hr size=2 width="100%" align=center>
+
+</span></div>
+
+<h2><a name="_2._DCLƒtƒ@ƒCƒ‹"></a><a name="_2._DCL_files"></a><span lang=EN-US
+style='font-family:"Times New Roman"'>2. DCL files<o:p></o:p></span></h2>
+
+<p><span lang=EN-US style='font-family:"Times New Roman"'>The MACU8 assembler
+package supports all models which has nX-U8/100 core by isolating such
+particulars as memory structure, SFR names and attributes, and instructions
+available in separate DCL files. Components are thus able to automatically
+tailor their operation to the target device by making reference to the
+appropriate external file.<o:p></o:p></span></p>
+
+<p><span lang=EN-US style='font-family:"Times New Roman"'>Only the assembler
+reads in the DCL file. The other components obtain the necessary DCL file
+information from the object files created by the assembler.<o:p></o:p></span></p>
+
+<p><span lang=EN-US style='font-family:"Times New Roman"'>DCL files, in
+addition to the above software role, also serve to document for the developer
+such model particulars as the names of special function registers (<span
+class=SpellE>SFRs</span>) available to programs. For help in interpreting their
+contents, refer to the DCLU8_E.HTML file. DCL files are text files, so can be
+displayed on the screen or sent to the printer.<o:p></o:p></span></p>
+
+<p><span lang=EN-US style='font-family:"Times New Roman"'>Because of their
+importance in controlling software operation, do not modify the contents of DCL
+files.<o:p></o:p></span></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='font-family:"Times New Roman"'>
+
+<hr size=2 width="100%" align=center>
+
+</span></div>
+
+<h2><a name="_3._’ˆÓŽ–€"></a><a name="_3._XV“à—e"></a><a
+name="_3._Updated_Contents"></a><span lang=EN-US style='font-family:"Times New Roman"'>3.
+Updated Contents<o:p></o:p></span></h2>
+
+<p><a name=3></a><span lang=EN-US style='font-family:"Times New Roman"'>RLU8 and
+RASU8 have been updated in this release:<o:p></o:p></span></p>
+
+<p style='margin-left:18.0pt;mso-para-margin-left:1.5gd'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='font-family:"Times New Roman"'>RLU8<br>
+</span></b><span lang=EN-US style='font-family:"Times New Roman"'>- RLU8 V1.51<b><o:p></o:p></b></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l8 level1 lfo2;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"Times New Roman";mso-fareast-font-family:"Times New Roman";mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>(1)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR><span lang=EN-US style='font-family:
+"Times New Roman";mso-bidi-font-weight:bold'>The problem which does not link
+the referred function or table has been fixed.<span style='color:red'><o:p></o:p></span></span></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l8 level1 lfo2;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"Times New Roman";mso-fareast-font-family:"Times New Roman";mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>(2)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR><span lang=EN-US style='font-family:
+"Times New Roman";mso-bidi-font-weight:bold'>The problem which TABLE segments
+are not allocated to physical segment #0 has been fixed.<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt'><span lang=EN-US
+style='font-family:"Times New Roman";mso-bidi-font-weight:bold'>To fix this
+problem, the priority of allocation for the TABLE segment has been changed.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt'><span lang=EN-US
+style='font-family:"Times New Roman";mso-bidi-font-weight:bold'>In allocating
+the TABLE segments with the same priority as RLU8 V1.50, please specify the /CP
+option added newly.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l8 level1 lfo2;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"Times New Roman";mso-fareast-font-family:"Times New Roman";mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>(3)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR><span lang=EN-US style='font-family:
+"Times New Roman";mso-bidi-font-weight:bold'>The problem which an application
+error generates when an error was detected at the time of a link has been
+fixed.<o:p></o:p></span></span></p>
+
+<p style='margin-left:24.0pt;mso-para-margin-left:2.0gd'><span lang=EN-US
+style='font-family:"Times New Roman"'>The following update was added in
+previous release: <o:p></o:p></span></p>
+
+<p style='margin-left:18.0pt;mso-para-margin-left:1.5gd'><span lang=EN-US
+style='font-family:"Times New Roman"'>- RLU8 V1.50<b><o:p></o:p></b></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l15 level1 lfo4;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"Times New Roman";mso-fareast-font-family:"Times New Roman";mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>(1)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR><span lang=EN-US style='font-family:
+"Times New Roman";mso-bidi-font-weight:bold'>The feature which checks the
+reference relation of a function/table and does not link the function/table
+which is not referred to has been added.<span style='color:red'><o:p></o:p></span></span></span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt'><span lang=EN-US
+style='font-family:"Times New Roman";color:black;mso-bidi-font-weight:bold'>In
+order to use this feature, CCU8 V3.30, RASU8 V1.60, and RLU8 V1.50 are
+required.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt'><span lang=EN-US
+style='font-family:"Times New Roman";color:black;mso-bidi-font-weight:bold'>This
+feature operates by default.</span><span lang=EN-US style='font-family:"Times New Roman";
+color:red;mso-bidi-font-weight:bold'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l15 level1 lfo4;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"Times New Roman";mso-fareast-font-family:"Times New Roman";mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>(2)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR><span lang=EN-US style='font-family:
+"Times New Roman";mso-bidi-font-weight:bold'>/LA option has been added.<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt'><span lang=EN-US
+style='font-family:"Times New Roman"'>/LA option is specified in order to link
+all the function/table, without checking the reference relation of a function/table.<o:p></o:p></span></p>
+
+<p style='margin-left:18.0pt;mso-para-margin-left:1.5gd'><span lang=EN-US
+style='font-family:"Times New Roman"'>- RLU8 V1.40<b><o:p></o:p></b></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l14 level1 lfo6;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"Times New Roman";mso-fareast-font-family:"Times New Roman";mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>(1)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR><span lang=EN-US style='font-family:
+"Times New Roman";mso-bidi-font-weight:bold'>The copyright has been changed to
+new company name (LAPIS Semiconductor). There is no change of a function.<span
+style='color:red'><o:p></o:p></span></span></span></p>
+
+<p style='margin-left:18.0pt;mso-para-margin-left:1.5gd'><span lang=EN-US
+style='font-family:"Times New Roman"'>- RLU8 V1.30 <b><o:p></o:p></b></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l0 level1 lfo8;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"Times New Roman";mso-fareast-font-family:"Times New Roman";mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>(1)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR><span lang=EN-US style='font-family:
+"Times New Roman";mso-bidi-font-weight:bold'>The copyright has been changed to
+new company name (OKI SEMICONDUCTOR). There is no change of a function.<span
+style='color:red'><o:p></o:p></span></span></span></p>
+
+<p style='margin-left:18.0pt;mso-para-margin-left:1.5gd'><span lang=EN-US
+style='font-family:"Times New Roman"'>- RLU8 V1.20 <b><o:p></o:p></b></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l1 level1 lfo10;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"Times New Roman";mso-fareast-font-family:"Times New Roman"'><span
+style='mso-list:Ignore'>(1)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR><span lang=EN-US style='font-family:
+"Times New Roman";mso-bidi-font-weight:bold'>Modification has been so made that
+compiler version information will be output to a map file. Compiler version
+information will be output along with assembler version information. If no
+compiler version information is included in an object file, “-<span
+class=GramE>.-</span> -” will be output to a map file.</span></span><span
+lang=EN-US style='font-family:"Times New Roman"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l1 level1 lfo10;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"Times New Roman";mso-fareast-font-family:"Times New Roman"'><span
+style='mso-list:Ignore'>(2)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR><span lang=EN-US style='font-family:
+"Times New Roman";mso-bidi-font-weight:bold'>Modification has been so made that
+C source symbol information will be output to a map file. C source symbol
+information will be output when the /SD option is specified. The output format
+of C source symbol information is the same as that of assembly source symbol
+information.</span></span><span lang=EN-US style='font-family:"Times New Roman"'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></p>
+
+<p style='margin-left:18.0pt;mso-para-margin-left:1.5gd'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='font-family:"Times New Roman"'>RASU8<br>
+</span></b><span lang=EN-US style='font-family:"Times New Roman"'>- RASU8 V1.61
+<b><o:p></o:p></b></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l7 level1 lfo12;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"Times New Roman";mso-fareast-font-family:"Times New Roman";mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>(1)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR><span lang=EN-US style='font-family:
+"Times New Roman";mso-bidi-font-weight:bold'>The check function for generating
+the absolute print file has been modified. When using RASU8 V1.61 or later
+version, please use the ABL file which is generated by RLU8 V1.51 or later
+version.<o:p></o:p></span></span></p>
+
+<p style='margin-left:24.0pt;mso-para-margin-left:2.0gd'><span lang=EN-US
+style='font-family:"Times New Roman"'>The following update was added in
+previous release: <span style='mso-bidi-font-weight:bold'><o:p></o:p></span></span></p>
+
+<p style='margin-left:18.0pt;mso-para-margin-left:1.5gd'><span lang=EN-US
+style='font-family:"Times New Roman"'>- RASU8 V1.60 <b><o:p></o:p></b></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l4 level1 lfo14;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"Times New Roman";mso-fareast-font-family:"Times New Roman";mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>(1)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR><span lang=EN-US style='font-family:
+"Times New Roman";mso-bidi-font-weight:bold'>The number of characters of the
+symbol which RASU8 recognizes always has become 255 characters. The number of
+characters of a /SL option is ignored. <o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l4 level1 lfo14;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"Times New Roman";mso-fareast-font-family:"Times New Roman";mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>(2)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR><span lang=EN-US style='font-family:
+"Times New Roman";mso-bidi-font-weight:bold'>By the feature which does not link
+the function/table which is not referred, the address for the function/table in
+which an absolute print file is not referred is indicated as an asterisk (*<span
+class=GramE>*:</span>****).<o:p></o:p></span></span></p>
+
+<p style='margin-left:18.0pt;mso-para-margin-left:1.5gd'><span lang=EN-US
+style='font-family:"Times New Roman"'>- RASU8 V1.50 <b><o:p></o:p></b></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l9 level1 lfo16;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"Times New Roman";mso-fareast-font-family:"Times New Roman";mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>(1)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR><span lang=EN-US style='font-family:
+"Times New Roman";mso-bidi-font-weight:bold'>The copyright has been changed to
+new company name (LAPIS Semiconductor). There is no change of a function.<o:p></o:p></span></span></p>
+
+<p style='margin-left:18.0pt;mso-para-margin-left:1.5gd'><span lang=EN-US
+style='font-family:"Times New Roman"'>- RASU8 V1.40 <b><o:p></o:p></b></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l10 level1 lfo18;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"Times New Roman";mso-fareast-font-family:"Times New Roman";mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>(1)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR><span lang=EN-US style='font-family:
+"Times New Roman";mso-bidi-font-weight:bold'>The problem which the address
+check function does not work correctly for operand of the ORG directive has
+been fixed.<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l10 level1 lfo18;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"Times New Roman";mso-fareast-font-family:"Times New Roman";mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>(2)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR><span lang=EN-US style='font-family:
+"Times New Roman";mso-bidi-font-weight:bold'>The copyright has been changed to
+new company name (OKI SEMICONDUCTOR).<o:p></o:p></span></span></p>
+
+<p style='margin-left:18.0pt;mso-para-margin-left:1.5gd'><span lang=EN-US
+style='font-family:"Times New Roman"'>- RASU8 V1.30 <b><o:p></o:p></b></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l11 level1 lfo20;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"Times New Roman";mso-fareast-font-family:"Times New Roman";mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>(1)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR><span lang=EN-US style='font-family:
+"Times New Roman";mso-bidi-font-weight:bold'>Modification associated with a
+change in CCU8 C debugging information has been made.<o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Times New Roman"'>The
+following software tools are not updated in this release.<o:p></o:p></span></p>
+
+<p style='margin-left:18.0pt;mso-para-margin-left:1.5gd'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='font-family:"Times New Roman"'>OHU8<br>
+</span></b><span lang=EN-US style='font-family:"Times New Roman"'>- OHU8 V1.20<b><o:p></o:p></b></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l2 level1 lfo22;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"Times New Roman";mso-fareast-font-family:"Times New Roman";mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>(1)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR><span lang=EN-US style='font-family:
+"Times New Roman";mso-bidi-font-weight:bold'>The copyright has been changed to
+new company name (LAPIS Semiconductor). There is no change of a function.<o:p></o:p></span></span></p>
+
+<p style='margin-left:24.0pt;mso-para-margin-left:2.0gd'><span lang=EN-US
+style='font-family:"Times New Roman"'>The following update was added in
+previous release: <span style='mso-bidi-font-weight:bold'><o:p></o:p></span></span></p>
+
+<p style='margin-left:18.0pt;mso-para-margin-left:1.5gd'><span lang=EN-US
+style='font-family:"Times New Roman"'>- OHU8 V1.10 <b><o:p></o:p></b></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l12 level1 lfo24;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"Times New Roman";mso-fareast-font-family:"Times New Roman";mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>(1)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR><span lang=EN-US style='font-family:
+"Times New Roman";mso-bidi-font-weight:bold'>The copyright has been changed to
+new company name (OKI SEMICONDUCTOR). The contents of S0 record (Motorola S
+format) has been changed along with this modification. The other functional
+specifications are the same.<o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></p>
+
+<p style='margin-left:18.0pt;mso-para-margin-left:1.5gd'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='font-family:"Times New Roman"'>LIBU8<br>
+</span></b><span lang=EN-US style='font-family:"Times New Roman"'>- LIBU8 V1.10
+<b><o:p></o:p></b></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l6 level1 lfo26;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"Times New Roman";mso-fareast-font-family:"Times New Roman";mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>(1)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR><span lang=EN-US style='font-family:
+"Times New Roman";mso-bidi-font-weight:bold'>The copyright has been changed to
+new company name (LAPIS Semiconductor). There is no change of a function.<o:p></o:p></span></span></p>
+
+<p style='margin-left:24.0pt;mso-para-margin-left:2.0gd'><span lang=EN-US
+style='font-family:"Times New Roman"'>The following update was added in
+previous release: <span style='mso-bidi-font-weight:bold'><o:p></o:p></span></span></p>
+
+<p style='margin-left:18.0pt;mso-para-margin-left:1.5gd'><span lang=EN-US
+style='font-family:"Times New Roman"'>- LIBU8 V1.10 <b><o:p></o:p></b></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l3 level1 lfo28;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"Times New Roman";mso-fareast-font-family:"Times New Roman";mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>(1)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR><span lang=EN-US style='font-family:
+"Times New Roman";mso-bidi-font-weight:bold'>The copyright has been changed to
+new company name (OKI SEMICONDUCTOR). There is no change of a function.<o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></p>
+
+<p style='margin-left:18.0pt;mso-para-margin-left:1.5gd'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='font-family:"Times New Roman"'>HTU8<br>
+</span></b><span lang=EN-US style='font-family:"Times New Roman"'>- HTU8 V1.20 <b><o:p></o:p></b></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l5 level1 lfo30;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"Times New Roman";mso-fareast-font-family:"Times New Roman";mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>(1)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR><span lang=EN-US style='font-family:
+"Times New Roman";mso-bidi-font-weight:bold'>The copyright has been changed to
+new company name (LAPIS Semiconductor). There is no change of a function.<o:p></o:p></span></span></p>
+
+<p style='margin-left:18.0pt;mso-para-margin-left:1.5gd'><span lang=EN-US
+style='font-family:"Times New Roman"'>The following update was added in
+previous release:<o:p></o:p></span></p>
+
+<p style='margin-left:18.0pt;mso-para-margin-left:1.5gd'><span lang=EN-US
+style='font-family:"Times New Roman"'>- HTU8 V1.10 <b><o:p></o:p></b></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l5 level1 lfo30;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"Times New Roman";mso-fareast-font-family:"Times New Roman";mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>(2)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR><span lang=EN-US style='font-family:
+"Times New Roman";mso-bidi-font-weight:bold'>Two or more input files can be
+read.<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l5 level1 lfo30;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"Times New Roman";mso-fareast-font-family:"Times New Roman";mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>(3)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR><span lang=EN-US style='font-family:
+"Times New Roman";mso-bidi-font-weight:bold'><span
+style='mso-spacerun:yes'> </span>The /F option which specifies an output file
+name has been added.<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l5 level1 lfo30;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"Times New Roman";mso-fareast-font-family:"Times New Roman";mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>(4)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR><span lang=EN-US style='font-family:
+"Times New Roman";mso-bidi-font-weight:bold'>The /AL option which reads the
+data of the specified range in input file, and allocates the read data to the
+specified address has been added.<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l5 level1 lfo30;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"Times New Roman";mso-fareast-font-family:"Times New Roman";mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>(5)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR><span lang=EN-US style='font-family:
+"Times New Roman";mso-bidi-font-weight:bold'>The response file has been
+supported.<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt'><span lang=EN-US
+style='font-family:"Times New Roman";mso-bidi-font-weight:bold'>For details,
+please refer to HTU8 User's Manual.<o:p></o:p></span></p>
+
+<p style='margin-left:18.0pt;mso-para-margin-left:1.5gd'><span lang=EN-US
+style='font-family:"Times New Roman"'>- HTU8 V1.00 <b><o:p></o:p></b></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l13 level1 lfo32;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"Times New Roman";mso-fareast-font-family:"Times New Roman";mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>(1)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR><span lang=EN-US style='font-family:
+"Times New Roman";mso-bidi-font-weight:bold'>Newly added as the tool for
+generating the flash ROM code data.<span style='mso-spacerun:yes'>  </span><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='font-family:"Times New Roman"'>
+
+<hr size=2 width="100%" align=center>
+
+</span></div>
+
+<h2><a name="_4._ƒGƒ‰[ƒtƒ@ƒCƒ‹‚É‚æ‚éƒ^ƒOƒWƒƒƒ“ƒv"></a><a
+name="_4._Tag_jumps_using_error_file"></a><span lang=EN-US style='font-family:
+"Times New Roman"'>4. Tag jumps using error file<o:p></o:p></span></h2>
+
+<p><span lang=EN-US style='font-family:"Times New Roman"'>RASU8 creates error
+files in a format compatible with text editors capable of reading the file name
+and line number from the beginning of the current line, opening the specified
+file, and automatically jumping to that line. Consult your editor manual for
+further details on using this handy function.<o:p></o:p></span></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='font-family:"Times New Roman"'>
+
+<hr size=2 width="100%" align=center>
+
+</span></div>
+
+<h2><a name="_2._ƒ}ƒjƒ…ƒAƒ‹‚É‹LÚ‚³‚ê‚Ä‚¢‚È‚¢’Ç‰Áî•ñ"></a><a
+name="_5._ƒ}ƒjƒ…ƒAƒ‹‚É‹LÚ‚³‚ê‚Ä‚¢‚È‚¢’Ç‰Áî•ñ"></a><a
+name="_5._Additional_information_that_is_n"></a><span lang=EN-US
+style='font-family:"Times New Roman"'>5. Additional information that is not
+provided in the manual<o:p></o:p></span></h2>
+
+<p><a name=2></a><span class=GramE><span lang=EN-US style='font-family:"Times New Roman"'>None.</span></span><span
+lang=EN-US style='font-family:"Times New Roman"'><o:p></o:p></span></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='font-family:"Times New Roman"'>
+
+<hr size=2 width="100%" align=center>
+
+</span></div>
+
+<h2><a name="_6._Restrictions"></a><span lang=EN-US style='font-family:"Times New Roman";
+color:windowtext'>6. Restrictions<o:p></o:p></span></h2>
+
+<p><a name="_Toc175576049"><span lang=EN-US style='font-family:"Times New Roman";
+color:black'>The current version of the RLU8 linker has the following
+restriction: <o:p></o:p></span></a></p>
+
+<span style='mso-bookmark:_Toc175576049'></span>
+
+<p style='mso-char-indent-size:12.05pt'><b style='mso-bidi-font-weight:normal'><span
+lang=EN-US style='font-family:"Times New Roman"'>RLU8<br>
+<span style='mso-spacerun:yes'> </span><span style='mso-spacerun:yes'> </span><span
+style='mso-spacerun:yes'> </span><span style='mso-spacerun:yes'> </span><span
+class=GramE>An</span> internal error may occur to description which assigns the
+variable to absolute address by using absolute, <span class=SpellE>segnoinit</span>
+or <span class=SpellE>seginit</span> <span class=SpellE>pragma</span>.<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:9.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US style='mso-bidi-font-size:
+10.5pt;font-family:"Times New Roman";color:black;mso-bidi-font-weight:bold'>[Occurrence
+Conditions]<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US style='mso-bidi-font-size:
+10.5pt;font-family:"Times New Roman";color:black;mso-bidi-font-weight:bold'>This
+problem occurs when the following conditions are satisfied.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US style='mso-bidi-font-size:
+10.5pt;font-family:"Times New Roman";color:black;mso-bidi-font-weight:bold'>(a)
+The variable is assigned to absolute address by using absolute <span
+class=SpellE>pragma</span>, <span class=SpellE>segnoinit</span> <span
+class=SpellE>pragma</span> or <span class=SpellE>seginit</span> <span
+class=SpellE>pragma</span>.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US style='mso-bidi-font-size:
+10.5pt;font-family:"Times New Roman";color:black;mso-bidi-font-weight:bold'>(b)
+Either description of the followings exists in the same file as (a).<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:45.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US style='mso-bidi-font-size:
+10.5pt;font-family:"Times New Roman";color:black;mso-bidi-font-weight:bold'>(<span
+class=SpellE>i</span>) <span style='mso-spacerun:yes'> </span>The interrupt function
+is defined by interrupt <span class=SpellE>pragma</span>.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:45.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US style='mso-bidi-font-size:
+10.5pt;font-family:"Times New Roman";color:black;mso-bidi-font-weight:bold'>(ii)
+<span style='mso-spacerun:yes'> </span>The software function is defined by <span
+class=SpellE>swi</span> <span class=SpellE>pragma</span>.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt;mso-para-margin-left:3.75gd;
+text-align:justify;text-justify:inter-ideograph;text-indent:-18.0pt;mso-char-indent-count:
+-1.5;mso-pagination:none'><span lang=EN-US style='mso-bidi-font-size:10.5pt;
+font-family:"Times New Roman";color:black;mso-bidi-font-weight:bold'>(iii) The const
+variable is assigned to absolute address by <span class=SpellE>segconst</span> <span
+class=SpellE>pragma</span>. And as an initial value for the const variable, the
+address of another const variable or function is given. For example, it shows the
+following description.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span class=GramE><span lang=EN-US
+style='font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black;mso-bidi-font-weight:bold'>static</span></span><span lang=EN-US
+style='font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black;mso-bidi-font-weight:bold'> void <span class=SpellE>test_func</span>(void)
+{ }<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";color:black;mso-bidi-font-weight:bold'>#<span
+class=SpellE>pragma</span> <span class=SpellE>segconst</span> 0x8000<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span class=GramE><span lang=EN-US
+style='font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black;mso-bidi-font-weight:bold'>void</span></span><span lang=EN-US
+style='font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black;mso-bidi-font-weight:bold'> (* const <span class=SpellE>fp</span>)()
+= <span class=SpellE>test_func</span>;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";color:black;mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:9.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US style='font-family:"Times New Roman";
+color:black'>[Occurrence Example]<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span class=GramE><span lang=EN-US
+style='font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black;mso-bidi-font-weight:bold'>unsigned</span></span><span lang=EN-US
+style='font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black;mso-bidi-font-weight:bold'> char skip;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><b style='mso-bidi-font-weight:normal'><span
+lang=EN-US style='font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black'>#<span class=SpellE>pragma</span> absolute skip 0x0E000<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span class=GramE><span lang=EN-US
+style='font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black;mso-bidi-font-weight:bold'>static</span></span><span lang=EN-US
+style='font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black;mso-bidi-font-weight:bold'> void <span class=SpellE>int_nmi</span>(void);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><b style='mso-bidi-font-weight:normal'><span
+lang=EN-US style='font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black'>#<span class=SpellE>pragma</span> interrupt <span class=SpellE>int_nmi</span>
+0x0a 1<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span class=GramE><span lang=EN-US
+style='font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black;mso-bidi-font-weight:bold'>static</span></span><span lang=EN-US
+style='font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black;mso-bidi-font-weight:bold'> void <span class=SpellE>int_nmi</span>(void)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";color:black;mso-bidi-font-weight:bold'>{
+<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";color:black;mso-bidi-font-weight:bold'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";color:black;mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:9.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US style='font-family:"Times New Roman";
+color:black'>[Workaround]<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;mso-para-margin-left:2.25gd;
+text-align:justify;text-justify:inter-ideograph;mso-pagination:none'><span
+lang=EN-US style='mso-bidi-font-size:10.5pt;font-family:"Times New Roman";
+color:black;mso-bidi-font-weight:bold'>Please avoid by either method of the
+followings.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US style='mso-bidi-font-size:
+10.5pt;font-family:"Times New Roman";color:black;mso-bidi-font-weight:bold'>(a)
+</span><span lang=EN-US style='font-family:"Times New Roman";color:black'>Define
+the named segment by using <span class=SpellE>segnoinit</span> <span
+class=SpellE>pragma</span> or <span class=SpellE>seginit</span> <span
+class=SpellE>pragma</span>, and assign the variable to the named segment. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:54.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US style='font-family:"Times New Roman";
+color:black'>Then, specify address by linker option. An example is shown below.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:54.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US style='font-family:"Times New Roman";
+color:black'>Step 1: The description of above example is modified as follows. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:90.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><b><span lang=EN-US style='font-family:
+"Courier New";mso-bidi-font-family:"Times New Roman";color:black'>#<span
+class=SpellE>pragma</span> <span class=SpellE>segnoinit</span> &quot;DATA_0E000&quot;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:90.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span class=GramE><span lang=EN-US
+style='font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black'>unsigned</span></span><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";color:black'> char skip;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:90.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><b><span lang=EN-US style='font-family:
+"Courier New";mso-bidi-font-family:"Times New Roman";color:black'>#<span
+class=SpellE>pragma</span> <span class=SpellE>segnoinit</span><o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:54.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US style='font-family:"Times New Roman";
+color:black'>Step 2: Please specify <span class=GramE>like <span
+style='mso-spacerun:yes'> </span>DATA</span>_0E000-0E000h <span
+style='mso-spacerun:yes'> </span>in the “Segments” field of DATA of [Target options][Segment]
+of IDEU8.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:54.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US style='font-family:"Times New Roman";
+color:black'><span style='mso-spacerun:yes'> </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US style='mso-bidi-font-size:
+10.5pt;font-family:"Times New Roman";color:black;mso-bidi-font-weight:bold'>(b)
+Specify /LA option.</span><span lang=EN-US style='font-family:"Times New Roman";
+color:black'> <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:54.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US style='font-family:"Times New Roman";
+color:black'>Please <span class=GramE>specify <span
+style='mso-spacerun:yes'> </span>/</span>LA <span
+style='mso-spacerun:yes'> </span>in the “Additional options” field of [Target options][General]
+of IDEU8.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:54.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US style='font-family:"Times New Roman";
+color:black'>Please note that when this option is specified, the function and
+table which are not referred to are also linked.<o:p></o:p></span></p>
+
+<p><span lang=EN-US style='font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></p>
+
+<p><span lang=EN-US style='font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='font-family:"Times New Roman"'>
+
+<hr size=2 width="100%" align=center>
+
+</span></div>
+
+<p align=right style='text-align:right'><span class=GramE><span lang=EN-US
+style='font-family:"Times New Roman"'>May.</span></span><span lang=EN-US
+style='font-family:"Times New Roman"'> 7, 2013<br>
+Copyright 2008-2013, LAPIS Semiconductor Co., Ltd.<o:p></o:p></span></p>
+
+<p align=right style='text-align:right'><span lang=EN-US style='font-family:
+"Times New Roman"'><o:p>&nbsp;</o:p></span></p>
+
+</div>
+
+</body>
+
+</html>

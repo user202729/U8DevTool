@@ -1,0 +1,3883 @@
+<!-- saved from url=(0026)http://www.lapis-semi.com/us/ -->
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:x="urn:schemas-microsoft-com:office:excel"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=shift_jis">
+<link rel=File-List href="Ccu8_j.files/filelist.xml">
+<link rel=Edit-Time-Data href="Ccu8_j.files/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>CCU8コンパイラについて</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>LAPIS Semiconductor Co., Ltd.</o:Author>
+  <o:LastAuthor>a990932</o:LastAuthor>
+  <o:Revision>24</o:Revision>
+  <o:TotalTime>10360</o:TotalTime>
+  <o:LastPrinted>2013-08-09T08:42:00Z</o:LastPrinted>
+  <o:Created>2013-05-07T01:49:00Z</o:Created>
+  <o:LastSaved>2013-08-12T04:46:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>2657</o:Words>
+  <o:Characters>15148</o:Characters>
+  <o:Company>LAPIS Semiconductor Co., Ltd.</o:Company>
+  <o:Lines>126</o:Lines>
+  <o:Paragraphs>35</o:Paragraphs>
+  <o:CharactersWithSpaces>17770</o:CharactersWithSpaces>
+  <o:Version>11.9999</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:ActiveWritingStyle Lang="EN-US" VendorID="64" DLLVersion="131078"
+   NLCheck="1">1</w:ActiveWritingStyle>
+  <w:ActiveWritingStyle Lang="JA" VendorID="64" DLLVersion="131078" NLCheck="1">1</w:ActiveWritingStyle>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:Compatibility>
+   <w:UseFELayout/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"ＭＳ 明朝";
+	panose-1:2 2 6 9 4 2 5 8 3 4;
+	mso-font-alt:"MS Mincho";
+	mso-font-charset:128;
+	mso-generic-font-family:roman;
+	mso-font-pitch:fixed;
+	mso-font-signature:-1610612033 1757936891 16 0 131231 0;}
+@font-face
+	{font-family:"ＭＳ ゴシック";
+	panose-1:2 11 6 9 7 2 5 8 2 4;
+	mso-font-alt:"MS Gothic";
+	mso-font-charset:128;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:-1610612033 1757936891 16 0 131231 0;}
+@font-face
+	{font-family:Century;
+	panose-1:2 4 6 4 5 5 5 2 3 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:647 0 0 0 159 0;}
+@font-face
+	{font-family:"ＭＳ Ｐゴシック";
+	panose-1:2 11 6 0 7 2 5 8 2 4;
+	mso-font-charset:128;
+	mso-generic-font-family:modern;
+	mso-font-pitch:variable;
+	mso-font-signature:-1610612033 1757936891 16 0 131231 0;}
+@font-face
+	{font-family:"\@ＭＳ ゴシック";
+	panose-1:2 11 6 9 7 2 5 8 2 4;
+	mso-font-charset:128;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:-1610612033 1757936891 16 0 131231 0;}
+@font-face
+	{font-family:"\@ＭＳ Ｐゴシック";
+	panose-1:2 11 6 0 7 2 5 8 2 4;
+	mso-font-charset:128;
+	mso-generic-font-family:modern;
+	mso-font-pitch:variable;
+	mso-font-signature:-1610612033 1757936891 16 0 131231 0;}
+@font-face
+	{font-family:"\@ＭＳ 明朝";
+	panose-1:2 2 6 9 4 2 5 8 3 4;
+	mso-font-charset:128;
+	mso-generic-font-family:roman;
+	mso-font-pitch:fixed;
+	mso-font-signature:-1610612033 1757936891 16 0 131231 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0mm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"ＭＳ Ｐゴシック";
+	mso-bidi-font-family:"ＭＳ Ｐゴシック";}
+h1
+	{mso-margin-top-alt:auto;
+	margin-right:0mm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0mm;
+	mso-pagination:widow-orphan;
+	mso-outline-level:1;
+	font-size:24.0pt;
+	font-family:"ＭＳ Ｐゴシック";
+	mso-bidi-font-family:"ＭＳ Ｐゴシック";
+	font-weight:bold;}
+h2
+	{mso-margin-top-alt:auto;
+	margin-right:0mm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0mm;
+	mso-pagination:widow-orphan;
+	mso-outline-level:2;
+	background:yellow;
+	font-size:18.0pt;
+	font-family:"ＭＳ Ｐゴシック";
+	mso-bidi-font-family:"ＭＳ Ｐゴシック";
+	color:black;
+	font-weight:bold;}
+h3
+	{mso-margin-top-alt:auto;
+	margin-right:0mm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0mm;
+	mso-pagination:widow-orphan;
+	mso-outline-level:3;
+	font-size:13.5pt;
+	font-family:"ＭＳ Ｐゴシック";
+	mso-bidi-font-family:"ＭＳ Ｐゴシック";
+	font-weight:bold;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+p.MsoDocumentMap, li.MsoDocumentMap, div.MsoDocumentMap
+	{mso-style-noshow:yes;
+	margin:0mm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	background:navy;
+	font-size:12.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"ＭＳ ゴシック";
+	mso-bidi-font-family:"Times New Roman";}
+p
+	{mso-margin-top-alt:auto;
+	margin-right:0mm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0mm;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"ＭＳ Ｐゴシック";
+	mso-bidi-font-family:"ＭＳ Ｐゴシック";}
+p.note, li.note, div.note
+	{mso-style-name:note;
+	mso-margin-top-alt:auto;
+	margin-right:0mm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0mm;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"ＭＳ Ｐゴシック";
+	mso-bidi-font-family:"ＭＳ Ｐゴシック";}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:99.25pt 30.0mm 30.0mm 30.0mm;
+	mso-header-margin:42.55pt;
+	mso-footer-margin:49.6pt;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:62528909;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1059927396 2142697868 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l0:level1
+	{mso-level-text:"\(%1\)";
+	mso-level-tab-stop:60.0pt;
+	mso-level-number-position:left;
+	margin-left:60.0pt;
+	text-indent:-18.0pt;}
+@list l0:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1
+	{mso-list-id:142478503;
+	mso-list-type:hybrid;
+	mso-list-template-ids:229903180 2142697868 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l1:level1
+	{mso-level-text:"\(%1\)";
+	mso-level-tab-stop:60.0pt;
+	mso-level-number-position:left;
+	margin-left:60.0pt;
+	text-indent:-18.0pt;}
+@list l1:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2
+	{mso-list-id:303241833;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1445673344 2142697868 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l2:level1
+	{mso-level-text:"\(%1\)";
+	mso-level-tab-stop:60.0pt;
+	mso-level-number-position:left;
+	margin-left:60.0pt;
+	text-indent:-18.0pt;}
+@list l2:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3
+	{mso-list-id:420684250;
+	mso-list-template-ids:-212795622;}
+@list l3:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l3:level2
+	{mso-level-text:"\(%2\)";
+	mso-level-tab-stop:75.0pt;
+	mso-level-number-position:left;
+	margin-left:75.0pt;
+	text-indent:-21.0pt;
+	mso-ansi-font-size:10.0pt;}
+@list l3:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l4
+	{mso-list-id:768622593;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1078098170 2142697868 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l4:level1
+	{mso-level-text:"\(%1\)";
+	mso-level-tab-stop:60.0pt;
+	mso-level-number-position:left;
+	margin-left:60.0pt;
+	text-indent:-18.0pt;}
+@list l4:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l4:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l4:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l4:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l4:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l4:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l4:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l4:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l5
+	{mso-list-id:876046170;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-2068006032 2142697868 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l5:level1
+	{mso-level-text:"\(%1\)";
+	mso-level-tab-stop:60.0pt;
+	mso-level-number-position:left;
+	margin-left:60.0pt;
+	text-indent:-18.0pt;}
+@list l5:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l5:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l5:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l5:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l5:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l5:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l5:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l5:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l6
+	{mso-list-id:1156258842;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1670764024 2142697868 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l6:level1
+	{mso-level-text:"\(%1\)";
+	mso-level-tab-stop:60.0pt;
+	mso-level-number-position:left;
+	margin-left:60.0pt;
+	text-indent:-18.0pt;}
+@list l6:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l6:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l6:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l6:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l6:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l6:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l6:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l6:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l7
+	{mso-list-id:1322345559;
+	mso-list-type:hybrid;
+	mso-list-template-ids:934720724 2142697868 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l7:level1
+	{mso-level-text:"\(%1\)";
+	mso-level-tab-stop:60.0pt;
+	mso-level-number-position:left;
+	margin-left:60.0pt;
+	text-indent:-18.0pt;}
+@list l7:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l7:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l7:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l7:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l7:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l7:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l7:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l7:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l8
+	{mso-list-id:1746536805;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1206929754 2142697868 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l8:level1
+	{mso-level-text:"\(%1\)";
+	mso-level-tab-stop:60.0pt;
+	mso-level-number-position:left;
+	margin-left:60.0pt;
+	text-indent:-18.0pt;}
+@list l8:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l8:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l8:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l8:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l8:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l8:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l8:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l8:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l9
+	{mso-list-id:1816604221;
+	mso-list-type:hybrid;
+	mso-list-template-ids:132930202 2142697868 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l9:level1
+	{mso-level-text:"\(%1\)";
+	mso-level-tab-stop:60.0pt;
+	mso-level-number-position:left;
+	margin-left:60.0pt;
+	text-indent:-18.0pt;}
+@list l9:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l9:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l9:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l9:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l9:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l9:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l9:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l9:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l10
+	{mso-list-id:1827474837;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1292497046 1961542962 67698699 67698701 67698689 67698699 67698701 67698689 67698699 67698701;}
+@list l10:level1
+	{mso-level-start-at:3;
+	mso-level-number-format:bullet;
+	mso-level-text:・;
+	mso-level-tab-stop:98.25pt;
+	mso-level-number-position:left;
+	margin-left:98.25pt;
+	text-indent:-18.0pt;
+	font-family:"ＭＳ Ｐゴシック";
+	mso-bidi-font-family:"ＭＳ Ｐゴシック";}
+@list l10:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l10:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l10:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l10:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l10:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l10:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l10:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l10:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l11
+	{mso-list-id:2091461068;
+	mso-list-type:hybrid;
+	mso-list-template-ids:173859554 2142697868 -1116822268 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l11:level1
+	{mso-level-text:"\(%1\)";
+	mso-level-tab-stop:60.0pt;
+	mso-level-number-position:left;
+	margin-left:60.0pt;
+	text-indent:-18.0pt;}
+@list l11:level2
+	{mso-level-number-format:decimal-enclosed-circle;
+	mso-level-text:%2;
+	mso-level-tab-stop:39.0pt;
+	mso-level-number-position:left;
+	margin-left:39.0pt;
+	text-indent:-18.0pt;}
+@list l11:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l11:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l11:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l11:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l11:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l11:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l11:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l12
+	{mso-list-id:2106028237;
+	mso-list-type:hybrid;
+	mso-list-template-ids:324019560 2142697868 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l12:level1
+	{mso-level-text:"\(%1\)";
+	mso-level-tab-stop:60.0pt;
+	mso-level-number-position:left;
+	margin-left:60.0pt;
+	text-indent:-18.0pt;}
+@list l12:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l12:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l12:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l12:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l12:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l12:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l12:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l12:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+ol
+	{margin-bottom:0mm;}
+ul
+	{margin-bottom:0mm;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:標準の表;
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0mm 5.4pt 0mm 5.4pt;
+	mso-para-margin:0mm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]-->
+<meta name="Microsoft Border" content=none>
+<!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="47106">
+  <v:textbox inset="5.85pt,.7pt,5.85pt,.7pt"/>
+ </o:shapedefaults></xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body bgcolor=white lang=JA link=blue vlink=blue style='tab-interval:42.0pt'>
+
+<div class=Section1>
+
+<table class=MsoNormalTable border=0 cellpadding=0 width="100%"
+ style='width:100.0%;mso-cellspacing:1.5pt;mso-padding-alt:0mm 5.4pt 0mm 5.4pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;mso-yfti-lastrow:yes'>
+  <td width="90%" style='width:90.0%;background:black;padding:.75pt .75pt .75pt .75pt'>
+  <h1 align=center style='margin-top:7.5pt;margin-right:0mm;margin-bottom:7.5pt;
+  margin-left:0mm;text-align:center'><strong><span lang=EN-US style='font-family:
+  "ＭＳ Ｐゴシック";mso-bidi-font-family:"ＭＳ Ｐゴシック";color:white'>CCU8</span></strong><strong><span
+  style='font-family:"ＭＳ Ｐゴシック";mso-bidi-font-family:"ＭＳ Ｐゴシック";color:white'>コンパイラについて</span></strong><strong><span
+  lang=EN-US style='font-family:"ＭＳ Ｐゴシック";mso-bidi-font-family:"ＭＳ Ｐゴシック"'><o:p></o:p></span></strong></h1>
+  </td>
+ </tr>
+</table>
+
+<p class=note style='margin-left:297.65pt'>このファイルには、マニュアルに記載されていない最新情報や、バージョンアップについてなどの重要な情報が記述されています。<span
+lang=EN-US>CCU8</span>コンパイラをご使用になる前に必ずご一読ください。 </p>
+
+<div class=MsoNormal align=center style='text-align:center'><span lang=EN-US>
+
+<hr size=2 width="100%" align=center>
+
+</span></div>
+
+<h2>目次</h2>
+
+<p><b><span lang=EN-US><a href="#_1._関連するドキュメント">1. <span lang=EN-US><span
+lang=EN-US>関連するドキュメント</span></span></a></span></b></p>
+
+<p><b><span lang=EN-US><a href="#_2._更新内容">2. <span lang=EN-US><span
+lang=EN-US>更新内容</span></span></a></span></b><span class=MsoHyperlink><span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p><b><span lang=EN-US><a href="#_3._マニュアルに記載されていない追加情報">3. <span lang=EN-US><span
+lang=EN-US>マニュアルに記載されていない追加情報</span></span></a></span></b><span
+class=MsoHyperlink><span lang=EN-US><o:p></o:p></span></span></p>
+
+<p><b style='mso-bidi-font-weight:normal'><span lang=EN-US><a href="#_4._制限事項">4.
+<span lang=EN-US><span lang=EN-US>制限事項</span></span></a><span
+class=MsoHyperlink><o:p></o:p></span></span></b></p>
+
+<p><b style='mso-bidi-font-weight:normal'><span lang=EN-US><a href="#_5._注意事項">5.
+<span lang=EN-US><span lang=EN-US>注意事項</span></span></a><span
+class=MsoHyperlink><o:p></o:p></span></span></b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span lang=EN-US>
+
+<hr size=2 width="100%" align=center>
+
+</span></div>
+
+<h2><a name="_1._関連するドキュメント"></a><span lang=EN-US>1. </span>関連するドキュメント</h2>
+
+<p><a name=1></a><a name="_1.1_IDEU8統合化開発環境情報"></a><a name="1_1"></a><span
+lang=EN-US>CCU8 </span>コンパイラに関するドキュメントとして、以下のものがあります。</p>
+
+<blockquote style='margin-top:5.0pt;margin-bottom:5.0pt'>
+
+<p class=MsoNormal><span lang=EN-US>- CCU8_J.HTML (CCU8</span>コンパイラについて<span
+lang=EN-US>) </span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'>この文書。最新情報や特記事項</p>
+
+<p class=MsoNormal><span lang=EN-US>- CCU8</span>ユーザマニュアル</p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US>CCU8</span>コンパイラの使用方法など
+</p>
+
+<p class=MsoNormal><span lang=EN-US>- CCU8</span>ランゲージリファレンス</p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US>CCU8</span>コンパイラの言語仕様など
+</p>
+
+<p class=MsoNormal><span lang=EN-US>- CCU8</span>プログラミングガイド</p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US>U8</span>用の<span
+lang=EN-US>C</span>言語プログラミングに関する記述方法など </p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+</blockquote>
+
+<div class=MsoNormal align=center style='text-align:center'><span lang=EN-US>
+
+<hr size=2 width="100%" align=center>
+
+</span></div>
+
+<h2><a name="_2._更新内容"></a><span lang=EN-US>2. </span>更新内容</h2>
+
+<p>今回のリリースでは、以下の内容が更新されています。</p>
+
+<ul style='margin-top:0mm' type=disc>
+ <li class=MsoNormal style='mso-list:l3 level1 lfo1;tab-stops:list 36.0pt'><b
+     style='mso-bidi-font-weight:normal'><span lang=EN-US>CCU8 V3.41 <span
+     style='mso-bidi-font-weight:bold'><o:p></o:p></span></span></b></li>
+</ul>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l12 level1 lfo2;
+tab-stops:list 60.0pt'><![if !supportLists]><b><span lang=EN-US><span
+style='mso-list:Ignore'>(1)<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span></b><![endif]><span
+dir=LTR><b style='mso-bidi-font-weight:normal'><span style='mso-bidi-font-size:
+10.5pt'>関数入口・出口のレジスタ退避・復帰を共通化する機能を追加しました。</span><span lang=EN-US
+style='mso-bidi-font-weight:bold'><o:p></o:p></span></b></span></p>
+
+<p class=MsoNormal style='margin-left:59.55pt'>関数入口・出口のレジスタ退避・復帰の共通化を行うことにより、コード削減を実施できます。</p>
+
+<p class=MsoNormal style='margin-left:59.55pt'>この機能は、コマンドラインオプション（<span
+lang=EN-US>/<span class=SpellE>Orp</span>, /<span class=SpellE>Orpn</span></span>）、および<span
+lang=EN-US>OPTIMIZATION</span>プラグマにて制御できます。</p>
+
+<p class=MsoNormal style='margin-left:59.55pt'>従来と同様のコードを出力したい場合には、<span
+lang=EN-US>/<span class=SpellE>Orpn</span></span>オプションを指定してください。</p>
+
+<p class=MsoNormal style='margin-left:59.55pt'>詳細については、『<span lang=EN-US>CCU8</span>ユーザーズマニュアル』の「<span
+lang=EN-US>3.2.3 </span>最適化オプション」、「<span lang=EN-US>5.9.1 OPTIMIZATION</span>プラグマ」を参照してください。</p>
+
+<p class=MsoNormal style='margin-left:59.55pt'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l12 level1 lfo2;
+tab-stops:list 60.0pt'><![if !supportLists]><b><span lang=EN-US><span
+style='mso-list:Ignore'>(2)<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span></b><![endif]><span
+dir=LTR><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='mso-bidi-font-size:10.5pt'>INLINE</span></b></span><b style='mso-bidi-font-weight:
+normal'><span style='mso-bidi-font-size:10.5pt'>プラグマの制限を緩和しました。</span><span
+lang=EN-US style='mso-bidi-font-weight:bold'><o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:59.55pt'><span lang=EN-US>INLINE</span>プラグマの制限の一部を緩和することにより、<span
+lang=EN-US>if</span>文や<span lang=EN-US>for</span>文などの分岐を含む関数もインライン展開できるようにしました。</p>
+
+<p class=MsoNormal style='margin-left:59.55pt'>一度しか呼ばれない関数を<span lang=EN-US>INLINE</span>プラグマで指定することにより、関数呼び出しのオーバーヘッドを減らすことができるため、コード削減を実施できます。</p>
+
+<p class=MsoNormal style='margin-left:59.55pt'>詳細については、『<span lang=EN-US>CCU8</span>ユーザーズマニュアル』の「<span
+lang=EN-US>5.3 INLINE</span>プラグマ」を参照してください。</p>
+
+<p class=MsoNormal style='margin-left:72.0pt;mso-para-margin-left:4.97gd;
+text-indent:-12.35pt;mso-char-indent-count:-1.03'>※関数を<span lang=EN-US>INLINE</span>プラグマで指定していた場合、<span
+lang=EN-US>V3.41</span>よりも前のバージョンではインライン展開されなかった関数が、<span lang=EN-US>V3.41</span>ではインライン展開され異なるコードが生成される場合があります。</p>
+
+<p class=MsoNormal style='margin-left:59.55pt'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l12 level1 lfo2;
+tab-stops:list 60.0pt'><![if !supportLists]><b><span lang=EN-US><span
+style='mso-list:Ignore'>(3)<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span></b><![endif]><span
+dir=LTR><b style='mso-bidi-font-weight:normal'><span style='mso-bidi-font-size:
+10.5pt'>インライン関数にて定数を参照し、その後に変数宣言をするとインターナルエラーが発生する問題を改修しました。</span><span
+lang=EN-US style='mso-bidi-font-weight:bold'><o:p></o:p></span></b></span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt'><span lang=EN-US>[</span>発生条件<span
+lang=EN-US>]</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US>V3.41</span>よりも前のバージョンでは、以下の条件を満たす場合に本不具合が発生します。</p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span style='mso-bidi-font-weight:
+bold'>① </span><span style='mso-spacerun:yes'>&nbsp;</span>コンパイラの最適化オプションに、<span
+lang=EN-US>(/<span class=SpellE>Og</span>, /Om, /<span class=SpellE>Ot</span>)</span>のいずれかを指定している。</p>
+
+<p class=MsoNormal style='margin-left:90.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>IDEU8</span>では、<span
+lang=EN-US>[</span>コンパイル<span lang=EN-US>/</span>アセンブル オプション<span lang=EN-US>]</span>の<span
+lang=EN-US>[</span>最適化<span lang=EN-US>]</span>タブの以下のいずれかに該当します。</p>
+
+<p class=MsoNormal style='margin-left:90.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'>・広域的な最適化を行い、ループに関する最適化を行わない</p>
+
+<p class=MsoNormal style='margin-left:90.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'>・広域的な最適化とループに関する最適化を行う</p>
+
+<p class=MsoNormal style='margin-left:90.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'>・最適化を繰り返して、最大限に最適化する</p>
+
+<p class=MsoNormal style='margin-left:90.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'>・実行速度の最適化</p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span style='mso-bidi-font-weight:
+bold'>② </span><span lang=EN-US>inline</span>プラグマで指定された関数内にて、定数を参照する式がある。<span
+lang=EN-US style='mso-bidi-font-weight:bold'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span style='mso-bidi-font-weight:
+bold'>③ </span>②の定数式に<span lang=EN-US>1</span>を加算した定数値が、②の関数定義の後で、関数外の変数宣言で使用されている。<span
+lang=EN-US style='mso-bidi-font-weight:bold'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span style='mso-bidi-font-weight:
+bold'>④ </span>②と③の間に、他の関数定義がない。<span lang=EN-US style='mso-bidi-font-weight:
+bold'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>[</span><span style='mso-bidi-font-weight:
+bold'>発生例<span lang=EN-US>]<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>#<span class=SpellE>pragma</span>
+inline <span class=SpellE>inlinefunc</span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>void <span class=SpellE>inlinefunc</span>(
+void )</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>{</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>volatile char loc;</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span><b>loc = 4</b>;<span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>// </span>条件②</p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>}</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><b><span lang=EN-US>char <span
+class=SpellE>tbl</span> = 5</span></b><span lang=EN-US>;<span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>// </span>条件③ </p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p>以降は過去のバージョンの更新内容です。</p>
+
+<ul style='margin-top:0mm' type=disc>
+ <li class=MsoNormal style='mso-list:l3 level1 lfo1;tab-stops:list 36.0pt'><b
+     style='mso-bidi-font-weight:normal'><span lang=EN-US>CCU8 V3.31 <span
+     style='mso-bidi-font-weight:bold'><o:p></o:p></span></span></b></li>
+</ul>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l4 level1 lfo3;
+tab-stops:list 60.0pt'><![if !supportLists]><b><span lang=EN-US><span
+style='mso-list:Ignore'>(1)<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span></b><![endif]><span
+dir=LTR><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='mso-bidi-font-size:10.5pt'>char</span></b></span><b style='mso-bidi-font-weight:
+normal'><span style='mso-bidi-font-size:10.5pt'>型メンバのみを持つ構造体が、入れ子の構造体メンバとして宣言され、その構造体メンバにアクセスする記述に対し、<span
+lang=EN-US>/<span class=SpellE>Zp</span></span>オプションを指定してコンパイルすると不正なコードを生成する問題を改修しました。</span><span
+lang=EN-US style='mso-bidi-font-weight:bold'><o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:63.0pt'><span lang=EN-US>[</span>発生条件<span
+lang=EN-US>]</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US>V3.31</span>よりも前のバージョンでは、以下の条件を満たす場合に本不具合が発生します。</p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span style='mso-bidi-font-weight:
+bold'>① </span><span style='mso-spacerun:yes'>&nbsp;</span>コンパイル時に<span
+lang=EN-US>/<span class=SpellE>Zp</span></span>オプションを指定している。<span lang=EN-US
+style='mso-bidi-font-weight:bold'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span style='mso-bidi-font-weight:
+bold'>② </span><span lang=EN-US>char</span>型メンバのみを持つ構造体がある。<span lang=EN-US
+style='mso-bidi-font-weight:bold'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span style='mso-bidi-font-weight:
+bold'>③</span>上記②の構造体をメンバとする構造体があり、入れ子の構造体メンバが奇数番地に割り付けられる<span lang=EN-US
+style='mso-bidi-font-weight:bold'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span style='mso-bidi-font-weight:
+bold'>④</span>上記③の構造体メンバに対し、間接的にアクセスする記述がある。または、上記③の構造体メンバに上記②の関数戻り値の構造体を代入している。<span
+lang=EN-US style='mso-bidi-font-weight:bold'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>[</span><span style='mso-bidi-font-weight:
+bold'>発生例<span lang=EN-US>]<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span class=SpellE><span
+lang=EN-US style='mso-bidi-font-weight:bold'>typedef</span></span><span
+lang=EN-US style='mso-bidi-font-weight:bold'> <span class=SpellE>struct</span>
+{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>unsigned char<span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span>a;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>unsigned char<span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span>b;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>} STR1 ;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span class=SpellE><span
+lang=EN-US style='mso-bidi-font-weight:bold'>typedef</span></span><span
+lang=EN-US style='mso-bidi-font-weight:bold'> <span class=SpellE>struct</span>
+{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>unsigned char<span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span>a;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>STR1<span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>b;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>} STR2 ;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>STR1<span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span><span class=SpellE>str1</span>
+= { 10, 20 };<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>void sub(STR1 *p)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span></span><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US>*p = str1;</span></b><span lang=EN-US
+style='mso-bidi-font-weight:bold'><span style='mso-spacerun:yes'>&nbsp;
+</span>&lt;== </span><span style='mso-bidi-font-weight:bold'>ワードバウンダリに違反するコードを生成する<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>void main(void)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>STR2<span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span><span class=SpellE>str2</span>;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>sub(&amp;str2.b); &lt;==
+str2.b</span><span style='mso-bidi-font-weight:bold'>のアドレスは奇数番地となる<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:59.55pt'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:59.55pt'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l4 level1 lfo3;
+tab-stops:list 60.0pt'><![if !supportLists]><b><span lang=EN-US><span
+style='mso-list:Ignore'>(2)<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span></b><![endif]><span
+dir=LTR><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='mso-bidi-font-size:10.5pt'>char</span></b></span><b style='mso-bidi-font-weight:
+normal'><span style='mso-bidi-font-size:10.5pt'>型メンバのみを持つ構造体に対しポインタを介してアクセスする記述に対し、<span
+lang=EN-US>/<span class=SpellE>Zp</span></span>オプションを指定してコンパイルすると不正なコードを生成する問題を改修しました。</span><span
+lang=EN-US style='mso-bidi-font-weight:bold'><o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:63.0pt'><span lang=EN-US>[</span>発生条件<span
+lang=EN-US>]</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US>V3.31</span>よりも前のバージョンでは、以下の条件を満たす場合に本不具合が発生します。</p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span style='mso-bidi-font-weight:
+bold'>① </span>コンパイル時に<span lang=EN-US>/<span class=SpellE>Zp</span></span>オプションを指定している<span
+lang=EN-US style='mso-bidi-font-weight:bold'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span style='mso-bidi-font-weight:
+bold'>② </span><span lang=EN-US>char</span>型メンバのみを持つ構造体があり、構造体のサイズが<span
+lang=EN-US>3</span>バイトである。<span lang=EN-US style='mso-bidi-font-weight:bold'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span style='mso-bidi-font-weight:
+bold'>③</span>上記②の構造体型のポインタを介してアクセスする記述を行っている。<span lang=EN-US
+style='mso-bidi-font-weight:bold'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>[</span><span style='mso-bidi-font-weight:
+bold'>発生例<span lang=EN-US>]<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span class=SpellE><span
+lang=EN-US style='mso-bidi-font-weight:bold'>typedef</span></span><span
+lang=EN-US style='mso-bidi-font-weight:bold'> <span class=SpellE>struct</span>
+{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>unsigned char a, b, c ; <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>} STR ;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>STR w[3];<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>STR d2[3] = { { 0, 1, 2}, { 3, 4, 5}, { 6, 7,
+8} };<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>void sub( <span class=SpellE>int</span> x,
+STR *p )<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span></span><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US>*p = d2[x] ; </span></b><span lang=EN-US
+style='mso-bidi-font-weight:bold'><span
+style='mso-spacerun:yes'>&nbsp;</span>&lt;== </span><span style='mso-bidi-font-weight:
+bold'>ポインタ<span lang=EN-US>p</span>を介して<span lang=EN-US>w[1]</span>にアクセスする際、ワードバウンダリに違反するコード<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='mso-bidi-font-weight:bold'>を生成する<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>void main(void)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>sub(1,&amp;w[1]);<span
+style='mso-spacerun:yes'>&nbsp; </span>&lt;== w[1]</span><span
+style='mso-bidi-font-weight:bold'>のアドレスは奇数番地となる<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:59.55pt'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<ul style='margin-top:0mm' type=disc>
+ <li class=MsoNormal style='mso-list:l3 level1 lfo1;tab-stops:list 36.0pt'><b
+     style='mso-bidi-font-weight:normal'><span lang=EN-US>CCU8 V3.30 <span
+     style='mso-bidi-font-weight:bold'><o:p></o:p></span></span></b></li>
+</ul>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l6 level1 lfo4;
+tab-stops:list 60.0pt'><![if !supportLists]><b><span lang=EN-US><span
+style='mso-list:Ignore'>(1)<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span></b><![endif]><span
+dir=LTR><b style='mso-bidi-font-weight:normal'>参照されない関数・テーブルをリンクしない機能を追加しました。<span
+lang=EN-US style='mso-bidi-font-weight:bold'><o:p></o:p></span></b></span></p>
+
+<p class=MsoNormal style='margin-left:59.55pt'>この機能を使用するには、<span lang=EN-US>CCU8
+V3.30</span>の他に、<span lang=EN-US>RASU8 V1.60</span>以上および<span lang=EN-US>RLU8
+V1.50</span>以上が必要です。<span lang=EN-US><br>
+</span>デフォルトの機能として動作するため、オプションの指定は不要です。</p>
+
+<p class=MsoNormal style='margin-left:59.55pt'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l6 level1 lfo4;
+tab-stops:list 60.0pt'><![if !supportLists]><b><span lang=EN-US><span
+style='mso-list:Ignore'>(2)<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span></b><![endif]><span
+dir=LTR><b style='mso-bidi-font-weight:normal'><span lang=EN-US>/<span
+class=SpellE>Zc</span></span>オプションを追加しました。<span lang=EN-US style='mso-bidi-font-weight:
+bold'><o:p></o:p></span></b></span></p>
+
+<p class=MsoNormal style='margin-left:59.55pt'><span lang=EN-US>V3.21</span>以前の動作と同様に、参照されない関数・テーブルもリンクするには、<span
+lang=EN-US>/<span class=SpellE>Zc</span></span>オプションを指定します。</p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<ul style='margin-top:0mm' type=disc>
+ <li class=MsoNormal style='mso-list:l3 level1 lfo1;tab-stops:list 36.0pt'><b
+     style='mso-bidi-font-weight:normal'><span lang=EN-US>CCU8 V3.21 <span
+     style='mso-bidi-font-weight:bold'><o:p></o:p></span></span></b></li>
+</ul>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l5 level1 lfo5;
+tab-stops:list 60.0pt'><![if !supportLists]><b><span lang=EN-US><span
+style='mso-list:Ignore'>(1)<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span></b><![endif]><span
+dir=LTR><b style='mso-bidi-font-weight:normal'><span lang=EN-US>if</span>文と<span
+lang=EN-US>else</span>文の両方の処理の中で、同じポインタ変数に対して同様な記述で後置インクリメントを行うような記述に対し、誤ったコードを生成する問題を改修しました。<span
+lang=EN-US style='mso-bidi-font-weight:bold'><o:p></o:p></span></b></span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt'><span lang=EN-US>[</span>発生条件<span
+lang=EN-US>]</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US>V3.21</span>よりも前のバージョンでは、以下の条件を満たす場合に本不具合が発生します。</p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span style='mso-bidi-font-weight:
+bold'>①<span lang=EN-US> /<span class=SpellE>Og</span>, /Om </span>または<span
+lang=EN-US>/<span class=SpellE>Ot</span></span>オプションが指定されている。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span style='mso-bidi-font-weight:
+bold'>②<span lang=EN-US> if</span>文と<span lang=EN-US>else</span>文の両方の処理の中で、同じポインタ変数に対して同様な記述で後置インクリメントを行っている。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>[</span><span style='mso-bidi-font-weight:
+bold'>発生例<span lang=EN-US>]<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>const unsigned char *<span class=SpellE>IHt_MRomRd</span>(const
+unsigned char *q, unsigned char *p)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>if(<span class=SpellE>ucMode</span>
+== 1){<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US>*p++<span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span>= 0x00;</span></b><span
+lang=EN-US style='mso-bidi-font-weight:bold'> <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>*p<span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; </span>= 0xFF;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>else{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;</span>*p++<span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span>= 0xFF;</span></b><span
+lang=EN-US style='mso-bidi-font-weight:bold'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>*p++<span style='mso-spacerun:yes'>&nbsp;&nbsp; </span>= 0x00;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>return q;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>}<b><o:p></o:p></b></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><b><span lang=EN-US><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l5 level1 lfo5;
+tab-stops:list 60.0pt'><![if !supportLists]><b><span lang=EN-US><span
+style='mso-list:Ignore'>(2)<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span></b><![endif]><span
+dir=LTR><b style='mso-bidi-font-weight:normal'><span lang=EN-US>/<span
+class=SpellE>Zp</span></span>オプション指定時、奇数のオフセットを持つ構造体・共用体メンバへのアクセスが正しく行われない問題を改修しました。<span
+lang=EN-US style='mso-bidi-font-weight:bold'><o:p></o:p></span></b></span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt'><span lang=EN-US>[</span>発生条件<span
+lang=EN-US>]</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US>V3.21</span>よりも前のバージョンでは、以下の条件を満たす場合に本不具合が発生します。</p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span style='mso-bidi-font-weight:
+bold'>①<span lang=EN-US> /<span class=SpellE>Zp</span></span>オプションを指定している。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span style='mso-bidi-font-weight:
+bold'>②<span lang=EN-US> char</span>型のみのメンバを持つ<span lang=EN-US>2</span>バイト以上の構造体または共用体がある。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span style='mso-bidi-font-weight:
+bold'>③ 上記②が構造体または共用体のメンバとして、奇数番地に割り付けられている。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span style='mso-bidi-font-weight:
+bold'>④ 上記③のメンバに代入する記述がある。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>[</span><span style='mso-bidi-font-weight:
+bold'>発生例<span lang=EN-US>]<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span class=SpellE><span
+lang=EN-US style='mso-bidi-font-weight:bold'>typedef</span></span><span
+lang=EN-US style='mso-bidi-font-weight:bold'> <span class=SpellE>struct</span>{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>unsigned char a;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>unsigned char b;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>}<span class=SpellE>Foo</span>;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span class=SpellE><span
+lang=EN-US style='mso-bidi-font-weight:bold'>typedef</span></span><span
+lang=EN-US style='mso-bidi-font-weight:bold'> <span class=SpellE>struct</span>{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>unsigned <span class=SpellE>int</span>
+c;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>unsigned char d;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span><span class=SpellE>Foo</span>
+e;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>}Bar;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>void <span class=SpellE>func</span>(Bar* bar,
+<span class=SpellE>Foo</span>* <span class=SpellE>foo</span>)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+</span>bar-&gt;e= *<span class=SpellE>foo</span>;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><b><span lang=EN-US><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l5 level1 lfo5;
+tab-stops:list 60.0pt'><![if !supportLists]><b><span lang=EN-US><span
+style='mso-list:Ignore'>(3)<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span></b><![endif]><span
+dir=LTR><b style='mso-bidi-font-weight:normal'><span lang=EN-US>const</span>修飾されたポインタ変数に初期値を与えるとインターナルエラーが発生する問題を改修しました。<span
+lang=EN-US style='mso-bidi-font-weight:bold'><o:p></o:p></span></b></span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt'><span lang=EN-US>[</span>発生条件<span
+lang=EN-US>]</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US>V3.21</span>よりも前のバージョンでは、以下の条件を満たす場合に本不具合が発生します。</p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span style='mso-bidi-font-weight:
+bold'>①<span lang=EN-US> const</span>修飾されたポインタ変数が宣言されている。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span style='mso-bidi-font-weight:
+bold'>② ①の変数が”アドレス＋オフセット”の形式で初期化されている。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span style='mso-bidi-font-weight:
+bold'>③ ①の変数が、<span lang=EN-US>absolute</span>プラグマまたは<span class=SpellE><span
+lang=EN-US>segconst</span></span>プラグマで絶対番地に割り付けられている。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>[</span><span style='mso-bidi-font-weight:
+bold'>発生例<span lang=EN-US>]<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US>#<span class=SpellE>pragma</span> absolute p 0xfe<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span class=SpellE><span
+lang=EN-US style='mso-bidi-font-weight:bold'>int</span></span><span lang=EN-US
+style='mso-bidi-font-weight:bold'> a = 20;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span class=SpellE><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US>int</span></b></span><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US> *const p = &amp;a + 1;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><b><span lang=EN-US><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l5 level1 lfo5;
+tab-stops:list 60.0pt'><![if !supportLists]><b><span lang=EN-US><span
+style='mso-list:Ignore'>(4)<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span></b><![endif]><span
+dir=LTR><b style='mso-bidi-font-weight:normal'>ループ内での後置インクリメントの記述に対して、誤ったコードを生成する問題を改修しました。<span
+lang=EN-US style='mso-bidi-font-weight:bold'><o:p></o:p></span></b></span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt'><span lang=EN-US>[</span>発生条件<span
+lang=EN-US>]</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US>V3.21</span>よりも前のバージョンでは、以下の条件を満たす場合に本不具合が発生します。</p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span style='mso-bidi-font-weight:
+bold'>① 変数<span lang=EN-US>VAR1</span>、<span lang=EN-US>VAR2</span>の型が同じ基本型<span
+lang=EN-US>(char, short, <span class=SpellE>int</span>, long)</span>で同じ符号<span
+lang=EN-US>(unsigned/ signed) </span>である。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span style='mso-bidi-font-weight:
+bold'>②<span lang=EN-US> VAR1</span>はループ制御変数である。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span style='mso-bidi-font-weight:
+bold'>③<span lang=EN-US> VAR1</span>と<span lang=EN-US>VAR2</span>は同じ値で初期化されている。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span style='mso-bidi-font-weight:
+bold'>④<span lang=EN-US> VAR1</span>と<span lang=EN-US>VAR2</span>はループ内にて同じ値で加算または減算される。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span style='mso-bidi-font-weight:
+bold'>⑤<span lang=EN-US> VAR1</span>と<span lang=EN-US>VAR2</span>はループ内で<span
+lang=EN-US>1</span>度だけ値が定義される。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span style='mso-bidi-font-weight:
+bold'>⑥<span lang=EN-US> VAR1</span>がループ内で定義される前に<span lang=EN-US>VAR2 </span>が使用される。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>[</span><span style='mso-bidi-font-weight:
+bold'>発生例<span lang=EN-US>]<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span class=SpellE><span
+lang=EN-US style='mso-bidi-font-weight:bold'>int</span></span><span lang=EN-US
+style='mso-bidi-font-weight:bold'> res;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span class=SpellE><span
+lang=EN-US style='mso-bidi-font-weight:bold'>int</span></span><span lang=EN-US
+style='mso-bidi-font-weight:bold'> main( void )<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=DA style='mso-ansi-language:
+DA;mso-bidi-font-weight:bold'>{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=DA style='mso-ansi-language:
+DA;mso-bidi-font-weight:bold'><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+</span>int a = 0 ;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=DA style='mso-ansi-language:
+DA;mso-bidi-font-weight:bold'><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+</span>int i ;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=DA style='mso-ansi-language:
+DA;mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=DA style='mso-ansi-language:
+DA;mso-bidi-font-weight:bold'><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+</span>for (i = 0; i &lt; 1; i++) {<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=DA style='mso-ansi-language:
+DA;mso-bidi-font-weight:bold'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-US style='mso-bidi-font-weight:bold'>a++ ;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;</span>if ( a != 1 ) { </span></b><span
+lang=EN-US style='mso-bidi-font-weight:bold'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>res = 1;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}
+else {<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>res = 0;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><span style='mso-spacerun:yes'>&nbsp;</span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>return 0 ;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>}<b><o:p></o:p></b></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><b><span lang=EN-US><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l5 level1 lfo5;
+tab-stops:list 60.0pt'><![if !supportLists]><b><span lang=EN-US><span
+style='mso-list:Ignore'>(5)<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span></b><![endif]><span
+dir=LTR><b style='mso-bidi-font-weight:normal'>初期化付きの<span lang=EN-US>const</span>変数に対し誤ったコードを生成する問題を改修しました。<span
+lang=EN-US style='mso-bidi-font-weight:bold'><o:p></o:p></span></b></span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt'><span lang=EN-US>[</span>発生条件<span
+lang=EN-US>]</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US>V3.21</span>よりも前のバージョンでは、以下の条件を満たす場合に本不具合が発生します。</p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span style='mso-bidi-font-weight:
+bold'>①<span lang=EN-US> /<span class=SpellE>Od</span></span>オプションが指定されていない。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span style='mso-bidi-font-weight:
+bold'>② 変数<span lang=EN-US>VAR </span>が変数または関数のアドレスで初期化されている。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span style='mso-bidi-font-weight:
+bold'>③ 変数<span lang=EN-US>VAR</span>が<span lang=EN-US>const</span>修飾されている。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span style='mso-bidi-font-weight:
+bold'>④<span lang=EN-US> VAR</span>がグローバル変数として初期化される。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span style='mso-bidi-font-weight:
+bold'>⑤ 変数<span lang=EN-US>VAR</span>は<span lang=EN-US>volatile</span>修飾されていない。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span style='mso-bidi-font-weight:
+bold'>⑥ 変数<span lang=EN-US>VAR</span>が関数内で使用される。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>[</span><span style='mso-bidi-font-weight:
+bold'>発生例<span lang=EN-US>]<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>void <span class=SpellE>func</span> ();<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>unsigned <span class=SpellE>int</span> <span
+class=SpellE>aa</span>;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>unsigned <span class=SpellE>int</span> bb;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>const unsigned <span class=SpellE>int</span> <span
+class=SpellE>vec</span> [] = { 0,0,0,0,(unsigned <span class=SpellE>int</span>)
+&amp;<span class=SpellE>func</span> };<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>void main ()<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span><span class=SpellE>aa</span>
+= <span class=SpellE>vec</span> [0];<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span></span><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US>bb = <span class=SpellE>vec</span> [4]; </span></b><span
+lang=EN-US style='mso-bidi-font-weight:bold'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><b><span lang=EN-US><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l5 level1 lfo5;
+tab-stops:list 60.0pt'><![if !supportLists]><b><span lang=EN-US><span
+style='mso-list:Ignore'>(6)<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span></b><![endif]><span
+dir=LTR><b style='mso-bidi-font-weight:normal'>アドレスとオフセットを用いて間接コールを行う記述に対し、誤ったコードを生成する問題を改修しました。<span
+lang=EN-US style='mso-bidi-font-weight:bold'><o:p></o:p></span></b></span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt'><span lang=EN-US>[</span>発生条件<span
+lang=EN-US>]</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US>V3.21</span>よりも前のバージョンでは、以下の条件を満たす場合に本不具合が発生します。</p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span style='mso-bidi-font-weight:
+bold'>①<span lang=EN-US> <span class=SpellE>typedef</span></span>を用いて関数ポインタ<span
+lang=EN-US> (FUNCTION_PTR) </span>が宣言されている。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span style='mso-bidi-font-weight:
+bold'>② 変数<span lang=EN-US>(VAR1)</span>が宣言されている。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span style='mso-bidi-font-weight:
+bold'>③ 変数<span lang=EN-US>VAR1</span>は<span lang=EN-US>(WORD *)VAR1[OFFSET]</span>のようにアドレスとオフセットで参照され、ポインタにキャストされる。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span style='mso-bidi-font-weight:
+bold'>④ 上記③のアドレスを関数ポインタ<span lang=EN-US>FUNCTION_PTR </span>として関数を呼び出している。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>[</span><span style='mso-bidi-font-weight:
+bold'>発生例<span lang=EN-US>]<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>#<span class=SpellE>pragma</span> interrupt
+test 0x30<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span class=SpellE><span
+lang=EN-US style='mso-bidi-font-weight:bold'>typedef</span></span><span
+lang=EN-US style='mso-bidi-font-weight:bold'> unsigned short <span
+class=SpellE>ushort</span>;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span class=SpellE><span
+lang=EN-US style='mso-bidi-font-weight:bold'>typedef</span></span><span
+lang=EN-US style='mso-bidi-font-weight:bold'> void (*<span class=SpellE>fp</span>)(void);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>unsigned long <span class=SpellE>user_vector_addr</span>;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>void test()<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span></span><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US>((<span class=SpellE>fp</span>)((<span class=SpellE>ushort</span>
+*)<span class=SpellE>user_vector_addr</span>)[0x18])(); </span></b><span
+lang=EN-US style='mso-bidi-font-weight:bold'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>}<b><o:p></o:p></b></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><b><span lang=EN-US><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l5 level1 lfo5;
+tab-stops:list 60.0pt'><![if !supportLists]><b><span lang=EN-US><span
+style='mso-list:Ignore'>(7)<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span></b><![endif]><span
+dir=LTR><b style='mso-bidi-font-weight:normal'>構造体または共用体の配列をメンバに持つ構造体<span
+lang=EN-US>/</span>共用体の変数に対し、ポインタを用いて書き込みを行う記述に対し、アプリケーションエラーが発生する問題を改修しました。<span
+lang=EN-US style='mso-bidi-font-weight:bold'><o:p></o:p></span></b></span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt'><span lang=EN-US>[</span>発生条件<span
+lang=EN-US>]</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US>V3.21</span>よりも前のバージョンでは、以下の条件を満たす場合に本不具合が発生します。</p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span style='mso-bidi-font-weight:
+bold'>①<span lang=EN-US> /<span class=SpellE>Od</span></span>オプションが指定されている。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span style='mso-bidi-font-weight:
+bold'>② 構造体または共用体の変数<span lang=EN-US>SUVAR</span>が宣言されている。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span style='mso-bidi-font-weight:
+bold'>③<span lang=EN-US> SUVAR</span>は別の構造体または共用体の配列<span lang=EN-US>ARR_MEMB</span>をメンバに持つ。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span style='mso-bidi-font-weight:
+bold'>④ ポインタ変数<span lang=EN-US>PVAR </span>がインデックス変数を用いて<span lang=EN-US>ARR_MEMB
+</span>のアドレスとして定義されている。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span style='mso-bidi-font-weight:
+bold'>⑤<span lang=EN-US> PVAR </span>のメンバに定数<span lang=EN-US>0</span>が代入されている。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>[</span><span style='mso-bidi-font-weight:
+bold'>発生例<span lang=EN-US>]<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span class=SpellE><span
+lang=EN-US style='mso-bidi-font-weight:bold'>typedef</span></span><span
+lang=EN-US style='mso-bidi-font-weight:bold'> <span class=SpellE>struct</span>
+{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>unsigned short *<span
+class=SpellE>pBuf</span>;<span style='mso-spacerun:yes'>&nbsp; </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>unsigned short <span
+class=SpellE>buf_size</span>; <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>unsigned short ix;<span
+style='mso-spacerun:yes'>&nbsp; </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>} <span class=SpellE>tBuffer</span>;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span class=SpellE><span
+lang=EN-US style='mso-bidi-font-weight:bold'>typedef</span></span><span
+lang=EN-US style='mso-bidi-font-weight:bold'> <span class=SpellE>struct</span>
+{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span><span class=SpellE>tBuffer</span>
+<span class=SpellE>Buf</span>[3]; <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>} <span class=SpellE>tWork</span>;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span class=SpellE><span
+lang=EN-US style='mso-bidi-font-weight:bold'>tWork</span></span><span
+lang=EN-US style='mso-bidi-font-weight:bold'> <span class=SpellE>gstWork</span>;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>void <span class=SpellE>func</span>( unsigned
+char <span class=SpellE>chNo</span> )<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span><span class=SpellE>tBuffer</span>
+*<span class=SpellE>pstBuf</span>;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span><span class=SpellE>pstBuf</span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span>= &amp;<span class=SpellE>gstWork.Buf</span>[<span
+class=SpellE>chNo</span>];<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><span style='mso-spacerun:yes'>&nbsp;&nbsp;
+</span></span><b style='mso-bidi-font-weight:normal'><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;</span><span class=SpellE>pstBuf</span>-&gt;ix<span
+style='mso-spacerun:yes'>&nbsp; </span>= 0;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>}<b><o:p></o:p></b></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><b><span lang=EN-US><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l5 level1 lfo5;
+tab-stops:list 60.0pt'><![if !supportLists]><b><span lang=EN-US><span
+style='mso-list:Ignore'>(8)<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span></b><![endif]><span
+dir=LTR><b style='mso-bidi-font-weight:normal'><span lang=EN-US>8</span>ビット<span
+lang=EN-US>/16</span>ビット単位の書き込みにおいて、書き込み先の領域よりも大きいサイズで書き込みが行われる問題を改修しました。<span
+lang=EN-US style='mso-bidi-font-weight:bold'><o:p></o:p></span></b></span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt'><span lang=EN-US>[</span>発生条件<span
+lang=EN-US>]</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US>V3.21</span>よりも前のバージョンでは、以下の条件を満たす場合に本不具合が発生します。</p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span style='mso-bidi-font-weight:
+bold'>① </span>コンパイル時に<span lang=EN-US>/<span class=SpellE>Od</span></span>以外の最適化オプションを指定している。<span
+lang=EN-US style='mso-bidi-font-weight:bold'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span style='mso-bidi-font-weight:
+bold'>② </span><span lang=EN-US>far</span>ポインタを引数に持つ関数があり、その引数がレジスタに割り付けられている。</p>
+
+<p class=MsoNormal style='margin-left:72.0pt'>③<span lang=EN-US> far</span>ポインタ引数を参照する式がある。</p>
+
+<p class=MsoNormal style='margin-left:72.0pt'>④ ③の後に以下のいずれかの処理を行っている。</p>
+
+<p class=MsoNormal style='margin-left:90.0pt'><span style='mso-bidi-font-weight:
+bold'>・<span lang=EN-US>far</span>ポインタ引数を<span lang=EN-US>signed short/unsigned
+short/signed <span class=SpellE>int</span>/unsigned <span class=SpellE>int</span>/signed
+long/unsigned long</span>型のいずれかの型にキャストし、<span lang=EN-US>0xFF</span>の<span
+lang=EN-US>AND</span>演算を行った結果を<span lang=EN-US>signed char</span>型または<span
+lang=EN-US>unsigned char</span>型の変数に代入している。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:90.0pt'><span style='mso-bidi-font-weight:
+bold'>・<span lang=EN-US>far</span>ポインタ引数を<span lang=EN-US>signed long/unsigned
+long</span>型のいずれかの型にキャストし、<span lang=EN-US>0xFFFF</span>の<span lang=EN-US>AND</span>演算を行った結果を<span
+lang=EN-US>signed short/unsigned short/signed <span class=SpellE>int</span>/unsigned
+<span class=SpellE>int</span></span>型のいずれかの型の変数に代入している。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>[</span><span style='mso-bidi-font-weight:
+bold'>発生例<span lang=EN-US>]<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>unsigned char <span class=SpellE>var</span>;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>unsigned short __far *<span class=SpellE>fp</span>;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>void fn( unsigned short __far *<span
+class=SpellE>addr</span>)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span><span class=SpellE>fp</span>
+= <span class=SpellE>addr</span>;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span></span><span class=SpellE><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US>var</span></b></span><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US> = ( unsigned char )( (
+unsigned short )<span class=SpellE>addr</span> &amp; 0xFF );<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>return ;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><b><span lang=EN-US><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l5 level1 lfo5;
+tab-stops:list 60.0pt'><![if !supportLists]><b><span lang=EN-US><span
+style='mso-list:Ignore'>(9)<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span></b><![endif]><span
+dir=LTR><b style='mso-bidi-font-weight:normal'><span lang=EN-US>far</span>ポインタを返すインライン関数を用いてセグメント<span
+lang=EN-US>1</span>以上のデータをアクセスする記述に対し、誤ったコードを生成する問題を改修しました。<span lang=EN-US
+style='mso-bidi-font-weight:bold'><o:p></o:p></span></b></span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt'><span lang=EN-US>[</span>発生条件<span
+lang=EN-US>]</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US>V3.21</span>よりも前のバージョンでは、以下の条件を満たす場合に本不具合が発生します。</p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span style='mso-bidi-font-weight:
+bold'>① コンパイル時に最適化を有効にしている（<span lang=EN-US>/Om</span>、<span lang=EN-US>/<span
+class=SpellE>Ot</span></span>、<span lang=EN-US>/<span class=SpellE>Og</span></span>、<span
+lang=EN-US>/<span class=SpellE>Ol</span></span>、デフォルトのいずれかを指定）<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span style='mso-bidi-font-weight:
+bold'>②<span lang=EN-US> signed long/unsigned long</span>型のいずれかの型を<span
+lang=EN-US>far</span>ポインタにキャストした結果を返す関数がある。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span style='mso-bidi-font-weight:
+bold'>③ ②の関数を<span lang=EN-US>#<span class=SpellE>pragma</span> inline</span>を使用してインライン展開している。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span style='mso-bidi-font-weight:
+bold'>④ ③のインライン関数の結果を用いてデータのアクセスを行っている。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>[</span><span style='mso-bidi-font-weight:
+bold'>発生例<span lang=EN-US>]<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>#<span class=SpellE>pragma</span> inline <span
+class=SpellE>set_far_addr</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>unsigned char __far * <span class=SpellE>set_far_addr</span>(unsigned
+long <span class=SpellE>addr</span>)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>return<span
+style='mso-spacerun:yes'>&nbsp; </span>(unsigned char __far *)<span
+class=SpellE>addr</span>;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=DA style='mso-ansi-language:
+DA;mso-bidi-font-weight:bold'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=DA style='mso-ansi-language:
+DA;mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=DA style='mso-ansi-language:
+DA;mso-bidi-font-weight:bold'>int i;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=DA style='mso-ansi-language:
+DA;mso-bidi-font-weight:bold'>unsigned char var;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=DA style='mso-ansi-language:
+DA;mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>void f(void) {<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><span style='mso-spacerun:yes'>&nbsp;&nbsp;
+</span></span><b style='mso-bidi-font-weight:normal'><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;</span><span class=SpellE>var</span> = *(<span
+class=SpellE>set_far_addr</span>(0x10040)+<span class=SpellE>i</span>);<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><b><span lang=EN-US><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l5 level1 lfo5;
+tab-stops:list 60.0pt'><![if !supportLists]><b><span lang=EN-US><span
+style='mso-list:Ignore'>(10)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span></b><![endif]><span dir=LTR><span class=SpellE><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US>int</span></b></span><b
+style='mso-bidi-font-weight:normal'>型の変数が奇数アドレスに割り付けられる問題を改修しました。<span
+lang=EN-US style='mso-bidi-font-weight:bold'><o:p></o:p></span></b></span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt'><span lang=EN-US>[</span>発生条件<span
+lang=EN-US>]</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US>V3.21</span>よりも前のバージョンでは、以下の条件を満たす場合に本不具合が発生します。</p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span style='mso-bidi-font-weight:
+bold'>①<span lang=EN-US> static</span>修飾された初期値のない<span class=SpellE><span
+lang=EN-US>int</span></span><span lang=EN-US>/unsigned <span class=SpellE>int</span>/short/unsigned
+short/long/unsigned long</span>のいずれかの型の変数があり、読み出しまたは書き込みを行っている。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span style='mso-bidi-font-weight:
+bold'>② </span>①の変数が定義された同じファイル中に、<span lang=EN-US>static</span>修飾された初期値のない　<span
+lang=EN-US>char</span>型または<span lang=EN-US>unsigned char</span>型の変数が<span
+lang=EN-US>1</span>個以上あり、そのうち①の変数より名前のアルファベット順で前に来るものが奇数個ある<span
+style='mso-bidi-font-weight:bold'>。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span style='mso-bidi-font-weight:
+bold'>③ ①の変数が定義された同じファイル中に、<span lang=EN-US>ABSOLUTE</span>プラグマで割り付け先を指定された<span
+lang=EN-US>static</span>修飾されていない初期値なしの<span lang=EN-US>const</span>変数がある。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>[</span><span style='mso-bidi-font-weight:
+bold'>発生例<span lang=EN-US>]<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>#<span class=SpellE>pragma</span> ABSOLUTE <span
+class=SpellE>const_data</span> 0x8000<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>const <span class=SpellE>int</span> <span
+class=SpellE>const_data</span>;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>static <span class=SpellE>int</span> i1;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>static char c1;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>static char c2;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>static char c3;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>void <span class=SpellE>func</span>(void) {<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><span style='mso-spacerun:yes'>&nbsp;&nbsp;
+</span></span><b style='mso-bidi-font-weight:normal'><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;</span>i1 = 0;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>c1 = 0;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>c2 = 0;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>c3 = 0;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>}<b><o:p></o:p></b></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><b><span lang=EN-US><o:p>&nbsp;</o:p></span></b></p>
+
+<ul style='margin-top:0mm' type=disc>
+ <li class=MsoNormal style='mso-list:l3 level1 lfo1;tab-stops:list 36.0pt'><b
+     style='mso-bidi-font-weight:normal'><span lang=EN-US>CCU8 V3.20 <span
+     style='mso-bidi-font-weight:bold'><o:p></o:p></span></span></b></li>
+</ul>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l9 level1 lfo6;
+tab-stops:list 60.0pt'><![if !supportLists]><b><span lang=EN-US><span
+style='mso-list:Ignore'>(1)<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span></b><![endif]><span
+dir=LTR><b style='mso-bidi-font-weight:normal'>コピーライト表記を新会社名（<span lang=EN-US>LAPIS
+Semiconductor</span>）に変更しました。機能の変更はありません。<span lang=EN-US style='mso-bidi-font-weight:
+bold'><o:p></o:p></span></b></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><b><span lang=PT-BR
+style='mso-ansi-language:PT-BR'><o:p>&nbsp;</o:p></span></b></p>
+
+<ul style='margin-top:0mm' type=disc>
+ <li class=MsoNormal style='mso-list:l3 level1 lfo1;tab-stops:list 36.0pt'><b
+     style='mso-bidi-font-weight:normal'><span lang=EN-US>CCU8 V3.10b <span
+     style='mso-bidi-font-weight:bold'><o:p></o:p></span></span></b></li>
+</ul>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l1 level1 lfo7;
+tab-stops:list 60.0pt'><![if !supportLists]><b><span lang=EN-US><span
+style='mso-list:Ignore'>(1)<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span></b><![endif]><span
+dir=LTR><b style='mso-bidi-font-weight:normal'>ビットフィールドへのポインタにキャストした定数および<span
+lang=EN-US>char</span>型へのポインタにキャストした定数を用いた書き込みの組み合わせにおいて不正なコードを生成する問題を改修しました。<span
+lang=EN-US style='mso-bidi-font-weight:bold'><o:p></o:p></span></b></span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt'><span lang=EN-US>[</span>発生条件<span
+lang=EN-US>]</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US>V3.10b</span>よりも前のバージョンでは、以下の条件を満たす場合に本不具合が発生します。</p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span style='mso-bidi-font-weight:
+bold'>① ビットフィールドへのポインタにキャストした定数を用いて、ビットメンバに対する<span lang=EN-US>1</span>ビット単位の書き込みをしている。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span style='mso-bidi-font-weight:
+bold'>② 同一関数内において、①の後に、バイト型へのポインタにキャストした①と同じ値の定数を用いて、バイト単位で定数<span lang=EN-US>0</span>か、値が常に<span
+lang=EN-US>0</span>となる演算の結果や変数を書き込んでいる。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span style='mso-bidi-font-weight:
+bold'>③ 上記の①と②の間に以下のいずれの記述もない<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:98.25pt;text-indent:-18.0pt;mso-list:
+l10 level1 lfo8;tab-stops:list 98.25pt'><![if !supportLists]><span lang=EN-US
+style='mso-bidi-font-weight:bold'><span style='mso-list:Ignore'>・<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR><span style='mso-bidi-font-weight:
+bold'>関数呼び出し<span lang=EN-US><o:p></o:p></span></span></span></p>
+
+<p class=MsoNormal style='margin-left:98.25pt;text-indent:-18.0pt;mso-list:
+l10 level1 lfo8;tab-stops:list 98.25pt'><![if !supportLists]><span lang=PT-BR
+style='mso-ansi-language:PT-BR;mso-bidi-font-weight:bold'><span
+style='mso-list:Ignore'>・<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR><span lang=PT-BR style='mso-ansi-language:
+PT-BR;mso-bidi-font-weight:bold'>__asm</span><span style='mso-bidi-font-weight:
+bold'>、</span></span><span lang=PT-BR style='mso-ansi-language:PT-BR;
+mso-bidi-font-weight:bold'>#pragma asm - #pragma endasm</span><span
+style='mso-ansi-language:PT-BR;mso-bidi-font-weight:bold'>、または<span lang=PT-BR>#asm
+- #endasm<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:98.25pt;text-indent:-18.0pt;mso-list:
+l10 level1 lfo8;tab-stops:list 98.25pt'><![if !supportLists]><span lang=PT-BR
+style='mso-ansi-language:PT-BR;mso-bidi-font-weight:bold'><span
+style='mso-list:Ignore'>・<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR><span style='mso-ansi-language:
+PT-BR;mso-bidi-font-weight:bold'>ビットフィールド以外の型へのポインタにキャストした定数（①とは異なる値）を用いた値の書き込み<span
+lang=PT-BR><o:p></o:p></span></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=PT-BR
+style='mso-ansi-language:PT-BR;mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>[</span><span style='mso-bidi-font-weight:
+bold'>発生例<span lang=EN-US>]<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span class=SpellE><span
+lang=EN-US style='mso-bidi-font-weight:bold'>typedef</span></span><span
+lang=EN-US style='mso-bidi-font-weight:bold'> <span class=SpellE>struct</span>
+{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>unsigned char b0 : 1;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>unsigned char b1 : 1;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>...<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>unsigned char b7 : 1;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>} _BYTE_FIELD;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>#define P41D<span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span>((*(volatile _BYTE_FIELD
+*)0xE100).b1)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>#define P4D<span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; </span>(*(volatile unsigned
+char *)0xE100)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>void main()<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>P41D = 1;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>P4D = 0;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=PT-BR
+style='mso-ansi-language:PT-BR;mso-bidi-font-weight:bold'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=PT-BR
+style='mso-ansi-language:PT-BR;mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<ul style='margin-top:0mm' type=disc>
+ <li class=MsoNormal style='mso-list:l3 level1 lfo1;tab-stops:list 36.0pt'><b
+     style='mso-bidi-font-weight:normal'><span lang=EN-US>CCU8 V3.10a <span
+     style='mso-bidi-font-weight:bold'><o:p></o:p></span></span></b></li>
+</ul>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l2 level1 lfo9;
+tab-stops:list 60.0pt'><![if !supportLists]><b><span lang=EN-US><span
+style='mso-list:Ignore'>(1)<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span></b><![endif]><span
+dir=LTR><b style='mso-bidi-font-weight:normal'>構造体または共用体の配列のメンバアクセスが正常にできない問題を改修しました。<span
+lang=EN-US style='mso-bidi-font-weight:bold'><o:p></o:p></span></b></span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt'><span lang=EN-US>[</span>発生条件<span
+lang=EN-US>]</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US>V3.10a</span>よりも前のバージョンでは、以下の条件を満たす場合に本不具合が発生します。</p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span style='mso-bidi-font-weight:
+bold'>① 構造体または共用体の配列が宣言されている。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span style='mso-bidi-font-weight:
+bold'>② ①の配列の要素数に対し、<span class=SpellE><span lang=EN-US>typedef</span></span>された型でキャストを行っている。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>[</span><span style='mso-bidi-font-weight:
+bold'>発生例<span lang=EN-US>]<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span class=SpellE><span
+lang=EN-US style='mso-bidi-font-weight:bold'>typedef</span></span><span
+lang=EN-US style='mso-bidi-font-weight:bold'> unsigned char UC;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span class=SpellE><span
+lang=EN-US style='mso-bidi-font-weight:bold'>typedef</span></span><span
+lang=EN-US style='mso-bidi-font-weight:bold'> <span class=SpellE>struct</span>
+{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span><span class=SpellE>int</span>
+m1;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span><span class=SpellE>int</span>
+m2;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>} ST1;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>static <b>ST1 stvar1[(UC)3];</b><o:p></o:p></span></p>
+
+<p><b><span lang=EN-US><o:p>&nbsp;</o:p></span></b></p>
+
+<ul style='margin-top:0mm' type=disc>
+ <li class=MsoNormal style='mso-list:l3 level1 lfo1;tab-stops:list 36.0pt'><b
+     style='mso-bidi-font-weight:normal'><span lang=EN-US>CCU8 V3.10 <span
+     style='mso-bidi-font-weight:bold'><o:p></o:p></span></span></b></li>
+</ul>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l0 level1 lfo10;
+tab-stops:list 60.0pt'><![if !supportLists]><b><span lang=EN-US><span
+style='mso-list:Ignore'>(1)<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span></b><![endif]><span
+dir=LTR><b style='mso-bidi-font-weight:normal'>構造体メンバである関数へのポインタによる関数呼び出しにおいて、コールツリーオプションを指定したときにインターナルエラーが発生する問題を改修しました。<span
+lang=EN-US style='mso-bidi-font-weight:bold'><o:p></o:p></span></b></span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt'><span lang=EN-US>[</span>発生条件<span
+lang=EN-US>]</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US>V3.10</span>よりも前のバージョンでは、以下の条件を満たす場合に本不具合が発生します。</p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span style='mso-bidi-font-weight:
+bold'>① コールツリーオプション<span lang=EN-US>(/CT)</span>を指定している<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span style='mso-bidi-font-weight:
+bold'>② 構造体メンバである関数へのポインタを用いて関数呼び出しをしている<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span style='mso-bidi-font-weight:
+bold'>③ 関数ポインタによる呼び出しにおいて、アスタリスク<span lang=EN-US>'*'</span>をつけている<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span style='mso-bidi-font-weight:
+bold'>④ 関数の引数に関数呼び出しを指定している<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span style='mso-bidi-font-weight:
+bold'>⑤ ④の引数に②と同じ構造体を使用している<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>[</span><span style='mso-bidi-font-weight:
+bold'>発生例<span lang=EN-US>]<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span class=SpellE><span
+lang=EN-US style='mso-bidi-font-weight:bold'>typedef</span></span><span
+lang=EN-US style='mso-bidi-font-weight:bold'> <span class=SpellE>struct</span>
+{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>char *<span class=SpellE>cname</span>;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>unsigned char (*<span
+class=SpellE>cfunc</span>)(char *<span class=SpellE>opt_msg</span>);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>} CMD;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>const CMD <span class=SpellE>Cmd</span>;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>char * fn(char *);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>void test(void)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><span style='mso-spacerun:yes'>&nbsp;&nbsp;
+</span><b><span style='mso-spacerun:yes'>&nbsp;</span>(*(<span class=SpellE>Cmd.cfunc</span>))(fn(<span
+class=SpellE>Cmd.cname</span>));<o:p></o:p></b></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l0 level1 lfo10;
+tab-stops:list 60.0pt'><![if !supportLists]><b><span lang=EN-US><span
+style='mso-list:Ignore'>(2)<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span></b><![endif]><span
+dir=LTR><b>複数のキャストを用いた式に対しインターナルエラーが発生する問題を改修しました。<span lang=EN-US><o:p></o:p></span></b></span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>[</span><span style='mso-bidi-font-weight:
+bold'>発生条件<span lang=EN-US>]<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>V3.10</span><span style='mso-bidi-font-weight:
+bold'>よりも前のバージョンでは、以下の条件をすべて満たす場合に本不具合が発生します。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span style='mso-bidi-font-weight:
+bold'>① 関数に引数が指定されており、その引数がレジスタに割り付けられている。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span style='mso-bidi-font-weight:
+bold'>② ①の引数が関数内で使用されている（加減乗除演算、関数呼び出しの引数、配列のインデックスなど）。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span style='mso-bidi-font-weight:
+bold'>③ ②の後に複数のキャストを用いた式があり、キャストの間にアドレス演算子<span lang=EN-US>&amp;</span>を記述している。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>[</span><span style='mso-bidi-font-weight:
+bold'>発生例<span lang=EN-US>]<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>unsigned short uhRes1;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>unsigned char ucRes1;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>unsigned char table[16];<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>void func1( unsigned char <span class=SpellE>arg</span>
+)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>ucRes1 = table[<span
+class=SpellE>arg</span>];<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span><b>uhRes1 = *(unsigned short
+*)&amp;(*(unsigned char *)(0x1000));<o:p></o:p></b></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l0 level1 lfo10;
+tab-stops:list 60.0pt'><![if !supportLists]><b><span lang=EN-US><span
+style='mso-list:Ignore'>(3)<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span></b><![endif]><span
+dir=LTR><b style='mso-bidi-font-weight:normal'><span style='font-family:"ＭＳ ゴシック";
+mso-hansi-font-family:"ＭＳ Ｐゴシック"'>セグメント<span lang=EN-US>1</span>以上のデータをアクセスする記述に対し不正なコードを生成する問題を改修しました。</span><span
+lang=EN-US style='mso-bidi-font-weight:bold'><o:p></o:p></span></b></span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>[</span><span style='mso-bidi-font-weight:
+bold'>発生条件<span lang=EN-US>]<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>V3.10</span><span style='mso-bidi-font-weight:
+bold'>よりも前のバージョンでは、以下の条件をすべて満たす場合に本不具合が発生します。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span style='mso-bidi-font-weight:
+bold'>①コンパイル時に最適化を有効にしている（</span><span lang=EN-US>/Om</span>、<span lang=EN-US>/<span
+class=SpellE>Ot</span></span>、<span lang=EN-US>/<span class=SpellE>Og</span></span>、デフォルトのいずれかを指定<span
+style='mso-bidi-font-weight:bold'>）<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span style='mso-bidi-font-weight:
+bold'>②<span lang=EN-US> <a name="OLE_LINK2">far</a></span><span
+style='mso-bookmark:OLE_LINK2'>ポインタ変数に定数を代入する記述の後に、<span lang=EN-US>for</span>、<span
+lang=EN-US>while</span>、<span lang=EN-US>if</span>、<span lang=EN-US>switch</span>などの制御文や関数呼び出しの記述がある。</span><span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span style='mso-bidi-font-weight:
+bold'>③ ②の記述の後に<span lang=EN-US>far</span>ポインタ変数とインデックス用の変数を使用してデータをアクセスする記述がある。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>[</span><span style='mso-bidi-font-weight:
+bold'>発生例<span lang=EN-US>]<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>void <span class=SpellE>func</span>(void) <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>unsigned char __far *adr1;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>unsigned char ary1[4];<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span><span class=SpellE>int</span>
+<span class=SpellE>i</span>;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>adr1 = (unsigned char __far
+*)0x10000;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span></span><span lang=DA
+style='mso-ansi-language:DA;mso-bidi-font-weight:bold'>for(i=0; i&lt;4; i++) {<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=DA style='mso-ansi-language:
+DA;mso-bidi-font-weight:bold'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b>ary1[i]
+= *(adr1 + i);<o:p></o:p></b></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=DA style='mso-ansi-language:
+DA;mso-bidi-font-weight:bold'><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US style='mso-bidi-font-weight:bold'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l0 level1 lfo10;
+tab-stops:list 60.0pt'><![if !supportLists]><b><span lang=EN-US><span
+style='mso-list:Ignore'>(4)<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span></b><![endif]><span
+dir=LTR><b style='mso-bidi-font-weight:normal'><span style='font-family:"ＭＳ ゴシック";
+mso-hansi-font-family:"ＭＳ Ｐゴシック"'>ワーニング<span lang=EN-US>W5021</span>に対するチェックが適切に行われない問題を改修しました。</span><span
+lang=EN-US style='mso-bidi-font-weight:bold'><o:p></o:p></span></b></span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>[</span><span style='mso-bidi-font-weight:
+bold'>発生条件<span lang=EN-US>]<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>V3.10</span><span style='mso-bidi-font-weight:
+bold'>よりも前のバージョンでは、以下の条件をすべて満たす場合に本不具合が発生します。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span style='mso-bidi-font-weight:
+bold'>①ワーニングレベルを<span lang=EN-US>2</span>以上に設定している。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span style='mso-bidi-font-weight:
+bold'>②複数の引数を持つ関数の最終引数<span lang=EN-US>(</span>引数が<span lang=EN-US>3</span>つある場合は第<span
+lang=EN-US>3</span>引数<span lang=EN-US>)</span>が整数定数である。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>[</span><span style='mso-bidi-font-weight:
+bold'>発生例<span lang=EN-US>]<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>void <span class=SpellE>func</span>(unsigned <span
+class=SpellE>int</span> x, unsigned char y, unsigned <span class=SpellE>int</span>
+z); <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>void main() {<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><b><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span><span class=SpellE>func</span>(4000,
+30, 300);<span style='mso-spacerun:yes'>&nbsp; </span></span>・・・<span
+lang=EN-US>(A)<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><b><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span><span class=SpellE>func</span>(4000,
+300, 30);<span style='mso-spacerun:yes'>&nbsp; </span></span>・・・<span
+lang=EN-US>(B)<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>(A) </span><span style='mso-bidi-font-weight:
+bold'>引数<span lang=EN-US>300</span>とそれぞれの引数の型<span lang=EN-US>(unsigned <span
+class=SpellE>int</span> x</span>、<span lang=EN-US>unsigned char y</span>、<span
+lang=EN-US>unsigned <span class=SpellE>int</span> z)</span>を比較し、引数<span
+lang=EN-US>300</span>と<span lang=EN-US>unsigned char y</span>に対して<span
+lang=EN-US>W5021</span>が出力されます。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>(B) </span><span style='mso-bidi-font-weight:
+bold'>引数<span lang=EN-US>30</span>とそれぞれの引数の型<span lang=EN-US>(unsigned <span
+class=SpellE>int</span> x</span>、<span lang=EN-US>unsigned char y</span>、<span
+lang=EN-US>unsigned <span class=SpellE>int</span> z)</span>を比較し、ワーニングが出力されません。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>(</span><span
+style='mso-bidi-font-weight:bold'>本来は、引数<span lang=EN-US>300</span>と<span
+lang=EN-US>unsigned char y</span>に対して<span lang=EN-US>W5021</span>が出力されるべきです<span
+lang=EN-US>)<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l0 level1 lfo10;
+tab-stops:list 60.0pt'><![if !supportLists]><b><span lang=EN-US><span
+style='mso-list:Ignore'>(5)<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span></b><![endif]><span
+dir=LTR><b style='mso-bidi-font-weight:normal'><span style='font-family:"ＭＳ ゴシック";
+mso-hansi-font-family:"ＭＳ Ｐゴシック"'>ワーニング<span lang=EN-US>W5023</span>に対するチェックが適切に行われない問題を改修しました。</span><span
+lang=EN-US style='mso-bidi-font-weight:bold'><o:p></o:p></span></b></span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>[</span><span style='mso-bidi-font-weight:
+bold'>発生条件<span lang=EN-US>]<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>V3.10</span><span style='mso-bidi-font-weight:
+bold'>よりも前のバージョンでは、以下の条件をすべて満たす場合に本不具合が発生します。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span style='mso-bidi-font-weight:
+bold'>①ワーニングレベルを<span lang=EN-US>2</span>以上に設定している。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span style='mso-bidi-font-weight:
+bold'>②複数の引数を持つ関数の最終引数<span lang=EN-US>(</span>引数が<span lang=EN-US>3</span>つある場合は第<span
+lang=EN-US>3</span>引数<span lang=EN-US>)</span>が変数である。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span style='mso-bidi-font-weight:
+bold'>③最終引数以外の引数に定数を指定している。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>[</span><span style='mso-bidi-font-weight:
+bold'>発生例<span lang=EN-US>]<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>void <span class=SpellE>func</span>(unsigned <span
+class=SpellE>int</span> x, unsigned char y, unsigned <span class=SpellE>int</span>
+z);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>void main()<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>unsigned char <span
+class=SpellE>uc</span>;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>unsigned <span class=SpellE>int</span>
+<span class=SpellE>ui</span>;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><b><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span><span class=SpellE>func</span>(4000,
+1, <span class=SpellE>ui</span>);<span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span></span>・・・<span lang=EN-US>(A)<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><b><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span><span class=SpellE>func</span>(4000,
+300, <span class=SpellE>ui</span>); </span>・・・<span lang=EN-US>(B)<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>(A) </span><span style='mso-bidi-font-weight:
+bold'>定数<span lang=EN-US>1</span>を<span class=SpellE><span lang=EN-US>int</span></span>型として引数の型<span
+lang=EN-US>(unsigned char y)</span>と比較し、<span lang=EN-US>W5023</span>が出力されます。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>(</span><span
+style='mso-bidi-font-weight:bold'>本来は、引数の型を超えていないため、<span lang=EN-US>W5023</span>は出力されるべきではありません<span
+lang=EN-US>)<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'>(B) </span><span style='mso-bidi-font-weight:
+bold'>引数<span lang=EN-US>300</span>を<span class=SpellE><span lang=EN-US>int</span></span>型として引数の型<span
+lang=EN-US>(unsigned char y)</span>と比較し、<span lang=EN-US>W5023</span>が出力されます。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='mso-bidi-font-weight:bold'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>(</span><span
+style='mso-bidi-font-weight:bold'>本来は、定数の比較であるため<span lang=EN-US>W5021</span>が出力されるべきです<span
+lang=EN-US>)<o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<ul style='margin-top:0mm' type=disc>
+ <li class=MsoNormal style='mso-list:l3 level1 lfo1;tab-stops:list 36.0pt'><b
+     style='mso-bidi-font-weight:normal'><span lang=EN-US>CCU8 V3.09 <span
+     style='mso-bidi-font-weight:bold'><o:p></o:p></span></span></b></li>
+</ul>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l11 level1 lfo11;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>(1)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR><span lang=EN-US>C</span>デバッグ情報に関する改善を行いました。今回の変更により、インクルードファイル中に記述されたコードを、<span
+lang=EN-US>DTU8</span>デバッガにてデバッグできるようになりました。<span lang=EN-US style='mso-bidi-font-weight:
+bold'><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l11 level1 lfo11;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>(2)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR><span style='mso-bidi-font-weight:
+bold'>複数のブロック内に共通する同じ式を記述した場合に、その式に対するコードの生成を誤る問題を改修しました。<span lang=EN-US><o:p></o:p></span></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<ul style='margin-top:0mm' type=disc>
+ <li class=MsoNormal style='mso-list:l3 level1 lfo1;tab-stops:list 36.0pt'><b
+     style='mso-bidi-font-weight:normal'><span lang=EN-US>CCU8 V3.08 <span
+     style='mso-bidi-font-weight:bold'><o:p></o:p></span></span></b></li>
+</ul>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l8 level1 lfo12;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>(1)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR><span lang=EN-US style='mso-bidi-font-weight:
+bold'>C</span><span style='mso-bidi-font-weight:bold'>デバッグ情報に関する改善を行いました。今回の変更により、<span
+lang=EN-US>DTU8</span>デバッガでのステップアウト機能がサポートされます。<span lang=EN-US><o:p></o:p></span></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<ul style='margin-top:0mm' type=disc>
+ <li class=MsoNormal style='mso-list:l3 level1 lfo1;tab-stops:list 36.0pt'><b
+     style='mso-bidi-font-weight:normal'><span lang=EN-US>CCU8 V3.07 <span
+     style='mso-bidi-font-weight:bold'><o:p></o:p></span></span></b></li>
+</ul>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l7 level1 lfo13;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>(1)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR><span lang=EN-US style='mso-bidi-font-weight:
+bold'>C</span><span style='mso-bidi-font-weight:bold'>デバッグ情報に関する変更を行いました。これにより、レジスタに割り付けられたローカル変数や関数引数をデバッガにて参照できるようになりました。<span
+lang=EN-US><o:p></o:p></span></span></span></p>
+
+<p><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span lang=EN-US>
+
+<hr size=2 width="100%" align=center>
+
+</span></div>
+
+<h2><a name="_2._マニュアルに記載されていない追加情報"></a><a name="_3._マニュアルに記載されていない追加情報"></a><span
+lang=EN-US>3. </span>マニュアルに記載されていない追加情報</h2>
+
+<p><a name=2></a>マニュアルに記載されていない追加情報はありません。</p>
+
+<div class=MsoNormal align=center style='text-align:center'><span lang=EN-US>
+
+<hr size=2 width="100%" align=center>
+
+</span></div>
+
+<h2><a name="_3._注意事項"></a><a name="_4._制限事項"></a><span lang=EN-US>4. </span>制限事項</h2>
+
+<p><a name=3></a>現バージョンの<span lang=EN-US>CCU8</span>には、以下の制限事項があります。</p>
+
+<p class=MsoNormal style='margin-left:24.1pt;text-indent:-24.1pt;mso-char-indent-count:
+-2.0'><b style='mso-bidi-font-weight:normal'><span lang=EN-US style='mso-bidi-font-size:
+10.5pt'>(1)</span><span style='mso-bidi-font-weight:bold'>ネスト関係にあるインライン関数内にて、スタックに割り付けられたローカル変数のアクセスに対するコード生成を誤ります</span></b><b><span
+style='mso-bidi-font-size:10.5pt'>。</span></b><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='mso-bidi-font-size:10.5pt'><o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>[</span>発生条件<span
+lang=EN-US>]</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'>① ネスト関係にあるインライン展開対象の関数が存在する。</p>
+
+<p class=MsoNormal style='margin-left:45.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'>ここでは、呼び出し側のインライン関数を<span lang=EN-US>inlinefunc1</span>、<span
+lang=EN-US>inlinefunc1</span>から呼び出されるインライン関数を<span lang=EN-US>inlinefunc2</span>とする。</p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'>②<span lang=EN-US> inlinefunc2</span>に対する呼び出しが以下のいずれかを満たす。</p>
+
+<p class=MsoNormal style='margin-left:45.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>(a) inlinefunc2</span>の呼び出しが、<span
+lang=EN-US>inlinefunc1</span>関数のループ内に存在する。</p>
+
+<p class=MsoNormal style='margin-left:45.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>(b) </span>戻り値を持たない<span
+lang=EN-US>inlinefunc2</span>に対して、<span lang=EN-US>inlinefunc1</span>からの呼び出しが<span
+lang=EN-US>2</span>回以上ある。</p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'>③ インライン関数内の記述が以下のいずれかを満たす。</p>
+
+<p class=MsoNormal style='margin-left:63.0pt;mso-para-margin-left:3.75gd;
+text-align:justify;text-justify:inter-ideograph;text-indent:-18.0pt;mso-char-indent-count:
+-1.5;mso-pagination:none'><span lang=EN-US>(a) inlinefunc1</span>に<span
+lang=EN-US>volatile</span>修飾されたローカル変数が<span lang=EN-US>2</span>個以上存在し、そのローカル変数を<span
+lang=EN-US>inlinefunc2</span>呼び出しの引数に<span lang=EN-US>2</span>個以上指定して<span
+lang=EN-US>inlinefunc2</span>にてその引数をアクセスしている。</p>
+
+<p class=MsoNormal style='margin-left:63.0pt;mso-para-margin-left:3.75gd;
+text-align:justify;text-justify:inter-ideograph;text-indent:-18.0pt;mso-char-indent-count:
+-1.5;mso-pagination:none'><span lang=EN-US>(b) inlinefunc1</span>の<span
+lang=EN-US>volatile</span>修飾されたローカル変数を<span lang=EN-US>inlinefunc2</span>呼び出しの引数に<span
+lang=EN-US>1</span>個以上指定し、<span lang=EN-US>inlinefunc2</span>にてその引数と<span
+lang=EN-US>inlinefunc2</span>の<span lang=EN-US>volatile</span>修飾されたローカル変数を<span
+lang=EN-US>1</span>個以上アクセスしている。</p>
+
+<p class=MsoNormal style='margin-left:63.0pt;mso-para-margin-left:3.75gd;
+text-align:justify;text-justify:inter-ideograph;text-indent:-18.0pt;mso-char-indent-count:
+-1.5;mso-pagination:none'><span lang=EN-US>(c) inlinefunc1</span>の<span
+lang=EN-US>volatile</span>修飾されたローカル変数１個以上を同一ブロック内の<span lang=EN-US>inlinefunc2</span>呼び出しの前でアクセスし、<span
+lang=EN-US>inlinefunc2</span>にて<span lang=EN-US>inlinefunc2</span>の<span
+lang=EN-US>volatile</span>修飾されたローカル変数を<span lang=EN-US>1</span>個以上アクセスしている。</p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'>④ コンパイル時に最適化を有効にしている。</p>
+
+<p class=MsoNormal style='margin-left:45.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>IDEU8</span>では以下のいずれかに該当する。カッコ内はコマンドラインオプション。</p>
+
+<p class=MsoNormal style='margin-left:45.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>- </span>基本的な最適化のみ　（指定なし）</p>
+
+<p class=MsoNormal style='margin-left:45.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>- </span>ループに関する最適化を行い、広域的な最適化を行わない　（<span
+lang=EN-US>/<span class=SpellE>Ol</span></span>）</p>
+
+<p class=MsoNormal style='margin-left:45.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>- </span>広域的な最適化を行い、ループに関する最適化を行わない　（<span
+lang=EN-US>/<span class=SpellE>Og</span></span>）</p>
+
+<p class=MsoNormal style='margin-left:45.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>- </span>広域的な最適化とループに関する最適化を行う　（<span
+lang=EN-US>/<span class=SpellE>Og</span> /<span class=SpellE>Ol</span></span>）</p>
+
+<p class=MsoNormal style='margin-left:45.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>- </span>最適化を繰り返して、最大限に最適化する　（<span
+lang=EN-US>/Om</span>）</p>
+
+<p class=MsoNormal style='margin-left:45.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>- </span>実行速度の最適化　（<span
+lang=EN-US>/<span class=SpellE>Ot</span></span>）</p>
+
+<p class=MsoNormal style='margin-left:45.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>[</span>発生例<span
+lang=EN-US>]</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><b><span lang=EN-US>#<span class=SpellE>pragma</span>
+inline inlinefunc1<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><b><span lang=EN-US>#<span class=SpellE>pragma</span>
+inline inlinefunc2<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span class=SpellE><span lang=EN-US>int</span></span><span
+lang=EN-US> gvar1;</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>void inlinefunc2( <span
+class=SpellE>int</span> a, <span class=SpellE>int</span> b )</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>{</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><b><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>volatile <span class=SpellE>int</span>
+<span class=SpellE>lVar</span>;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><b><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span><span class=SpellE>lVar</span>
+= a + b;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><b><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>gvar1 += <span class=SpellE>lVar</span>;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>}</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>void inlinefunc1(void)</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>{</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span><b><span
+style='mso-spacerun:yes'>&nbsp;</span>volatile <span class=SpellE>int</span> a
+= 20;<o:p></o:p></b></span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span><span class=SpellE><b>int</b></span><b>
+b = 40;<o:p></o:p></b></span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span><span class=SpellE>int</span>
+index;</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>index = 0;</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><b><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>for(index =0; index &lt;= 1;
+index++)<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><b><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>{<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><b><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>inlinefunc2( a, b );<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><b><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>}</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>void <span class=SpellE>func</span>(void)</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>{</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>inlinefunc1();</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>}</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>[</span>回避策<span
+lang=EN-US>]</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'>呼び出し側のインライン関数（例では<span lang=EN-US>inlinefunc1</span>）に対する<span
+lang=EN-US>inline</span>プラグマを外してください。</p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'>【例】</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><b><span lang=EN-US>//#<span class=SpellE>pragma</span>
+inline inlinefunc1</span></b><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp; </span>// inlinefunc1</span><span
+style='mso-ansi-language:DA'>に対する</span><span lang=EN-US>inline</span><span
+style='mso-ansi-language:DA'>プラグマを削除</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>#<span class=SpellE>pragma</span>
+inline inlinefunc2 </span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span class=SpellE><span lang=EN-US>int</span></span><span
+lang=EN-US> gvar1;</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>void inlinefunc2( <span
+class=SpellE>int</span> a, <span class=SpellE>int</span> b )</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>{</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>...</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>}</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>void inlinefunc1(void)</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>{</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>...</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>for(index =0; index &lt;= 1;
+index++)</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>{</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>inlinefunc2( a, b );</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>}</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=DA style='mso-ansi-language:
+DA'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=DA style='mso-ansi-language:
+DA'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:24.1pt;text-indent:-24.1pt;mso-char-indent-count:
+-2.0'><b style='mso-bidi-font-weight:normal'><span lang=EN-US style='mso-bidi-font-size:
+10.5pt'><span style='mso-spacerun:yes'>&nbsp;</span>(2) const</span></b><b
+style='mso-bidi-font-weight:normal'><span style='mso-bidi-font-size:10.5pt'>変数を<span
+class=SpellE><span lang=EN-US>segconst</span></span>または<span lang=EN-US>absolute</span>プラグマを用いて絶対番地に割り付けようとすると、インターナルエラーが発生する場合があります。<span
+lang=EN-US><o:p></o:p></span></span></b></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>[</span>発生条件<span
+lang=EN-US>]</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'>①<span lang=EN-US> const</span>修飾された構造体変数が初期化付で定義されている。</p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'>② ①の変数は、<span lang=EN-US>2</span>つ以上のメンバを持ち、<span
+lang=EN-US>2</span>番目以降に別の構造体のメンバのアドレスを初期値として与えている。</p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'>③ ①の変数を<span class=SpellE><span
+lang=EN-US>segconst</span></span>または<span lang=EN-US>absolute</span>プラグマで絶対番地に割り付ける指定をしている。</p>
+
+<p class=MsoNormal style='margin-left:45.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>[</span>発生例<span
+lang=EN-US>]</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span class=SpellE><span lang=EN-US>typedef</span></span><span
+lang=EN-US> <span class=SpellE>struct</span> <span class=SpellE>di</span>{</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>unsigned <span class=SpellE>int</span>
+d0;</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>unsigned <span class=SpellE>int</span>
+<span class=SpellE>addr</span>;</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>}TTBL;</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span class=SpellE><span lang=EN-US>typedef</span></span><span
+lang=EN-US> <span class=SpellE>struct</span>{</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>unsigned char <span
+class=SpellE>volat_a</span>[2];<span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>unsigned char <span
+class=SpellE>current_a</span>[3];<span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>}TVAR;</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>TVAR <span class=SpellE>Varible</span>;<span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>#<span class=SpellE>pragma</span>
+absolute <span class=SpellE>CnstTbl</span> 1:0x1000</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>const TTBL __far <span
+class=SpellE>CnstTbl</span>[]=</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>{</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>{</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>0x00,</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>(unsigned <span class=SpellE>int</span>)<span class=SpellE>Varible.current_a</span>,</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>} </span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>};</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>[</span>回避策<span
+lang=EN-US>]</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span class=SpellE><span lang=EN-US>segconst</span></span>プラグマを用いて名前付きで定義したセグメントに<span
+lang=EN-US>const</span>変数を割り付け、リンク時のオプションにて割り付けアドレスを指定してください。</p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'>【例】</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><b><span lang=EN-US>#<span class=SpellE>pragma</span>
+<span class=SpellE>segconst</span> __far &quot;<span class=SpellE>table_seg</span>&quot;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>const TTBL __far <span
+class=SpellE>CnstTbl</span>[]=</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>{</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>{</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>0x00,</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>(unsigned <span class=SpellE>int</span>)<span class=SpellE>Varible.current_a</span>,</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>} </span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>};</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'>　<span lang=EN-US>IDEU8</span>の<span
+lang=EN-US>[</span>ターゲットオプション<span lang=EN-US>]</span>ダイアログの<span lang=EN-US>[</span>一般<span
+lang=EN-US>]</span>タブにて、「優先的に割付ける<span lang=EN-US>TABLE</span>セグメント」をチェックし、「セグメント指定」フィールドに<span
+lang=EN-US> table_seg-1:1000h </span>のように指定してください。</p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><b style='mso-bidi-font-weight:normal'><span
+lang=EN-US style='mso-bidi-font-size:10.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span></span></b></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:24.1pt;text-indent:-24.1pt;mso-char-indent-count:
+-2.0'><b style='mso-bidi-font-weight:normal'><span lang=EN-US style='mso-bidi-font-size:
+10.5pt'>(3) </span></b><b style='mso-bidi-font-weight:normal'><span
+style='mso-bidi-font-size:10.5pt'>同一ファイル内に、関数名の先頭のアンダースコア有無だけが異なる関数が存在する場合に、コンパイラが不正なコードを生成する場合があります。<span
+lang=EN-US><o:p></o:p></span></span></b></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>[</span>発生条件<span
+lang=EN-US>]</span></p>
+
+<p class=MsoNormal style='margin-left:45.0pt;mso-para-margin-left:2.25gd;
+text-align:justify;text-justify:inter-ideograph;text-indent:-18.0pt;mso-char-indent-count:
+-1.5;mso-pagination:none'>① 同一ファイル内に、関数名の先頭のアンダースコアの有無だけが異なる関数が存在する。（それぞれの関数名を<span
+class=SpellE><span lang=EN-US>funcA</span></span>および<span lang=EN-US>_<span
+class=SpellE>funcA</span></span>とする）</p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'>② 関数<span class=SpellE><span lang=EN-US>funcA</span></span>の内部でスタックに割り付けられる変数を使用している。</p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'>③ 関数<span lang=EN-US>_<span class=SpellE>funcA</span></span>は別の関数（<span
+class=SpellE><span lang=EN-US>funcB</span></span>とする）から呼び出されている。</p>
+
+<p class=MsoNormal style='margin-left:45.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>[</span>発生例<span
+lang=EN-US>]</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>static <span
+class=SpellE>int</span> <b>_<span class=SpellE>funcA</span></b>(<span
+class=SpellE>int</span> <span class=SpellE>intReq</span>)</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>{</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>return 0;</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>}</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span class=SpellE><span lang=EN-US>int</span></span><span
+lang=EN-US> dummy(void);</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span class=SpellE><span lang=EN-US>int</span></span><span
+lang=EN-US> <span class=SpellE><b>funcA</b></span>(void)</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>{</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>volatile <span class=SpellE>int</span>
+<span class=SpellE>rc</span>;</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span><span class=SpellE>rc</span>
+= dummy();</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>return <span class=SpellE>rc</span>;</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>}</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>void <span class=SpellE>funcB</span>(void)</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>{</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span><b>_<span class=SpellE>funcA</span></b>(0);</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>return;</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>}</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>[</span>回避策<span
+lang=EN-US>]</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'>関数名の違いが先頭のアンダスコア有無だけにならないよう、関数名を変更してください。</p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'>【例】</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>static <span
+class=SpellE>int</span> <span class=SpellE><b>xfuncA</b></span>(<span
+class=SpellE>int</span> <span class=SpellE>intReq</span>)<span
+style='mso-spacerun:yes'>&nbsp; </span>// </span>関数名を<span lang=EN-US>_<span
+class=SpellE>funcA</span></span>→<span class=SpellE><span lang=EN-US>xfuncA</span></span>に変更</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>{</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>return 0;</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>}</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span class=SpellE><span lang=EN-US>int</span></span><span
+lang=EN-US> dummy(void);</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span class=SpellE><span lang=EN-US>int</span></span><span
+lang=EN-US> <span class=SpellE><b>funcA</b></span>(void)</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>{</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>volatile <span class=SpellE>int</span>
+<span class=SpellE>rc</span>;</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span><span class=SpellE>rc</span>
+= dummy();</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>return <span class=SpellE>rc</span>;</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>}</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>void <span class=SpellE>funcB</span>(void)</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>{</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span><span class=SpellE><b>xfuncA</b></span>(0);<span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>// </span>関数名を<span
+lang=EN-US>_<span class=SpellE>funcA</span></span>→<span class=SpellE><span
+lang=EN-US>xfuncA</span></span>に変更</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>return;</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>}</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:24.1pt;text-indent:-24.1pt;mso-char-indent-count:
+-2.0'><b style='mso-bidi-font-weight:normal'><span lang=EN-US style='mso-bidi-font-size:
+10.5pt'><span style='mso-spacerun:yes'>&nbsp;</span>(4) </span></b><b
+style='mso-bidi-font-weight:normal'><span style='mso-bidi-font-size:10.5pt'>シフト演算と関数呼び出しを含む記述に対し、アプリケーションエラーが発生する場合があります。<span
+lang=EN-US><o:p></o:p></span></span></b></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>[</span>発生条件<span
+lang=EN-US>]</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'>① 最適化オプションで<span lang=EN-US>/Om, /<span
+class=SpellE>Ot</span>, /<span class=SpellE>Og</span></span>のいずれかを指定している。</p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'>② 変数と定数の<span lang=EN-US>AND(&amp;)</span>演算の結果を変数に代入する式がある。</p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'>③ ②の後に、代入された変数をビット幅とするシフト演算がある。</p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'>④ ③の後に、関数呼び出しがある。</p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'>⑤ ④の後に、変数と定数の<span lang=EN-US>AND(&amp;)</span>演算の結果を変数に代入する式がある。</p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'>⑥ ⑤の後に、代入された変数をビット幅とするシフト演算がある。</p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'>⑦ ②と⑤の<span lang=EN-US>AND(&amp;)</span>演算で使用される定数は同じ値である。</p>
+
+<p class=MsoNormal style='margin-left:45.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>[</span>発生例<span
+lang=EN-US>]</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>void fn();</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>unsigned char <span
+class=SpellE>bit_pos</span>;</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>unsigned char <span
+class=SpellE>tmp</span>;</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>unsigned char tmp2;</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>static void test(unsigned
+char arg1)</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>{</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><b><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span><span class=SpellE>bit_pos</span>
+= arg1 &amp; 0x0f;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><b><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span><span class=SpellE>tmp</span>
+= (tmp2 &lt;&lt; <span class=SpellE>bit_pos</span>);<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><b><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>fn();<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><b><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span><span class=SpellE>bit_pos</span>
+= arg1 &amp; 0x0f;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><b><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span><span class=SpellE>tmp</span>
+= (0x01 &gt;&gt; <span class=SpellE>bit_pos</span>);<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>}</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>[</span>回避策<span
+lang=EN-US>]</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'>不具合が発生する関数に対し、最適化プラグマで<span lang=EN-US>default</span>を指定してください。</p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'>【例】</p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp; </span><b>#<span class=SpellE>pragma</span>
+optimization default<o:p></o:p></b></span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp; </span>static void test(unsigned char arg1)</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp; </span>{</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>...</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp; </span>}</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp; </span><b>#<span class=SpellE>pragma</span>
+optimization<o:p></o:p></b></span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:24.1pt;text-indent:-24.1pt;mso-char-indent-count:
+-2.0'><b style='mso-bidi-font-weight:normal'><span lang=EN-US style='mso-bidi-font-size:
+10.5pt'>(5) </span></b><b style='mso-bidi-font-weight:normal'><span
+style='mso-bidi-font-size:10.5pt'>ワーニング<span lang=EN-US>W5013</span>を出力すべき箇所に対し、<span
+lang=EN-US>W5013</span>が出力されない場合があります。<span lang=EN-US><o:p></o:p></span></span></b></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>[</span>発生条件<span
+lang=EN-US>]</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'>下記の①または②の条件を満たす場合に発生します。</p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'>①<span class=SpellE><span lang=EN-US>int</span></span><span
+lang=EN-US>/unsigned <span class=SpellE>int</span>/short/unsigned short/</span>型の引数に対し、<span
+lang=EN-US>char/unsigned char</span>型の値を指定している。</p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'>②<span lang=EN-US>char/unsigned char</span>型の引数に対し、<span
+class=SpellE><span lang=EN-US>int</span></span><span lang=EN-US>/unsigned <span
+class=SpellE>int</span>/short/unsigned short</span>型の値を指定している。</p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>[</span>発生例<span
+lang=EN-US>]</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>void <span class=SpellE>func_uc</span>(unsigned
+char x);</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>void main(void) {</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span><b style='mso-bidi-font-weight:
+normal'><span style='mso-spacerun:yes'>&nbsp;</span><span class=SpellE>func_uc</span>(0x100U);<span
+style='mso-bidi-font-weight:bold'> </span></b></span><b>・・・<span lang=EN-US>(A)</span></b></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>}</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'>ワーニング<span lang=EN-US>W5013</span>は、関数引数に対しバイト数の異なる型が指定されたために型の変換が行われたことを意味します。</p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'>上記<span lang=EN-US>(A)</span>に対し、定数<span
+lang=EN-US>0x100U</span>は<span lang=EN-US>unsigned <span class=SpellE>int</span></span>型で、<span
+lang=EN-US>unsigned char</span>型に変換されるため、<span lang=EN-US>W5013</span>が出力されるべきですが、出力されません。</p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>[</span>回避策<span
+lang=EN-US>]</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'>回避策はありません。</p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'>本ワーニングにつきましては出力されない場合があることをご留意の上参照ください。</p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:24.1pt;text-indent:-24.1pt;mso-char-indent-count:
+-2.0'><b style='mso-bidi-font-weight:normal'><span lang=EN-US style='mso-bidi-font-size:
+10.5pt'>(6) if-else</span></b><b style='mso-bidi-font-weight:normal'><span
+style='mso-bidi-font-size:10.5pt'>ブロック内とその後ろに共通式があるような記述に対しアプリケーションエラーが発生する場合があります。<span
+lang=EN-US><o:p></o:p></span></span></b></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>[</span>発生条件<span
+lang=EN-US>]</span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'>① コンパイル時に最適化を有効にしている（<span lang=EN-US>/Om</span>、<span
+lang=EN-US>/<span class=SpellE>Ot</span></span>、<span lang=EN-US>/<span
+class=SpellE>Og</span></span>、デフォルトのいずれかを指定）</p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'>②<span lang=EN-US> if-else</span>内およびその後ろに論理<span
+lang=EN-US>OR</span>を行う式が記述されている。</p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'>③ 上記②の論理<span lang=EN-US>OR</span>の式はすべて同じである。</p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'>④ 上記②の論理<span lang=EN-US>OR</span>のオペランドに、コンパイル時に値が<span
+lang=EN-US>0</span>以外に確定するものが指定されている</p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'>　　（下記発生例では、変数<span lang=EN-US>Operand</span>が該当。初期値１が設定されており、コンパイル時にはその値（<span
+lang=EN-US>1</span>）が使用される）。</p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;</span>[</span>発生例<span lang=EN-US>]</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span class=SpellE><span lang=EN-US>int</span></span><span
+lang=EN-US> Test(unsigned <span class=SpellE>int</span> <span class=SpellE>ResultVar</span>,
+<span class=SpellE>int</span> <span class=SpellE>CondnVar</span>)</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>{</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>unsigned <span class=SpellE>int</span><span
+style='mso-spacerun:yes'>&nbsp; </span>Operand = 1;</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>if (10 &gt; <span
+class=SpellE>CondnVar</span>)</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>{</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+class=SpellE><b style='mso-bidi-font-weight:normal'>ResultVar</b></span><b
+style='mso-bidi-font-weight:normal'> = <span class=SpellE>ResultVar</span> ||
+Operand; <o:p></o:p></b></span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>}</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>else</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>{</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+class=SpellE><b style='mso-bidi-font-weight:normal'>ResultVar</b></span><b
+style='mso-bidi-font-weight:normal'> = <span class=SpellE>ResultVar</span> ||
+Operand; <o:p></o:p></b></span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>}</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span><span class=SpellE><b
+style='mso-bidi-font-weight:normal'>ResultVar</b></span><b style='mso-bidi-font-weight:
+normal'> = <span class=SpellE>ResultVar</span> || Operand; <o:p></o:p></b></span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>return <span class=SpellE>ResultVar</span>;</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>}</span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>[</span>回避策<span
+lang=EN-US>]</span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'>　共通式の中で使用されている変数を<span lang=EN-US>volatile</span>宣言してください。上の例では、変数<span
+lang=EN-US>Operand</span>を<span lang=EN-US>volatile</span>宣言することで回避できます。</p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'>【例】</p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span><b style='mso-bidi-font-weight:
+normal'>volatile unsigned <span class=SpellE>int</span><span
+style='mso-spacerun:yes'>&nbsp; </span>Operand = 1;<o:p></o:p></b></span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:24.1pt;text-indent:-24.1pt;mso-char-indent-count:
+-2.0'><a name="OLE_LINK1"></a><a name="_Toc175576049"><span style='mso-bookmark:
+OLE_LINK1'><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='mso-bidi-font-size:10.5pt'>(7) </span></b></span></a><span
+style='mso-bookmark:_Toc175576049'><span style='mso-bookmark:OLE_LINK1'><b
+style='mso-bidi-font-weight:normal'><span style='mso-bidi-font-size:10.5pt'>コンパイラの最適化等の影響により、デバッガにて変数を正しく参照できない場合があります</span></b></span></span><span
+style='mso-bookmark:OLE_LINK1'><b style='mso-bidi-font-weight:normal'><span
+lang=EN-US style='mso-bidi-font-size:10.5pt'><o:p></o:p></span></b></span></p>
+
+<span style='mso-bookmark:OLE_LINK1'></span>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>CCU8</span>コンパイラの最適化の影響によりローカル変数がレジスタに割り付けられた場合、ローカル変数に対するデバッグ情報の整合が取れなくなる場合があります。この場合、<span
+lang=EN-US>DTU8</span>デバッガでその変数を正しく参照できなくなります。</p>
+
+<p class=MsoNormal style='margin-left:39.0pt'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:24.1pt;text-indent:-24.1pt;mso-char-indent-count:
+-2.0'><b style='mso-bidi-font-weight:normal'><span lang=EN-US style='mso-bidi-font-size:
+10.5pt'>(8) </span></b><b style='mso-bidi-font-weight:normal'><span
+style='mso-bidi-font-size:10.5pt'>レジスタに割り付けられた関数引数のアドレスは取得できません<span
+lang=EN-US><o:p></o:p></span></span></b></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'>レジスタに割り付けられた関数引数のアドレスを取得することはできません。</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span class=SpellE><span lang=EN-US>int</span></span><span
+lang=EN-US> *p;</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>void <span class=SpellE>func</span>(<span
+class=SpellE>int</span> arg1)<span style='mso-spacerun:yes'>&nbsp; </span></span>←引数<span
+lang=EN-US>arg1</span>はレジスタに割り付けられます</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>{</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>p = &amp;arg1;<span
+style='mso-spacerun:yes'>&nbsp; </span></span>←この行に対してエラー<span lang=EN-US>(E5009
+: '&amp;' on register variable)</span>を出力します。</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>}</span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'>関数引数のアドレスを取得する必要がある場合には、関数を<span
+lang=EN-US>__<span class=SpellE>noreg</span></span>で修飾してください。</p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>__<span class=SpellE>noreg</span></span>で修飾することにより、関数引数はすべてスタックに割り付けられるようになり、引数のアドレスを取得できるようになります。</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>void <b>__<span
+class=SpellE>noreg</span> </b><span class=SpellE>func</span>(<span
+class=SpellE>int</span> arg1)</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>{</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>p = &amp;arg1; </span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US>}</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p style='margin-left:24.0pt'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span lang=EN-US>
+
+<hr size=2 width="100%" align=center>
+
+</span></div>
+
+<h2><a name="_5._注意事項"></a><span lang=EN-US>5. </span>注意事項</h2>
+
+<p><span lang=EN-US>(1) </span>現バージョンの<span lang=EN-US>CCU8</span>で出力したアセンブリソースは、<span
+lang=EN-US>RASU8 V1.40</span>以降のアセンブラでのみアセンブル可能となります。</p>
+
+<p><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;mso-para-margin-left:2.0gd;
+layout-grid-mode:char'><span lang=EN-US style='font-family:"Courier New";
+mso-fareast-font-family:"ＭＳ ゴシック";mso-font-kerning:1.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span lang=EN-US>
+
+<hr size=2 width="100%" align=center>
+
+</span></div>
+
+<p align=right style='text-align:right'>作成日<span lang=EN-US> : 2013</span>年<span
+lang=EN-US>8</span>月<span lang=EN-US>12</span>日<span lang=EN-US><br>
+Copyright 2008-2013, LAPIS Semiconductor Co., Ltd.</span></p>
+
+</div>
+
+</body>
+
+</html>

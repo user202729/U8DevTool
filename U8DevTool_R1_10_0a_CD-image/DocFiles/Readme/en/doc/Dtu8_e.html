@@ -1,0 +1,2572 @@
+<!-- saved from url=(0026)http://www.lapis-semi.com/us/ -->
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40"
+xmlns:ns0="http://schemas.microsoft.com/office/2004/12/omml">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<link rel=File-List href="Dtu8_e_filelist.xml">
+<link rel=Edit-Time-Data href="Dtu8_e_editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>DTU8 Debugger</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>LAPIS Semiconductor Co., Ltd.</o:Author>
+  <o:LastAuthor>lapis-admin</o:LastAuthor>
+  <o:Revision>13</o:Revision>
+  <o:TotalTime>3006</o:TotalTime>
+  <o:LastPrinted>2011-01-19T11:34:00Z</o:LastPrinted>
+  <o:Created>2012-09-26T10:19:00Z</o:Created>
+  <o:LastSaved>2013-03-27T05:59:00Z</o:LastSaved>
+  <o:Pages>2</o:Pages>
+  <o:Words>2868</o:Words>
+  <o:Characters>16348</o:Characters>
+  <o:Company>LAPIS Semiconductor Co., Ltd.</o:Company>
+  <o:Lines>136</o:Lines>
+  <o:Paragraphs>38</o:Paragraphs>
+  <o:CharactersWithSpaces>19178</o:CharactersWithSpaces>
+  <o:Version>11.9999</o:Version>
+ </o:DocumentProperties>
+ <o:OfficeDocumentSettings>
+  <o:DoNotOrganizeInFolder/>
+ </o:OfficeDocumentSettings>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:UseFELayout/>
+   <w:SplitPgBreakAndParaMark/>
+   <w:DontVertAlignCellWithSp/>
+   <w:DontBreakConstrainedForcedTables/>
+   <w:DontVertAlignInTxbx/>
+   <w:Word11KerningPairs/>
+   <w:CachedColBalance/>
+  </w:Compatibility>
+  <w:DoNotOptimizeForBrowser/>
+  <w:TrackMoves/>
+  <w:TrackFormatting/>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeAsian>JA</w:LidThemeAsian>
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="--"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr>
+  <u1:mathPr>
+   <u1:mathFont u1:val="Cambria Math"/>
+   <u1:brkBin u1:val="before"/>
+   <u1:brkBinSub u1:val="--"/>
+   <u1:smallFrac u1:val="off"/>
+   <u1:dispDef/>
+   <u1:lMargin u1:val="0"/>
+   <u1:rMargin u1:val="0"/>
+   <u1:defJc u1:val="centerGroup"/>
+   <u1:wrapIndent u1:val="1440"/>
+   <u1:intLim u1:val="subSup"/>
+   <u1:naryLim u1:val="undOvr"/>
+  </u1:mathPr>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--table.MSONORMALTABLE
+	{mso-style-name:•W€‚Ì•\;
+	mso-tstyle-rowband-size:0;}
+p.MSONORMAL
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;}
+li.MSONORMAL
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;}
+div.MSONORMAL
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;}
+h1
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;}
+h2
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;}
+h3
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;}
+a:link
+	{mso-style-unhide:no;}
+span.MSOHYPERLINK
+	{mso-style-unhide:no;}
+a:visited
+	{mso-style-unhide:no;}
+span.MSOHYPERLINKFOLLOWED
+	{mso-style-unhide:no;}
+p.MSODOCUMENTMAP
+	{mso-style-unhide:no;}
+li.MSODOCUMENTMAP
+	{mso-style-unhide:no;}
+div.MSODOCUMENTMAP
+	{mso-style-unhide:no;}
+p
+	{mso-style-unhide:no;}
+p.MSOLISTPARAGRAPH
+	{mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;}
+li.MSOLISTPARAGRAPH
+	{mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;}
+div.MSOLISTPARAGRAPH
+	{mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;}
+span.1
+	{mso-style-unhide:no;}
+span.2
+	{mso-style-unhide:no;}
+span.3
+	{mso-style-unhide:no;}
+span.A
+	{mso-style-unhide:no;}
+p.NOTE
+	{mso-style-unhide:no;}
+li.NOTE
+	{mso-style-unhide:no;}
+div.NOTE
+	{mso-style-unhide:no;}
+.MSOCHPDEFAULT
+	{mso-default-props:yes;}
+table.MSONORMALTABLE
+	{mso-style-priority:99;}
+table.TABLENORMAL
+	{mso-style-unhide:no;}
+
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:"MS Mincho";
+	panose-1:2 2 6 9 4 2 5 8 3 4;
+	mso-font-alt:"MS Mincho";
+	mso-font-charset:128;
+	mso-generic-font-family:roman;
+	mso-font-pitch:fixed;
+	mso-font-signature:-536870145 1791491579 18 0 131231 0;}
+@font-face
+	{font-family:"MS Gothic";
+	panose-1:2 11 6 9 7 2 5 8 2 4;
+	mso-font-alt:"MS Gothic";
+	mso-font-charset:128;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:-536870145 1791491579 18 0 131231 0;}
+@font-face
+	{font-family:Century;
+	panose-1:2 4 6 4 5 5 5 2 3 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:647 0 0 0 159 0;}
+@font-face
+	{font-family:"MS UI Gothic";
+	panose-1:2 11 6 0 7 2 5 8 2 4;
+	mso-font-charset:128;
+	mso-generic-font-family:modern;
+	mso-font-pitch:variable;
+	mso-font-signature:-536870145 1791491579 18 0 131231 0;}
+@font-face
+	{font-family:"MS PGothic";
+	panose-1:2 11 6 0 7 2 5 8 2 4;
+	mso-font-charset:128;
+	mso-generic-font-family:modern;
+	mso-font-pitch:variable;
+	mso-font-signature:-536870145 1791491579 18 0 131231 0;}
+@font-face
+	{font-family:"\@MS UI Gothic";
+	panose-1:2 11 6 0 7 2 5 8 2 4;
+	mso-font-charset:128;
+	mso-generic-font-family:modern;
+	mso-font-pitch:variable;
+	mso-font-signature:-536870145 1791491579 18 0 131231 0;}
+@font-face
+	{font-family:"MS PGothic";
+	panose-1:2 11 6 0 7 2 5 8 2 4;
+	mso-font-charset:128;
+	mso-generic-font-family:modern;
+	mso-font-pitch:variable;
+	mso-font-signature:-536870145 1791491579 18 0 131231 0;}
+@font-face
+	{font-family:"MS Mincho";
+	panose-1:2 2 6 9 4 2 5 8 3 4;
+	mso-font-charset:128;
+	mso-generic-font-family:roman;
+	mso-font-pitch:fixed;
+	mso-font-signature:-536870145 1791491579 18 0 131231 0;}
+@font-face
+	{font-family:"MS Gothic";
+	panose-1:2 11 6 9 7 2 5 8 2 4;
+	mso-font-charset:128;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:-536870145 1791491579 18 0 131231 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0mm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"MS PGothic";
+	mso-bidi-font-family:"Times New Roman";}
+h1
+	{mso-style-link:"\898B\51FA\3057 1 \(\6587\5B57\)";
+	mso-margin-top-alt:auto;
+	margin-right:0mm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0mm;
+	mso-pagination:widow-orphan;
+	mso-outline-level:1;
+	font-size:24.0pt;
+	font-family:"MS PGothic";
+	mso-bidi-font-family:"MS PGothic";
+	font-weight:bold;}
+h2
+	{mso-style-link:"\898B\51FA\3057 2 \(\6587\5B57\)";
+	mso-margin-top-alt:auto;
+	margin-right:0mm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0mm;
+	mso-pagination:widow-orphan;
+	mso-outline-level:2;
+	background:yellow;
+	font-size:18.0pt;
+	font-family:"MS PGothic";
+	mso-bidi-font-family:"MS PGothic";
+	color:black;
+	font-weight:bold;}
+h3
+	{mso-style-link:"\898B\51FA\3057 3 \(\6587\5B57\)";
+	mso-margin-top-alt:auto;
+	margin-right:0mm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0mm;
+	mso-pagination:widow-orphan;
+	mso-outline-level:3;
+	font-size:13.5pt;
+	font-family:"MS PGothic";
+	mso-bidi-font-family:"MS PGothic";
+	font-weight:bold;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:center 212.6pt right 425.2pt;
+	layout-grid-mode:char;
+	font-size:12.0pt;
+	font-family:"MS PGothic";
+	mso-bidi-font-family:"Times New Roman";}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:center 212.6pt right 425.2pt;
+	layout-grid-mode:char;
+	font-size:12.0pt;
+	font-family:"MS PGothic";
+	mso-bidi-font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+p.MsoDocumentMap, li.MsoDocumentMap, div.MsoDocumentMap
+	{mso-style-noshow:yes;
+	mso-style-link:"\898B\51FA\3057\30DE\30C3\30D7 \(\6587\5B57\)";
+	margin:0mm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	background:navy;
+	font-size:12.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"MS Gothic";
+	mso-bidi-font-family:"Times New Roman";}
+p
+	{mso-margin-top-alt:auto;
+	margin-right:0mm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0mm;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"MS PGothic";
+	mso-bidi-font-family:"Times New Roman";}
+span.1
+	{mso-style-name:"\898B\51FA\3057 1 \(\6587\5B57\)";
+	mso-style-locked:yes;
+	mso-style-link:"\898B\51FA\3057 1";
+	mso-ansi-font-size:12.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Arial;
+	mso-ascii-font-family:Arial;
+	mso-fareast-font-family:"MS Gothic";
+	mso-hansi-font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";}
+span.2
+	{mso-style-name:"\898B\51FA\3057 2 \(\6587\5B57\)";
+	mso-style-locked:yes;
+	mso-style-link:"\898B\51FA\3057 2";
+	mso-ansi-font-size:12.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Arial;
+	mso-ascii-font-family:Arial;
+	mso-fareast-font-family:"MS Gothic";
+	mso-hansi-font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";}
+span.3
+	{mso-style-name:"\898B\51FA\3057 3 \(\6587\5B57\)";
+	mso-style-locked:yes;
+	mso-style-link:"\898B\51FA\3057 3";
+	mso-ansi-font-size:12.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Arial;
+	mso-ascii-font-family:Arial;
+	mso-fareast-font-family:"MS Gothic";
+	mso-hansi-font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";}
+span.a
+	{mso-style-name:"\898B\51FA\3057\30DE\30C3\30D7 \(\6587\5B57\)";
+	mso-style-locked:yes;
+	mso-style-link:\898B\51FA\3057\30DE\30C3\30D7;
+	mso-ansi-font-size:9.0pt;
+	mso-bidi-font-size:9.0pt;
+	font-family:"MS UI Gothic";
+	mso-ascii-font-family:"MS UI Gothic";
+	mso-fareast-font-family:"MS UI Gothic";
+	mso-hansi-font-family:"MS PGothic";}
+p.msolistparagraph, li.msolistparagraph, div.msolistparagraph
+	{mso-style-name:msolistparagraph;
+	margin:0mm;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:4.0gd;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"MS PGothic";
+	mso-bidi-font-family:"Times New Roman";}
+p.note, li.note, div.note
+	{mso-style-name:note;
+	mso-margin-top-alt:auto;
+	margin-right:0mm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0mm;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"MS PGothic";
+	mso-bidi-font-family:"Times New Roman";}
+ /* Page Definitions */
+ @page
+	{mso-page-border-surround-header:no;
+	mso-page-border-surround-footer:no;
+	mso-footnote-separator:url("Dtu8_e_header.html") fs;
+	mso-footnote-continuation-separator:url("Dtu8_e_header.html") fcs;
+	mso-endnote-separator:url("Dtu8_e_header.html") es;
+	mso-endnote-continuation-separator:url("Dtu8_e_header.html") ecs;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:99.25pt 30.0mm 30.0mm 30.0mm;
+	mso-header-margin:42.55pt;
+	mso-footer-margin:49.6pt;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:65804830;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1877220728 -902368144 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l0:level1
+	{mso-level-text:"\(%1\)";
+	mso-level-tab-stop:60.0pt;
+	mso-level-number-position:left;
+	margin-left:60.0pt;
+	text-indent:-18.0pt;}
+@list l0:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1
+	{mso-list-id:88281843;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1917904966 -902368144 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l1:level1
+	{mso-level-text:"\(%1\)";
+	mso-level-tab-stop:60.0pt;
+	mso-level-number-position:left;
+	margin-left:60.0pt;
+	text-indent:-18.0pt;}
+@list l1:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2
+	{mso-list-id:234895684;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-226199746 -184503470 67698699 67698701 67698689 67698699 67698701 67698689 67698699 67698701;}
+@list l2:level1
+	{mso-level-start-at:0;
+	mso-level-number-format:bullet;
+	mso-level-text:-;
+	mso-level-tab-stop:35.7pt;
+	mso-level-number-position:left;
+	margin-left:35.7pt;
+	text-indent:-18.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"MS PGothic";}
+@list l2:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0D8;
+	mso-level-tab-stop:59.7pt;
+	mso-level-number-position:left;
+	margin-left:59.7pt;
+	text-indent:-21.0pt;
+	font-family:Wingdings;}
+@list l2:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3
+	{mso-list-id:382022415;
+	mso-list-type:hybrid;
+	mso-list-template-ids:683329814 -902368144 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l3:level1
+	{mso-level-text:"\(%1\)";
+	mso-level-tab-stop:60.0pt;
+	mso-level-number-position:left;
+	margin-left:60.0pt;
+	text-indent:-18.0pt;}
+@list l3:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l4
+	{mso-list-id:420684250;
+	mso-list-template-ids:-1595223436;}
+@list l4:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l4:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:"Courier New";
+	mso-bidi-font-family:"Times New Roman";}
+@list l4:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l4:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l4:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l4:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l4:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l4:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l4:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l5
+	{mso-list-id:700281250;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1815383544 -902368144 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l5:level1
+	{mso-level-text:"\(%1\)";
+	mso-level-tab-stop:60.0pt;
+	mso-level-number-position:left;
+	margin-left:60.0pt;
+	text-indent:-18.0pt;}
+@list l5:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l5:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l5:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l5:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l5:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l5:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l5:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l5:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l6
+	{mso-list-id:735250630;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1871814074 -902368144 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l6:level1
+	{mso-level-text:"\(%1\)";
+	mso-level-tab-stop:60.0pt;
+	mso-level-number-position:left;
+	margin-left:60.0pt;
+	text-indent:-18.0pt;}
+@list l6:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l6:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l6:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l6:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l6:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l6:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l6:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l6:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l7
+	{mso-list-id:748769936;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1573016392 -390803422 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l7:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:50.6pt;
+	mso-level-number-position:left;
+	margin-left:50.6pt;
+	text-indent:-18.0pt;}
+@list l7:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l7:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l7:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l7:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l7:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l7:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l7:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l7:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l8
+	{mso-list-id:847905649;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1179559224 -902368144 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l8:level1
+	{mso-level-text:"\(%1\)";
+	mso-level-tab-stop:60.0pt;
+	mso-level-number-position:left;
+	margin-left:60.0pt;
+	text-indent:-18.0pt;}
+@list l8:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l8:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l8:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l8:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l8:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l8:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l8:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l8:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l9
+	{mso-list-id:920139462;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-341148802 -902368144 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l9:level1
+	{mso-level-text:"\(%1\)";
+	mso-level-tab-stop:60.0pt;
+	mso-level-number-position:left;
+	margin-left:60.0pt;
+	text-indent:-18.0pt;}
+@list l9:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l9:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l9:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l9:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l9:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l9:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l9:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l9:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l10
+	{mso-list-id:977683213;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1576878290 -902368144 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l10:level1
+	{mso-level-text:"\(%1\)";
+	mso-level-tab-stop:60.0pt;
+	mso-level-number-position:left;
+	margin-left:60.0pt;
+	text-indent:-18.0pt;}
+@list l10:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l10:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l10:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l10:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l10:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l10:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l10:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l10:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l11
+	{mso-list-id:985745932;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1576878290 -902368144 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l11:level1
+	{mso-level-text:"\(%1\)";
+	mso-level-tab-stop:60.0pt;
+	mso-level-number-position:left;
+	margin-left:60.0pt;
+	text-indent:-18.0pt;}
+@list l11:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l11:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l11:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l11:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l11:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l11:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l11:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l11:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l12
+	{mso-list-id:1200700329;
+	mso-list-type:hybrid;
+	mso-list-template-ids:567698986 -902368144 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l12:level1
+	{mso-level-text:"\(%1\)";
+	mso-level-tab-stop:60.0pt;
+	mso-level-number-position:left;
+	margin-left:60.0pt;
+	text-indent:-18.0pt;}
+@list l12:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l12:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l12:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l12:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l12:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l12:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l12:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l12:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l13
+	{mso-list-id:1465346774;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-694380804 -902368144 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l13:level1
+	{mso-level-text:"\(%1\)";
+	mso-level-tab-stop:60.0pt;
+	mso-level-number-position:left;
+	margin-left:60.0pt;
+	text-indent:-18.0pt;}
+@list l13:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l13:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l13:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l13:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l13:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l13:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l13:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l13:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l14
+	{mso-list-id:1634478162;
+	mso-list-type:hybrid;
+	mso-list-template-ids:221570808 -902368144 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l14:level1
+	{mso-level-text:"\(%1\)";
+	mso-level-tab-stop:60.0pt;
+	mso-level-number-position:left;
+	margin-left:60.0pt;
+	text-indent:-18.0pt;}
+@list l14:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l14:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l14:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l14:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l14:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l14:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l14:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l14:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l15
+	{mso-list-id:1652368007;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1501260586 -902368144 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l15:level1
+	{mso-level-text:"\(%1\)";
+	mso-level-tab-stop:60.0pt;
+	mso-level-number-position:left;
+	margin-left:60.0pt;
+	text-indent:-18.0pt;}
+@list l15:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l15:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l15:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l15:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l15:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l15:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l15:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l15:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l16
+	{mso-list-id:1667055499;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-400278062 -902368144 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l16:level1
+	{mso-level-text:"\(%1\)";
+	mso-level-tab-stop:60.0pt;
+	mso-level-number-position:left;
+	margin-left:60.0pt;
+	text-indent:-18.0pt;}
+@list l16:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l16:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l16:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l16:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l16:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l16:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l16:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l16:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l17
+	{mso-list-id:1725254450;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1576878290 -902368144 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l17:level1
+	{mso-level-text:"\(%1\)";
+	mso-level-tab-stop:60.0pt;
+	mso-level-number-position:left;
+	margin-left:60.0pt;
+	text-indent:-18.0pt;}
+@list l17:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l17:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l17:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l17:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l17:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l17:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l17:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l17:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l18
+	{mso-list-id:1983656317;
+	mso-list-type:hybrid;
+	mso-list-template-ids:2088114338 -902368144 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l18:level1
+	{mso-level-text:"\(%1\)";
+	mso-level-tab-stop:60.0pt;
+	mso-level-number-position:left;
+	margin-left:60.0pt;
+	text-indent:-18.0pt;}
+@list l18:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l18:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l18:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l18:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l18:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l18:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l18:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l18:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l19
+	{mso-list-id:2105565241;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1474331566 -902368144 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l19:level1
+	{mso-level-text:"\(%1\)";
+	mso-level-tab-stop:60.0pt;
+	mso-level-number-position:left;
+	margin-left:60.0pt;
+	text-indent:-18.0pt;}
+@list l19:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l19:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l19:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l19:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l19:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l19:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l19:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l19:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+ol
+	{margin-bottom:0mm;}
+ul
+	{margin-bottom:0mm;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:\6A19\6E96\306E\8868;
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0mm 5.4pt 0mm 5.4pt;
+	mso-para-margin:0mm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+table.TableNormal
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0mm 5.4pt 0mm 5.4pt;
+	mso-para-margin:0mm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]-->
+<link rel=themeData href="Dtu8_e_themedata.thmx">
+<link rel=colorSchemeMapping href="Dtu8_e_colorschememapping.xml">
+<meta name="Microsoft Border" content=none>
+<!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="3074">
+  <v:textbox inset="5.85pt,.7pt,5.85pt,.7pt"/>
+ </o:shapedefaults></xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body bgcolor=white lang=JA link=blue vlink=blue style='tab-interval:42.0pt'>
+
+<div class=Section1>
+
+<table class=TableNormal border=0 cellpadding=0 width="100%" style='width:100.0%;
+ mso-cellspacing:1.5pt;mso-yfti-tbllook:1184;mso-padding-alt:0mm 5.4pt 0mm 5.4pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;mso-yfti-lastrow:yes'>
+  <td width="99%" style='width:99.6%;background:black;padding:.75pt .75pt .75pt .75pt'>
+  <h1 align=center style='margin-top:7.5pt;margin-right:0mm;margin-bottom:7.5pt;
+  margin-left:0mm;text-align:center'><strong><span lang=EN-US style='font-family:
+  "MS PGothic";mso-bidi-font-family:"MS PGothic";color:white'>DTU8 Debugger</span></strong><a
+  name="_top"></a><strong><span lang=EN-US style='font-family:"MS PGothic";
+  mso-bidi-font-family:"MS PGothic"'><o:p></o:p></span></strong></h1>
+  </td>
+ </tr>
+</table>
+
+<p class=note style='margin-left:297.65pt'><span lang=EN-US style='font-family:
+"Times New Roman"'>This document contains important information about
+revisions, upgrades, and other matters that did not make it into the printed
+manuals. Please read this before using the DTU8 debugger package.<o:p></o:p></span></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='font-family:"Times New Roman"'>
+
+<hr size=2 width="100%" align=center>
+
+</span></div>
+
+<h2><span lang=EN-US style='font-family:"Times New Roman"'>Contents<o:p></o:p></span></h2>
+
+<p><b><span lang=EN-US style='font-family:"Times New Roman"'><a
+href="#_1._Related_Documents">1. Related Documents</a></span></b><span
+lang=EN-US style='font-family:"Times New Roman"'><o:p></o:p></span></p>
+
+<p><b><span lang=EN-US style='font-family:"Times New Roman"'><a
+href="#_2._Supplement_to">2. Supplement to the use of emulator</a></span></b><span
+lang=EN-US style='font-family:"Times New Roman"'><br>
+<a href="#_2.1_Startup_sequence">2.1 Startup sequence</a><br>
+<a href="#_2.2_Stop_sequence">2.2 Stop sequence</a><o:p></o:p></span></p>
+
+<p><b><span lang=EN-US style='font-family:"Times New Roman"'><a
+href="#_3._Updated_Contents">3. Updated Contents</a><o:p></o:p></span></b></p>
+
+<p><b><span lang=EN-US style='font-family:"Times New Roman"'><a
+href="#_4._Additional_information">4. Additional information that is not
+provided in the manual</a><o:p></o:p></span></b></p>
+
+<p><b><span lang=EN-US style='font-family:"Times New Roman"'><a
+href="#_5._Restrictions">5. Restrictions</a><o:p></o:p></span></b></p>
+
+<p><b><span lang=EN-US style='font-family:"Times New Roman"'><a
+href="#_6._Important_Notes">6. Important Notes</a><u><span style='color:blue'><br
+style='mso-special-character:line-break'>
+<![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+<![endif]></span></u></span></b><span lang=EN-US style='font-family:"Times New Roman"'><o:p></o:p></span></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='font-family:"Times New Roman"'>
+
+<hr size=2 width="100%" align=center>
+
+</span></div>
+
+<h2><a name="_1._Related_Documents"></a><span lang=EN-US style='font-family:
+"Times New Roman"'>1. Related Documents<o:p></o:p></span></h2>
+
+<p><span lang=EN-US style='font-family:"Times New Roman"'>The following
+documents are related to the DTU8 debugger package.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0mm;margin-right:36.0pt;margin-bottom:
+0mm;margin-left:36.0pt;margin-bottom:.0001pt'><span lang=EN-US
+style='font-family:"Times New Roman"'>- DTU8_E.HTML (This document) <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='font-family:"Times New Roman"'>Provides the latest information and
+important notes.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0mm;margin-right:36.0pt;margin-bottom:
+0mm;margin-left:36.0pt;margin-bottom:.0001pt'><span lang=EN-US
+style='font-family:"Times New Roman"'>- DTU8 Debugger User's Manual <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='font-family:"Times New Roman"'>Describes how to use the DTU8 debugger.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0mm;margin-right:36.0pt;margin-bottom:
+0mm;margin-left:36.0pt;margin-bottom:.0001pt'><span lang=EN-US
+style='font-family:"Times New Roman"'>- DTU8 debugger online help <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='font-family:"Times New Roman"'>Provides references to all functions
+(menus, windows and dialog boxes).<o:p></o:p></span></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='font-family:"Times New Roman"'>
+
+<hr size=2 width="100%" align=center>
+
+</span></div>
+
+<h2><a name="_2._Supplement_to"></a><span lang=EN-US style='font-family:"Times New Roman"'>2.
+Supplement to the use of emulator<o:p></o:p></span></h2>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Times New Roman"'>Observe
+the following when using the DTU8 debugger in connection with an emulator. <o:p></o:p></span></p>
+
+<p class=note style='margin-left:297.65pt'><em><span lang=EN-US
+style='font-family:"MS PGothic";color:red'>Note:</span></em><i><span
+lang=EN-US style='font-family:"Times New Roman";color:red'><br>
+The method of, and the general notes on, using an emulator are described in
+hardware related documents (such as user's manuals). Refer to them as required.
+</span></i></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='font-family:"Times New Roman"'>
+
+<hr size=2 width="100%" align=center>
+
+</span></div>
+
+<h3><a name="_2.1_Startup_sequence"></a><span lang=EN-US style='font-family:
+"Times New Roman"'>2.1 Startup sequence<o:p></o:p></span></h3>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Times New Roman"'>(1)
+Verify your installation<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US
+style='font-family:"Times New Roman"'>After you install the DTU8 debugger by
+the setup program of the U8 development tool, check to see if a group named
+&quot;nX-U8&quot; has been created in the &quot;U8 Tools&quot; folder
+accessible from the Windows Start menu &gt; &quot;All Programs.&quot;</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Times New Roman"'>(2)
+Start the emulator <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US
+style='font-family:"Times New Roman"'>Turn the emulator power on.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Times New Roman"'>(3)
+Start the DTU8 debugger<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US
+style='font-family:"Times New Roman"'>From the Start menu, select &quot;All
+Programs&quot; &gt; &quot;U8 Tools&quot; &gt; &quot;nX-U8&quot; &gt; &quot;DTU8
+debugger&quot; icon to start the DTU8 debugger. <o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Times New Roman"'>(4)
+Connect the DTU8 debugger and the emulator <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US
+style='font-family:"Times New Roman"'>Choose the emulator to be used from the
+&quot;Target ICE&quot; drop down list on the &quot;Communications
+parameters&quot; dialog box that the DTU8 debugger displays, then click the
+&quot;OK&quot; button. <o:p></o:p></span></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='font-family:"Times New Roman"'>
+
+<hr size=2 width="100%" align=center>
+
+</span></div>
+
+<h3><a name="_2.2_Stop_sequence"></a><span lang=EN-US style='font-family:"Times New Roman"'>2.2
+Stop sequence<o:p></o:p></span></h3>
+
+<p><span lang=EN-US style='font-family:"Times New Roman"'>Do not turn the
+emulator power off before stopping the DTU8 debugger. This is because
+communication will be made with the emulator before the DTU8 debugger is
+stopped. <o:p></o:p></span></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='font-family:"Times New Roman"'>
+
+<hr size=2 width="100%" align=center>
+
+</span></div>
+
+<h2><a name="_3._Updated_Contents"></a><span lang=EN-US style='font-family:
+"Times New Roman"'>3. Updated Contents<o:p></o:p></span></h2>
+
+<p><span lang=EN-US style='font-family:"Times New Roman"'>The following updates
+have been added in this release: <o:p></o:p></span></p>
+
+<ul style='margin-top:0mm' type=disc>
+ <li class=MsoNormal style='mso-list:l4 level1 lfo1;tab-stops:list 36.0pt'><span
+     lang=EN-US style='font-family:"Times New Roman"'>DTU8 V5.10<b><o:p></o:p></b></span></li>
+</ul>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l17 level1 lfo2;
+tab-stops:list 60.0pt'><a name="OLE_LINK3"></a><a name="OLE_LINK4"><span
+style='mso-bookmark:OLE_LINK3'><![if !supportLists]><span lang=EN-US
+style='font-family:"Times New Roman";mso-fareast-font-family:"Times New Roman";
+mso-bidi-font-weight:bold'><span style='mso-list:Ignore'>(1)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span></span><![endif]><span
+lang=EN-US style='font-family:"Times New Roman";mso-bidi-font-weight:bold'>The
+&quot;Enabling/Disabling All Breakpoints&quot; function was enabled in the
+Dr.U8 ICE, Dr.U16 ICE, uEASE, nanoEASE mode.<o:p></o:p></span></span></a></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l17 level1 lfo2;
+tab-stops:list 60.0pt'><span style='mso-bookmark:OLE_LINK4'><span
+style='mso-bookmark:OLE_LINK3'><![if !supportLists]><span lang=EN-US
+style='font-family:"Times New Roman";mso-fareast-font-family:"Times New Roman";
+mso-bidi-font-weight:bold'><span style='mso-list:Ignore'>(2)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span></span><![endif]><span
+lang=EN-US style='font-family:"Times New Roman";mso-bidi-font-weight:bold'>The
+option which updates the contents of the code memory window to the newest
+automatically when a break occurs was added.<o:p></o:p></span></span></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l17 level1 lfo2;
+tab-stops:list 60.0pt'><span style='mso-bookmark:OLE_LINK4'><span
+style='mso-bookmark:OLE_LINK3'><![if !supportLists]><span lang=EN-US
+style='font-family:"Times New Roman";mso-fareast-font-family:"Times New Roman";
+mso-bidi-font-weight:bold'><span style='mso-list:Ignore'>(3)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span></span><![endif]><span
+lang=EN-US style='font-family:"Times New Roman";mso-bidi-font-weight:bold'>The
+function which skips the data of the area which cannot be written in when a
+program file is loaded was added.<o:p></o:p></span></span></span></p>
+
+<span style='mso-bookmark:OLE_LINK3'></span><span style='mso-bookmark:OLE_LINK4'></span>
+
+<p class=MsoNormal style='margin-left:60.0pt'><span lang=EN-US
+style='font-family:"Times New Roman";mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Times New Roman";
+mso-bidi-font-weight:bold'>The following updates were added in previous
+release:<o:p></o:p></span></p>
+
+<ul style='margin-top:0mm' type=disc>
+ <li class=MsoNormal style='mso-list:l4 level1 lfo1;tab-stops:list 36.0pt'><span
+     lang=EN-US style='font-family:"Times New Roman"'>DTU8 V5.00<b><o:p></o:p></b></span></li>
+</ul>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l10 level1 lfo3;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"Times New Roman";mso-fareast-font-family:"Times New Roman";mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>(1)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-family:"Times New Roman";
+mso-bidi-font-weight:bold'>The Dr.U16 ICE, Dr.ICE(Ashling nX-U8 ICE) and
+Dr.ICE(Dr.610XXX of an old type) have been supported.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l10 level1 lfo3;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"Times New Roman";mso-fareast-font-family:"Times New Roman";mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>(2)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-family:"Times New Roman";
+mso-bidi-font-weight:bold'>The RAM Data size of the Trace Window is changed 16
+bits in the Simulation mode for nX-U16 core.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l10 level1 lfo3;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"Times New Roman";mso-fareast-font-family:"Times New Roman";mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>(3)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-family:"Times New Roman";
+mso-bidi-font-weight:bold'>When a break occurred during the HALT/STOP mode in
+the simulation mode, the problem of which DTU8 cannot cancel HALT/STOP mode has
+been fixed.<o:p></o:p></span></p>
+
+<ul style='margin-top:0mm' type=disc>
+ <li class=MsoNormal style='mso-list:l4 level1 lfo1;tab-stops:list 36.0pt'><span
+     lang=EN-US style='font-family:"Times New Roman"'>DTU8 V4.20<b><o:p></o:p></b></span></li>
+</ul>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l11 level1 lfo4;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"Times New Roman";mso-fareast-font-family:"Times New Roman";mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>(1)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-family:"Times New Roman";
+mso-bidi-font-weight:bold'>The nanoEASE has been supported.<o:p></o:p></span></p>
+
+<ul style='margin-top:0mm' type=disc>
+ <li class=MsoNormal style='mso-list:l4 level1 lfo1;tab-stops:list 36.0pt'><span
+     lang=EN-US style='font-family:"Times New Roman"'>DTU8 V4.10<b><o:p></o:p></b></span></li>
+</ul>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l18 level1 lfo5;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"Times New Roman";mso-fareast-font-family:"Times New Roman";mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>(1)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-family:"Times New Roman";
+mso-bidi-font-weight:bold'>The operation of the simulation function changed
+from the instruction-level to cycle-level.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l18 level1 lfo5;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"Times New Roman";mso-fareast-font-family:"Times New Roman";mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>(2)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-family:"Times New Roman";
+color:black;mso-bidi-font-weight:bold'>The copy right has been changed to new
+company name (LAPIS Semiconductor Co., Ltd.).</span><span lang=EN-US
+style='font-family:"Times New Roman";mso-bidi-font-weight:bold'><o:p></o:p></span></p>
+
+<ul style='margin-top:0mm' type=disc>
+ <li class=MsoNormal style='mso-list:l4 level1 lfo1;tab-stops:list 36.0pt'><span
+     lang=EN-US style='font-family:"Times New Roman"'>DTU8 V4.03<b><o:p></o:p></b></span></li>
+</ul>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l13 level1 lfo6;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"Times New Roman";mso-fareast-font-family:"Times New Roman";mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>(1)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-family:"Times New Roman";
+mso-bidi-font-weight:bold'>A problem which incorrect code is written to a flash
+memory at the time of an emulation start when a software breakpoint is set to
+the ”memory in physical segment 1 and higher” and the contents of physical
+segments other than the ”memory in physical segment 1 and higher” are displayed
+has been fixed.<o:p></o:p></span></p>
+
+<ul style='margin-top:0mm' type=disc>
+ <li class=MsoNormal style='mso-list:l4 level1 lfo1;tab-stops:list 36.0pt'><span
+     lang=EN-US style='font-family:"Times New Roman"'>DTU8 V4.02<b><o:p></o:p></b></span></li>
+</ul>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l14 level1 lfo7;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"Times New Roman";mso-fareast-font-family:"Times New Roman";mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>(1)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-family:"Times New Roman";
+mso-bidi-font-weight:bold'>The formal version of Dr.U8ICE has been supported.<o:p></o:p></span></p>
+
+<ul style='margin-top:0mm' type=disc>
+ <li class=MsoNormal style='mso-list:l4 level1 lfo1;tab-stops:list 36.0pt'><span
+     lang=EN-US style='font-family:"Times New Roman"'>DTU8 V4.01<b><o:p></o:p></b></span></li>
+</ul>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l9 level1 lfo8;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"Times New Roman";mso-fareast-font-family:"Times New Roman";mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>(1)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-family:"Times New Roman";
+mso-bidi-font-weight:bold'>A problem which the “count value” of the “RAM match
+break2” is reset by the original set point when the pass count is set up for
+the “RAM match break2” and break by factors other than “RAM match break2” has
+been fixed.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l9 level1 lfo8;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"Times New Roman";mso-fareast-font-family:"Times New Roman";mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>(2)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-family:"Times New Roman";
+mso-bidi-font-weight:bold'>A problem which a program cannot be debug normally
+after the DTU8 is terminated during program execution, and the DTU8 is
+restarted before break occurred has been fixed.<o:p></o:p></span></p>
+
+<ul style='margin-top:0mm' type=disc>
+ <li class=MsoNormal style='mso-list:l4 level1 lfo1;tab-stops:list 36.0pt'><span
+     lang=EN-US style='font-family:"Times New Roman"'>DTU8 V4.00<b><o:p></o:p></b></span></li>
+</ul>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l12 level1 lfo9;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"Times New Roman";mso-fareast-font-family:"Times New Roman";mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>(1)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-family:"Times New Roman";
+mso-bidi-font-weight:bold'>The Dr.U8ICE has been supported.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l12 level1 lfo9;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"Times New Roman";mso-fareast-font-family:"Times New Roman";mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>(2)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-family:"Times New Roman";
+mso-bidi-font-weight:bold'>Added the Realtime RAM monitor function.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l12 level1 lfo9;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"Times New Roman";mso-fareast-font-family:"Times New Roman";mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>(3)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-family:"Times New Roman";
+mso-bidi-font-weight:bold'>Added the Realtime LCD monitor function.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l12 level1 lfo9;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"Times New Roman";mso-fareast-font-family:"Times New Roman";mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>(4)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-family:"Times New Roman";
+mso-bidi-font-weight:bold'>When a &quot;Fixed value&quot; is specified as
+&quot;Value of blank area&quot; as the option at the time of a program file
+load, all the areas which do not have data into a file among flash memories are
+filled up with the fixed value.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l12 level1 lfo9;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"Times New Roman";mso-fareast-font-family:"Times New Roman";mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>(5)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-family:"Times New Roman";
+mso-bidi-font-weight:bold'>The “PC match break” is validated during
+&quot;Execute to cursor&quot;.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l12 level1 lfo9;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"Times New Roman";mso-fareast-font-family:"Times New Roman";mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>(6)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-family:"Times New Roman";
+mso-bidi-font-weight:bold'>The data number of the real-time RAM watch in
+simulator mode which can be registered is changed into a maximum of 16 points
+(1/2/4 byte) from a maximum of 16 bytes.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l12 level1 lfo9;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"Times New Roman";mso-fareast-font-family:"Times New Roman";mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>(7)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-family:"Times New Roman";
+mso-bidi-font-weight:bold'>Added the updating mode.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l12 level1 lfo9;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"Times New Roman";mso-fareast-font-family:"Times New Roman";mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>(8)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-family:"Times New Roman";
+mso-bidi-font-weight:bold'>The operation which chooses the &quot;hardware break
+point&quot; and the &quot;software break point&quot; at the time of break point
+setting has been deleted. If there is a hardware break point which can be used
+at the time of break point setting, it will be chosen automatically.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l12 level1 lfo9;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"Times New Roman";mso-fareast-font-family:"Times New Roman";mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>(9)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-family:"Times New Roman";
+mso-bidi-font-weight:bold'>A problem which the &quot;Clear&quot; button is
+enabled even if &quot;Reserved&quot; is selected in the type group box in the
+symbol list dialog has been fixed.<o:p></o:p></span></p>
+
+<ul style='margin-top:0mm' type=disc>
+ <li class=MsoNormal style='mso-list:l4 level1 lfo1;tab-stops:list 36.0pt'><span
+     lang=EN-US style='font-family:"Times New Roman"'>DTU8 V3.10<b><o:p></o:p></b></span></li>
+</ul>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l0 level1 lfo10;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"Times New Roman";mso-fareast-font-family:"Times New Roman";mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>(1)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-family:"Times New Roman";
+mso-bidi-font-weight:bold'>A Problem which parts of program memory are
+overwritten with data 0xFF or 0x00 and the program does not work correctly when
+a real-time emulation is executed with setting any “software breakpoint” has
+been fixed.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l0 level1 lfo10;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"Times New Roman";mso-fareast-font-family:"Times New Roman";mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>(2)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-family:"Times New Roman";
+mso-bidi-font-weight:bold'>A Problem which fails in reading of a device
+information file when DTU8 was started by setup which does not display
+'communications parameters' dialog has been fixed.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l0 level1 lfo10;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"Times New Roman";mso-fareast-font-family:"Times New Roman";mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>(3)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-family:"Times New Roman";
+mso-bidi-font-weight:bold'>A Problem which the PC tracking does not work
+correctly on source window when forced break occurs has been fixed.<o:p></o:p></span></p>
+
+<ul style='margin-top:0mm' type=disc>
+ <li class=MsoNormal style='mso-list:l4 level1 lfo1;tab-stops:list 36.0pt'><span
+     lang=EN-US style='font-family:"Times New Roman"'>DTU8 V3.00<b><o:p></o:p></b></span></li>
+</ul>
+
+<p class=MsoNormal style='margin-left:42.0pt'><span lang=EN-US
+style='font-family:"Times New Roman";mso-bidi-font-weight:bold'>(1) A new type
+device information files can be read.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt'><span lang=EN-US
+style='font-family:"Times New Roman";mso-bidi-font-weight:bold'>(2) Added a
+load option which clears the trace memory when a program file is loaded.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt'><span lang=EN-US
+style='font-family:"Times New Roman";mso-bidi-font-weight:bold'>(3) Added a
+load option which does not change current flash memory contents does not exist
+in a program file.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:59.4pt;mso-para-margin-left:3.5gd;
+text-indent:-17.4pt;mso-char-indent-count:-1.45'><span lang=EN-US
+style='font-family:"Times New Roman";mso-bidi-font-weight:bold'>(4) Added a
+function of read only area on the flash memory. When a program file is loaded,
+the data in the read only area is skipped. An error occurs when the read only
+area is changed on the memory window or the Disassembly window.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt'><span lang=EN-US
+style='font-family:"Times New Roman";mso-bidi-font-weight:bold'>(5) Added a
+function of device reset.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt'><span lang=EN-US
+style='font-family:"Times New Roman";mso-bidi-font-weight:bold'>(6) Added a
+function of the uEASE firmware update.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt'><span lang=EN-US
+style='font-family:"Times New Roman";mso-bidi-font-weight:bold'>(7) A problem
+which a source line on the trace window is not updated has been fixed.<o:p></o:p></span></p>
+
+<ul style='margin-top:0mm' type=disc>
+ <li class=MsoNormal style='mso-list:l4 level1 lfo1;tab-stops:list 36.0pt'><span
+     lang=EN-US style='font-family:"Times New Roman"'>DTU8 V2.52<b><o:p></o:p></b></span></li>
+</ul>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l8 level1 lfo11;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"Times New Roman";mso-fareast-font-family:"Times New Roman";mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>(1)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-family:"Times New Roman";
+mso-bidi-font-weight:bold'>The following problem of uEASE mode connected with a
+target which has Mask ROM or SRAM as program memory has been fixed.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt'><span lang=EN-US
+style='font-family:"Times New Roman";mso-bidi-font-weight:bold'><span
+style='mso-spacerun:yes'>      </span>- DTU8 is crushed when it starts to
+execute program after setting software breakpoints.<o:p></o:p></span></p>
+
+<ul style='margin-top:0mm' type=disc>
+ <li class=MsoNormal style='mso-list:l4 level1 lfo1;tab-stops:list 36.0pt'><span
+     lang=EN-US style='font-family:"Times New Roman"'>DTU8 V2.51 <b><o:p></o:p></b></span></li>
+</ul>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l5 level1 lfo12;
+tab-stops:list 60.0pt'><a name="OLE_LINK1"></a><a name="OLE_LINK2"><span
+style='mso-bookmark:OLE_LINK1'><![if !supportLists]><span lang=EN-US
+style='font-family:"Times New Roman";mso-fareast-font-family:"Times New Roman";
+mso-bidi-font-weight:bold'><span style='mso-list:Ignore'>(1)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span></span><![endif]><span
+lang=EN-US style='font-family:"Times New Roman";mso-bidi-font-weight:bold'>The
+script command input specification through &quot;Script Command&quot; dialogue
+has been modified. DTU8 does not accept the script command input until the </span></span></a><span
+lang=EN-US style='font-family:"Times New Roman";mso-bidi-font-weight:bold'>processing
+of the last command is finished. If the next command is input before the
+previous command is finished, DTU8 will issue an error message.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l5 level1 lfo12;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"Times New Roman";mso-fareast-font-family:"Times New Roman";mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>(2)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-family:"Times New Roman";
+mso-bidi-font-weight:bold'>A problem which data in segment 1 or higher isn’t
+saved when the memory address is not specified in the argument of SAV script
+command has been fixed.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l5 level1 lfo12;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"Times New Roman";mso-fareast-font-family:"Times New Roman";mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>(3)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-family:"Times New Roman";
+mso-bidi-font-weight:bold'>A duplicate error check for the symbol registration has
+been modified. If the registered symbol is added again by symbol list dialogue
+or by SSYM command, DTU8 will issue an error message.<o:p></o:p></span></p>
+
+<ul style='margin-top:0mm' type=disc>
+ <li class=MsoNormal style='mso-list:l4 level1 lfo1;tab-stops:list 36.0pt'><span
+     lang=EN-US style='font-family:"Times New Roman"'>DTU8 V2.50 <b><o:p></o:p></b></span></li>
+</ul>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l16 level1 lfo13;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"Times New Roman";mso-fareast-font-family:"Times New Roman";mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>(1)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-family:"Times New Roman";
+mso-bidi-font-weight:bold'>The step-out function has been supported. The
+function is available only on the Source window.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l16 level1 lfo13;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"Times New Roman";mso-fareast-font-family:"Times New Roman";mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>(2)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-family:"Times New Roman";
+mso-bidi-font-weight:bold'>Macro script commands for uEASE mode have been
+supported. For the details, see the</span><span lang=EN-US style='font-family:
+"Times New Roman"'> Debugger User's Manual<span style='mso-bidi-font-weight:
+bold'>.<o:p></o:p></span></span></p>
+
+<ul style='margin-top:0mm' type=disc>
+ <li class=MsoNormal style='mso-list:l4 level1 lfo1;tab-stops:list 36.0pt'><span
+     lang=EN-US style='font-family:"Times New Roman"'>DTU8 V2.42 <b><o:p></o:p></b></span></li>
+</ul>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l6 level1 lfo14;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"Times New Roman";mso-fareast-font-family:"Times New Roman";mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>(1)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-family:"Times New Roman";
+mso-bidi-font-weight:bold'>When the breaks (except the data match break and the
+address break) are occurred, the problem which the pass count value of the
+address break or the data match break is reset with the specified value in the
+break conditions dialog has been fixed.<o:p></o:p></span></p>
+
+<ul style='margin-top:0mm' type=disc>
+ <li class=MsoNormal style='mso-list:l4 level1 lfo1;tab-stops:list 36.0pt'><span
+     lang=EN-US style='font-family:"Times New Roman"'>DTU8 V2.41 <b><o:p></o:p></b></span></li>
+</ul>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l15 level1 lfo15;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"Times New Roman";mso-fareast-font-family:"Times New Roman";mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>(1)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-family:"Times New Roman";
+mso-bidi-font-weight:bold'>A problem which errors are issued continuously when
+the window of code, data or memory in physical segments 1 and higher is opened
+has been fixed. <o:p></o:p></span></p>
+
+<ul style='margin-top:0mm' type=disc>
+ <li class=MsoNormal style='mso-list:l4 level1 lfo1;tab-stops:list 36.0pt'><span
+     lang=EN-US style='font-family:"Times New Roman"'>DTU8 V2.40 <b><o:p></o:p></b></span></li>
+</ul>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l3 level1 lfo16;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"Times New Roman";mso-fareast-font-family:"Times New Roman";mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>(1)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-family:"Times New Roman";
+mso-bidi-font-weight:bold'>The problems which the power down break and the N/A
+access break of the ROM/RAM couldn't set have been fixed. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;mso-para-margin-left:5.0gd'><span
+lang=EN-US style='font-family:"Times New Roman";mso-fareast-font-family:"MS Mincho";
+mso-bidi-font-weight:bold'>A problem of Simulation mode, which an instruction
+at the execution start address is replaced with the BRK instruction by the
+following operation, has been fixed.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:54.0pt;mso-para-margin-left:4.5gd'><span
+lang=EN-US style='font-family:"Times New Roman";mso-bidi-font-weight:bold'><span
+style='mso-spacerun:yes'>  </span>1. Execute the program and break at a
+breakpoint.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:54.0pt;mso-para-margin-left:4.5gd'><span
+lang=EN-US><span style='mso-spacerun:yes'>  </span></span><span lang=EN-US
+style='font-family:"Times New Roman";mso-bidi-font-weight:bold'>2. Execute to
+the same address to this break address by &quot;Execute to cursor&quot;.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:78.0pt;mso-para-margin-left:6.5gd'><span
+lang=EN-US style='font-family:"Times New Roman";mso-bidi-font-weight:bold'>(This
+is done by right clicking on the break address in the source window and
+selecting &quot;Execute to cursor&quot; in the popup menu.)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:78.0pt;mso-para-margin-left:4.5gd;
+text-indent:-24.0pt;mso-char-indent-count:-2.0'><span lang=EN-US
+style='font-family:"Times New Roman";mso-bidi-font-weight:bold'><span
+style='mso-spacerun:yes'>   </span>3. Reset and execute again. Then, the
+instruction at the execution start address is replaced with the BRK
+instruction.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l3 level1 lfo16;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"Times New Roman";mso-fareast-font-family:"Times New Roman";mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>(2)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-family:"Times New Roman";
+mso-bidi-font-weight:bold'>A problem of Simulation mode, which the message is
+not shown when you use the search function of the trace window and any data
+does not match the search conditions, has been fixed.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l3 level1 lfo16;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"Times New Roman";mso-fareast-font-family:"Times New Roman";mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>(3)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-family:"Times New Roman";
+mso-bidi-font-weight:bold'>A problem of Simulation mode, which the break
+address shown in the status window is not updated correctly when the following
+operation is performed, has been fixed.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;mso-para-margin-left:5.0gd'><span
+lang=EN-US style='font-family:"Times New Roman";mso-bidi-font-weight:bold'>1.
+Execute program and break at a breakpoint.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;mso-para-margin-left:5.0gd'><span
+lang=EN-US style='font-family:"Times New Roman";mso-bidi-font-weight:bold'>2.
+After the break, reset and execute again. And do the force break.<o:p></o:p></span></p>
+
+<ul style='margin-top:0mm' type=disc>
+ <li class=MsoNormal style='mso-list:l4 level1 lfo1;tab-stops:list 36.0pt'><span
+     lang=EN-US style='font-family:"Times New Roman"'>DTU8 V2.30 <b><o:p></o:p></b></span></li>
+</ul>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l1 level1 lfo17;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"Times New Roman";mso-fareast-font-family:"Times New Roman";mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>(1)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-family:"Times New Roman";
+mso-bidi-font-weight:bold'>On-chip-debug emulator (uEASE) mode has been
+supported. When you debug using the uEASE , choose uEASE from the target ICE
+field on the &quot;Communications parameters&quot; dialog. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;mso-para-margin-left:5.0gd'><span
+lang=EN-US style='font-family:"Times New Roman";mso-bidi-font-weight:bold'>For
+details, refer to the &quot;DTU8 Debugger User's Manual.&quot;</span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l1 level1 lfo17;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"Times New Roman";mso-fareast-font-family:"Times New Roman";mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>(2)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-family:"Times New Roman";
+mso-bidi-font-weight:bold'>The in-circuit emulator type of the &quot;Target
+ICE&quot; of the &quot;Communications parameters&quot; dialog was integrated into
+Dr.ICE. From this version, choose Dr.ICE when you choose Ashling nX-U8 ICE in
+older version of the DTU8.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l1 level1 lfo17;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"Times New Roman";mso-fareast-font-family:"Times New Roman";mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>(3)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-family:"Times New Roman";
+mso-bidi-font-weight:bold'>The option item of &quot;Environment
+Settings|Other&quot;&nbsp; has been changed from &quot;The emulation library is
+stepped over always&quot; to &quot;C library is stepped over always in C source
+level debugging&quot;. When the checkbox is checked, the C runtime library and
+emulation library are stepped over always in C source level debugging.<o:p></o:p></span></p>
+
+<ul style='margin-top:0mm' type=disc>
+ <li class=MsoNormal style='mso-list:l4 level1 lfo1;tab-stops:list 36.0pt'><span
+     lang=EN-US style='font-family:"Times New Roman"'>DTU8 V2.20 <b><o:p></o:p></b></span></li>
+</ul>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l19 level1 lfo18;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"Times New Roman";mso-fareast-font-family:"Times New Roman";mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>(1)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-family:"Times New Roman";
+mso-bidi-font-weight:bold'>Local variables or function arguments assigned to
+registers can now be added to the Watch window. The conventional method of
+adding them to the Watch window can be used. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l19 level1 lfo18;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"Times New Roman";mso-fareast-font-family:"Times New Roman";mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>(2)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-family:"Times New Roman";
+mso-bidi-font-weight:bold'>Modification has been so made that the Source window
+at debug will always be displayed. </span><span lang=EN-US style='font-family:
+"Times New Roman"'>To close the Switch display files dialog box, click the
+&quot;Cancel&quot; button on it or the Close button on the title bar.<span
+style='mso-bidi-font-weight:bold'> <o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-18.0pt;mso-list:l19 level1 lfo18;
+tab-stops:list 60.0pt'><![if !supportLists]><span lang=EN-US style='mso-bidi-font-family:
+"MS PGothic"'><span style='mso-list:Ignore'>(3)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-family:"Times New Roman";
+mso-bidi-font-weight:bold'>Added an interrupt simulation feature to the DTU8
+simulation mode. Selecting the &quot;Interrupt&quot; menu command from the
+&quot;View&quot; menu displays the &quot;Interrupt&quot; window. For details
+refer to the &quot;DTU8 Debugger User's Manual.&quot;</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Times New Roman";
+mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='font-family:"Times New Roman"'>
+
+<hr size=2 width="100%" align=center>
+
+</span></div>
+
+<h2><a name="_4._Additional_information"></a><span lang=EN-US style='font-family:
+"Times New Roman"'>4. Additional information that is not provided in the manual<o:p></o:p></span></h2>
+
+<p><span lang=EN-US style='font-family:"Times New Roman"'>None.<o:p></o:p></span></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='font-family:"Times New Roman"'>
+
+<hr size=2 width="100%" align=center>
+
+</span></div>
+
+<h2><a name="_5._Restrictions"></a><span lang=EN-US style='font-family:"Times New Roman"'>5.
+Restrictions<o:p></o:p></span></h2>
+
+<p><a name="_Toc175576049"><span lang=EN-US style='font-family:"Times New Roman"'>The
+current version of the DTU8 debugger has the following restrictions: <o:p></o:p></span></a></p>
+
+<p class=MsoNormal style='margin-left:24.1pt;text-indent:-24.1pt;mso-char-indent-count:
+-2.0;mso-char-indent-size:12.05pt'><span style='mso-bookmark:_Toc175576049'><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='mso-bidi-font-size:
+10.5pt;font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></b></span></p>
+
+<p class=MsoNormal style='margin-left:24.1pt;text-indent:-24.1pt;mso-char-indent-count:
+-2.0'><span style='mso-bookmark:_Toc175576049'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='mso-bidi-font-size:10.5pt;font-family:"Times New Roman"'>(1)
+DTU8 cannot recognize change of the code memory which does not use an on-chip
+debug function like a flash memory rewrite function.<o:p></o:p></span></b></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;mso-para-margin-left:3.0gd'><span
+style='mso-bookmark:_Toc175576049'><span lang=EN-US style='font-family:"Times New Roman"'>DTU8
+cannot recognize change of the code memory which does not use an on-chip debug
+function like a flash memory rewrite function of LSI. If the contents of a code
+memory are displayed or saved to a program file after rewriting, please first
+validate “Update code memory window” option on “Other” tab of the “Environment
+settings”, and then update the contents of a code memory by use “Update” on
+Window menu. Moreover, please validate the option “Auto Update when a break
+occur” concurrently with the above-mentioned setting to update the contents of
+the code memory automatically when a break occurs.</span><span lang=EN-US> </span></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;mso-para-margin-left:3.0gd'><span
+style='mso-bookmark:_Toc175576049'><span lang=EN-US style='font-family:"Times New Roman"'>In
+addition, when a code memory is updated, the mnemonic corresponding to the
+contents of a memory after rewriting in the disassembly display of the trace
+window is displayed to the trace data before rewriting.</span></span><span
+style='mso-bookmark:_Toc175576049'><span lang=EN-US style='mso-bidi-font-family:
+"MS PGothic"'><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:24.1pt;text-indent:-24.1pt;mso-char-indent-count:
+-2.0'><span style='mso-bookmark:_Toc175576049'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='mso-bidi-font-size:10.5pt;font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></b></span></p>
+
+<p class=MsoNormal style='margin-left:24.1pt;text-indent:-24.1pt;mso-char-indent-count:
+-2.0'><span style='mso-bookmark:_Toc175576049'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='mso-bidi-font-size:10.5pt;font-family:"Times New Roman"'>(2)
+A real-time tab is not switched to in the emulation execution mode in Dr.U16ICE
+mode. <o:p></o:p></span></b></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;mso-para-margin-left:3.0gd'><span
+style='mso-bookmark:_Toc175576049'><span lang=EN-US style='font-family:"Times New Roman"'>The
+display of a watch window cannot be switched to a real-time tab from other tabs
+in the emulation execution mode in Dr.U16ICE. Please change a display to a
+real-time tab before an emulation start to refer to the value of a real-time
+tab in the emulation execution mode.<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;mso-para-margin-left:3.0gd'><span
+style='mso-bookmark:_Toc175576049'><span lang=EN-US style='mso-bidi-font-size:
+10.5pt;font-family:"Times New Roman"'>By turning ON the “Activate realtime-tab
+of watch window when executing program” option</span></span><span
+style='mso-bookmark:_Toc175576049'><span lang=EN-US style='font-family:"Times New Roman"'>
+on “Other” tab of the “Environment settings”</span></span><span
+style='mso-bookmark:_Toc175576049'><span lang=EN-US style='mso-bidi-font-size:
+10.5pt;font-family:"Times New Roman"'>, the real-time tab is automatically
+displayed at the time of an emulation start.<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:24.1pt;text-indent:-24.1pt;mso-char-indent-count:
+-2.0'><span style='mso-bookmark:_Toc175576049'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='mso-bidi-font-size:10.5pt;font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></b></span></p>
+
+<p class=MsoNormal style='margin-left:24.1pt;text-indent:-24.1pt;mso-char-indent-count:
+-2.0'><span style='mso-bookmark:_Toc175576049'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='mso-bidi-font-size:10.5pt;font-family:"Times New Roman"'>(3)
+The [Calc.] button can certainly be pushed when the value of coverage is
+referred to of the status window in Dr.U16ICE mode.<o:p></o:p></span></b></span></p>
+
+<p class=MsoNormal style='margin-left:33.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span style='mso-bookmark:_Toc175576049'><span
+lang=EN-US style='mso-bidi-font-size:10.5pt;font-family:"Times New Roman"'>When
+the value of the coverage of the status window is referred to after break,
+please be sure to push the [Calc.] button and to update the value of coverage.<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:24.1pt;text-indent:-24.1pt;mso-char-indent-count:
+-2.0'><span style='mso-bookmark:_Toc175576049'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='mso-bidi-font-size:10.5pt;font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></b></span></p>
+
+<p class=MsoNormal style='margin-left:24.1pt;text-indent:-24.1pt;mso-char-indent-count:
+-2.0'><span style='mso-bookmark:_Toc175576049'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='mso-bidi-font-size:10.5pt;font-family:"Times New Roman"'>(4)
+A “Fill...” and “Change...” menus are invalid to the memory of the segment 8
+and higher in Dr.U8ICE, Dr.U16ICE, uEASE, nanoEASE mode.<o:p></o:p></span></b></span></p>
+
+<p class=MsoNormal style='margin-left:33.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span style='mso-bookmark:_Toc175576049'><span
+lang=EN-US style='mso-bidi-font-size:10.5pt;font-family:"Times New Roman"'>A
+“Fill...” and “Change...” menus are invalid to the memory of the segment 8 and
+higher in Dr.U8ICE, Dr.U16ICE, uEASE, nanoEASE mode. Please rewrite the memory
+of the segments 0-7 which are those references origin.<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:24.1pt;text-indent:-24.1pt;mso-char-indent-count:
+-2.0'><span style='mso-bookmark:_Toc175576049'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='mso-bidi-font-size:10.5pt;font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></b></span></p>
+
+<p class=MsoNormal style='margin-left:24.1pt;text-indent:-24.1pt;mso-char-indent-count:
+-2.0'><span style='mso-bookmark:_Toc175576049'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='mso-bidi-font-size:10.5pt;font-family:"Times New Roman"'>(5)
+When an interrupt occurs in a step over, a break occurs at the head of an
+interruption routine in Dr.U16ICE, Dr.U8ICE, uEASE, nanoEASE mode.<o:p></o:p></span></b></span></p>
+
+<p class=MsoNormal style='margin-left:33.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span style='mso-bookmark:_Toc175576049'><span
+lang=EN-US style='mso-bidi-font-size:10.5pt;font-family:"Times New Roman"'>When
+an interrupt occurs in a step over, a break occurs at the head of the interruption
+routine instead of the next instruction of the instruction by which the step
+was started.<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:24.1pt;text-indent:-24.1pt;mso-char-indent-count:
+-2.0'><span style='mso-bookmark:_Toc175576049'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='mso-bidi-font-size:10.5pt;font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></b></span></p>
+
+<p class=MsoNormal style='margin-left:24.1pt;text-indent:-24.1pt;mso-char-indent-count:
+-2.0'><span style='mso-bookmark:_Toc175576049'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='mso-bidi-font-size:10.5pt;font-family:"Times New Roman"'>(6)
+The option setting &quot;Reset system&quot; when loading a program file may be
+off.<o:p></o:p></span></b></span></p>
+
+<p class=MsoNormal style='margin-left:33.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span style='mso-bookmark:_Toc175576049'><span
+lang=EN-US style='font-family:"Times New Roman"'>If loading of a program file
+fails, the “Reset system” option in &quot;load program file&quot; dialog
+indicated by “File| load program file…” menu will be unchecked. Please check
+the &quot;Reset system&quot; check box again and load a program file to reset
+after a program file load.</span></span><span style='mso-bookmark:_Toc175576049'><span
+lang=EN-US style='mso-bidi-font-size:10.5pt;font-family:"Times New Roman"'><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:24.1pt;text-indent:-24.1pt;mso-char-indent-count:
+-2.0'><span style='mso-bookmark:_Toc175576049'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='mso-bidi-font-size:10.5pt;font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></b></span></p>
+
+<p class=MsoNormal style='margin-left:24.1pt;text-indent:-24.1pt;mso-char-indent-count:
+-2.0'><span style='mso-bookmark:_Toc175576049'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='mso-bidi-font-size:10.5pt;font-family:"Times New Roman"'>(7)
+In an initial state, when a program file is saved, a public symbol is not
+saved.<o:p></o:p></span></b></span></p>
+
+<p class=MsoNormal style='margin-left:33.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none'><span style='mso-bookmark:_Toc175576049'><span
+lang=EN-US style='font-family:"Times New Roman"'>The “Save public symbols”
+checkbox button on the “Save program file” dialog indicated by selecting the <span
+style='mso-bidi-font-weight:bold'>&quot;File| Save program to
+files…&quot;&nbsp;menu is unchecked in an initial state. </span>Please check
+the &quot;Save public symbols&quot; check box and save a program file to save
+public symbols to a program file.</span></span><span style='mso-bookmark:_Toc175576049'><span
+lang=EN-US style='mso-bidi-font-size:10.5pt;font-family:"Times New Roman"'><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:24.1pt;text-indent:-24.1pt;mso-char-indent-count:
+-2.0'><span style='mso-bookmark:_Toc175576049'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='mso-bidi-font-size:10.5pt;font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></b></span></p>
+
+<p class=MsoNormal style='margin-left:24.1pt;text-indent:-24.1pt;mso-char-indent-count:
+-2.0'><span style='mso-bookmark:_Toc175576049'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='mso-bidi-font-size:10.5pt;font-family:"Times New Roman"'>(8)
+It is possible that the debugger cannot reference variables correctly because
+of the effect by compiler optimization</span></b></span><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='mso-bidi-font-size:10.5pt;font-family:"Times New Roman"'>.<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:33.0pt;text-align:justify;text-justify:
+inter-ideograph;mso-pagination:none;mso-char-indent-size:12pt'><span
+lang=EN-US style='mso-bidi-font-size:10.5pt;font-family:"Times New Roman";
+mso-bidi-font-weight:bold'>If,</span><b style='mso-bidi-font-weight:normal'><span
+lang=EN-US style='mso-bidi-font-size:10.5pt;font-family:"Times New Roman"'> </span></b><span
+lang=EN-US style='font-family:"Times New Roman"'>during the course of CCU8
+compiler optimization, a local variable is&nbsp;assigned to a register, the
+debugging information consistency may be lost; as a result, it becomes
+impossible for the DTU8 debugger to reference variables </span><span
+lang=EN-US style='mso-bidi-font-size:10.5pt;font-family:"Times New Roman";
+mso-bidi-font-weight:bold'>correctly</span><span lang=EN-US style='font-family:
+"Times New Roman"'>. <o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Times New Roman";
+mso-fareast-font-family:"MS Mincho"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:24.1pt;text-indent:-24.1pt;mso-char-indent-count:
+-2.0;mso-char-indent-size:12.05pt'><b style='mso-bidi-font-weight:normal'><span
+lang=EN-US style='mso-bidi-font-size:10.5pt;font-family:"Times New Roman"'>(9)
+If a transition is made to HALT/STOP mode during simulation mode of the DTU8
+debugger, automatic generation of interrupt is disabled. <o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:33.0pt;mso-para-margin-left:2.75gd;
+text-align:justify;text-justify:inter-ideograph;mso-pagination:none;tab-stops:
+36.0pt'><span lang=EN-US style='mso-bidi-font-size:10.5pt;font-family:"Times New Roman";
+mso-bidi-font-weight:bold'>If a transition is made to HALT/STOP mode during
+simulation mode of the DTU8 debugger, automatic generation of interrupt is
+disabled. This is because, if transitioned to </span><span lang=EN-US
+style='font-family:"Times New Roman";mso-bidi-font-weight:bold'>HALT/STOP mode,
+no instruction will be executed and, as a result, the cycle count will no
+longer be</span><span lang=EN-US style='font-family:"Times New Roman"'>
+incremented. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:33.0pt;mso-para-margin-left:2.75gd;
+text-align:justify;text-justify:inter-ideograph;mso-pagination:none'><span
+lang=EN-US style='font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:80.5pt;mso-para-margin-left:2.71gd;
+text-indent:-48.0pt;mso-char-indent-count:-4.0;mso-char-indent-size:12pt'><span
+lang=EN-US style='font-family:"Times New Roman"'>To avoid this restriction,
+take either of the following measures:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:84.0pt;mso-para-margin-left:3.0gd;
+text-indent:-48.0pt;mso-char-indent-count:-4.0;mso-char-indent-size:12pt'><span
+lang=EN-US style='font-family:"Times New Roman"'>Measure 1: Cancel the
+HALT/STOP mode either by making an interrupt occur by clicking an interrupt
+source button or by executing Step in or Step over. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:84.0pt;mso-para-margin-left:3.0gd;
+text-indent:-48.0pt;mso-char-indent-count:-4.0;mso-char-indent-size:12pt'><span
+lang=EN-US style='font-family:"Times New Roman"'>Measure 2: Modify the customer<span
+style='mso-bidi-font-weight:bold'>'</span>s program so that control will not
+transition to HALT/STOP mode. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:32.5pt'><span lang=EN-US
+style='font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:24.1pt;text-indent:-24.1pt;mso-char-indent-count:
+-2.0'><b style='mso-bidi-font-weight:normal'><span lang=EN-US style='mso-bidi-font-size:
+10.5pt;font-family:"Times New Roman"'>(10) The jump button on the Symbols
+dialog does not run correctly for the bit type symbols.<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:32.6pt'><span lang=EN-US
+style='font-family:"Times New Roman"'>The jump button on the Symbols dialog
+indicated by selecting the <span style='mso-bidi-font-weight:bold'>&quot;Tools|
+Symbols&quot;&nbsp;menu does not run correctly for the bit type symbols. <o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:32.5pt'><span lang=EN-US
+style='font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:24.1pt;text-indent:-24.1pt;mso-char-indent-count:
+-2.0'><b style='mso-bidi-font-weight:normal'><span lang=EN-US style='mso-bidi-font-size:
+10.5pt;font-family:"Times New Roman"'>(11) When the following operations are
+done for the replicated windows, the replicated windows may be overlapped to
+one. <o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:32.6pt'><span lang=EN-US
+style='font-family:"Times New Roman"'>Operation 1: Minimize the window and move
+the minimized window by dragging.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:32.6pt'><span lang=EN-US
+style='font-family:"Times New Roman"'>Operation 2: Restore the window and
+replicate the window by selecting the &quot; <span style='mso-bidi-font-weight:
+bold'>Windows | Replicate&quot; menu.<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:32.6pt'><span lang=EN-US
+style='font-family:"Times New Roman";mso-bidi-font-weight:bold'>Operation 3:
+Minimize the replicated windows. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:32.5pt'><span lang=EN-US
+style='font-family:"Times New Roman";mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:24.1pt;text-indent:-24.1pt;mso-char-indent-count:
+-2.0'><b style='mso-bidi-font-weight:normal'><span lang=EN-US style='mso-bidi-font-size:
+10.5pt;font-family:"Times New Roman"'>(12) During step over emulation, the
+&quot; Window | Close active window&quot; menu may be unavailable. <o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:32.6pt'><span lang=EN-US
+style='font-family:"Times New Roman";mso-bidi-font-weight:bold'>During step
+over emulation, if only a source window is displayed, the &quot;Window | Close
+active window&quot; menu may be grayed out and unavailable. Therefore the
+source window may not be closed. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:32.5pt'><span lang=EN-US
+style='font-family:"Times New Roman";mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:24.1pt;text-indent:-24.1pt;mso-char-indent-count:
+-2.0'><b style='mso-bidi-font-weight:normal'><span lang=EN-US style='mso-bidi-font-size:
+10.5pt;font-family:"Times New Roman"'>(13) In the target LSI which has only the
+code memory of the physical segment 0 and has the data memory (the ROM
+reference area) of the physical segment 1 and higher, DTU8 saves the data which
+include the data of the physical segment 1 and higher to the file when you save
+the file on the &quot; Save program to file&quot; </span></b><b><span
+lang=EN-US style='font-family:"Times New Roman"'>dialog</span></b><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='mso-bidi-font-size:
+10.5pt;font-family:"Times New Roman"'>.<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:32.6pt'><span lang=EN-US
+style='font-family:"Times New Roman";mso-bidi-font-weight:bold'>DTU8 may issue
+an error when you specify the saved file which include the data of the physical
+segment 1 and higher in the &quot;Load program file&quot; dialog. To avoid this
+error, specify the address range (only physical segment 0) in the &quot;Save
+address range &quot;field of the &quot;Save program file&quot; dialog.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:32.6pt'><span lang=EN-US
+style='font-family:"Times New Roman";mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:24.1pt;text-indent:-24.1pt;mso-char-indent-count:
+-2.0'><b style='mso-bidi-font-weight:normal'><span lang=EN-US style='mso-bidi-font-size:
+10.5pt;font-family:"Times New Roman"'>(14)</span></b><span lang=EN-US
+style='font-family:"Times New Roman";mso-bidi-font-weight:bold'> </span><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-family:"Times New Roman"'>If
+a communication error for the target happens when the contents of the memory
+are viewed, some incorrect values are shown in each window</span></b><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='mso-bidi-font-size:
+10.5pt;font-family:"Times New Roman"'>. <o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:32.6pt'><span lang=EN-US
+style='font-family:"Times New Roman";mso-bidi-font-weight:bold'>If a
+communication error for the target happens when the contents of the memory are
+viewed by either of the following operation, some incorrect values are shown in
+each window, without showing &quot;**&quot; mark which indicates the error.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:39.7pt;text-indent:-8.5pt;mso-list:l2 level1 lfo19;
+tab-stops:list 35.7pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"Times New Roman";mso-fareast-font-family:"Times New Roman";mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>
+</span></span></span><![endif]><span lang=EN-US style='font-family:"Times New Roman";
+mso-bidi-font-weight:bold'>Execute &quot;Jump&quot; in the context menu of the
+code memory window, data memory window or memory window of physical segments 1
+and higher.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:39.7pt;text-indent:-8.5pt;mso-list:l2 level1 lfo19;
+tab-stops:list 35.7pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"Times New Roman";mso-fareast-font-family:"Times New Roman";mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>
+</span></span></span><![endif]><span lang=EN-US style='font-family:"Times New Roman";
+mso-bidi-font-weight:bold'>Add items to the watch window.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:32.5pt'><span lang=EN-US
+style='font-family:"Times New Roman";mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:24.1pt;text-indent:-24.1pt;mso-char-indent-count:
+-2.0'><b style='mso-bidi-font-weight:normal'><span lang=EN-US style='mso-bidi-font-size:
+10.5pt;font-family:"Times New Roman"'>(15) The displayed return value of a
+function whose type is </span></b><b style='mso-bidi-font-weight:normal'><span
+lang=EN-US style='font-family:"Times New Roman"'>&quot;</span></b><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='mso-bidi-font-size:
+10.5pt;font-family:"Times New Roman"'>struct</span></b><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='font-family:"Times New Roman"'>&quot;</span></b><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='mso-bidi-font-size:
+10.5pt;font-family:"Times New Roman"'>, </span></b><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='font-family:"Times New Roman"'>&quot;</span></b><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='mso-bidi-font-size:
+10.5pt;font-family:"Times New Roman"'>union</span></b><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='font-family:"Times New Roman"'>&quot;</span></b><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='mso-bidi-font-size:
+10.5pt;font-family:"Times New Roman"'> or </span></b><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='font-family:"Times New Roman"'>&quot;</span></b><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='mso-bidi-font-size:
+10.5pt;font-family:"Times New Roman"'>enum</span></b><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='font-family:"Times New Roman"'>&quot;</span></b><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='mso-bidi-font-size:
+10.5pt;font-family:"Times New Roman"'> is wrong. <o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:32.6pt'><span lang=EN-US
+style='font-family:"Times New Roman";mso-bidi-font-weight:bold'>When the watch
+window or WATCH script command is used, the displayed return value of a
+function whose type is &quot;struct&quot;, &quot;union&quot; or
+&quot;enum&quot; is wrong.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:32.5pt'><span lang=EN-US
+style='font-family:"Times New Roman";mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:24.1pt;text-indent:-24.1pt;mso-char-indent-count:
+-2.0'><b style='mso-bidi-font-weight:normal'><span lang=EN-US style='mso-bidi-font-size:
+10.5pt;font-family:"Times New Roman"'>(16) When the local variables assigned to
+registers by WATCH script command, the wrong value is displayed. <o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:32.6pt'><span lang=EN-US
+style='font-family:"Times New Roman";mso-bidi-font-weight:bold'>When displaying
+local variables assigned to some general registers by WATCH script command, the
+wrong values are shown in the &quot;Address&quot; column instead of register
+names.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:32.5pt'><span lang=EN-US
+style='font-family:"Times New Roman";mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:24.1pt;text-indent:-24.1pt;mso-char-indent-count:
+-2.0'><b style='mso-bidi-font-weight:normal'><span lang=EN-US style='mso-bidi-font-size:
+10.5pt;font-family:"Times New Roman"'>(17) About the frequency control register
+(FCON0,1) in case of uEASE use.<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:50.6pt;text-indent:-18.0pt;mso-list:l7 level1 lfo20;
+tab-stops:list 50.6pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"Times New Roman";mso-fareast-font-family:"Times New Roman";mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>a)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-family:"Times New Roman";
+mso-bidi-font-weight:bold'>Do not write the program made into the clock mode
+which is not mounted for the OSCM0/OSCM1 bit of FCON0 in the flash memory of
+target LSI. When this program is written in and the emulation is executed, the
+operation about execution becomes impossible, because the clock is not supplied
+to CPU. And DTU8+uEASE cannot be started by target LSI which wrote in this
+program. In these cases, Error number: 6300H is displayed. When you write in
+this program and the error occurs, please erase or change the flash memory by
+FWuEASE+uEASE.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:32.6pt'><span lang=EN-US
+style='font-family:"Times New Roman";mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:50.6pt;text-indent:-18.0pt;mso-list:l7 level1 lfo20;
+tab-stops:list 50.6pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"Times New Roman";mso-fareast-font-family:"Times New Roman";mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>b)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-family:"Times New Roman";
+mso-bidi-font-weight:bold'>The OSCM0/OSCM1 bit of FCON0 cannot be changed in
+the SFR window on DTU8.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Times New Roman";
+mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:50.6pt;text-indent:-18.0pt;mso-list:l7 level1 lfo20;
+tab-stops:list 50.6pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"Times New Roman";mso-fareast-font-family:"Times New Roman";mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>c)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-family:"Times New Roman";
+mso-bidi-font-weight:bold'>When ENOSC and SYSCLK of FCON1 are set to 1, even if
+ENOSC is set to 0 in the SFR window on DTU8, the display of SYSCLK is still 1.
+However, SYSCLK inside target LSI is 0. Therefore, the emulation is executed in
+the state of SYSCLK=0 as it was operated in the SFR window.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Times New Roman";
+mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:24.1pt;text-indent:-24.1pt;mso-char-indent-count:
+-2.0'><b style='mso-bidi-font-weight:normal'><span lang=EN-US style='mso-bidi-font-size:
+10.5pt;font-family:"Times New Roman"'>(18) When changing data is specified the
+range address in the Change data memory dialog on the Disassembly window and
+change it, DTU8 may not change it correctly.<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:32.6pt'><span lang=EN-US
+style='font-family:"Times New Roman";mso-bidi-font-weight:bold'>When you change
+the data of code memory or memory in physical segments 1 and higher, please use
+the Code memory window or Memory in physical segments 1 and higher window.</span><span
+lang=EN-US style='mso-bidi-font-size:10.5pt;font-family:"Times New Roman";
+mso-bidi-font-weight:bold'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Times New Roman";
+mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Times New Roman";
+mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='font-family:"Times New Roman";mso-bidi-font-weight:bold'>
+
+<hr size=2 width="100%" align=center>
+
+</span></div>
+
+<h2><a name="_6._Important_Notes"></a><span lang=EN-US style='font-family:"Times New Roman"'>6.
+Important Notes<o:p></o:p></span></h2>
+
+<p style='margin-left:18.0pt;text-indent:-18.0pt;mso-char-indent-count:-1.5'><span
+lang=EN-US style='font-family:"Times New Roman";mso-bidi-font-weight:bold'>(1)
+The current version of the DTU8 debugger can read any project file saved by an
+older version of the debugger.<br>
+However, it is impossible for an older version of the DTU8 debugger to read
+project files saved by the current version of the debugger.<o:p></o:p></span></p>
+
+<p style='margin-left:18.0pt;text-indent:-18.0pt;mso-char-indent-count:-1.5'><span
+lang=EN-US style='font-family:"Times New Roman";mso-bidi-font-weight:bold'>(2)
+Do not write program code or data to test area. If it is written to test area,
+DTU8 may not run correctly.<o:p></o:p></span></p>
+
+<p style='margin-left:18.0pt;text-indent:-18.0pt;mso-char-indent-count:-1.5'><span
+lang=EN-US style='font-family:"Times New Roman";mso-bidi-font-weight:bold'>(3)
+Do not operate DTU8 debugger except a regular procedure. If it is operated
+except a regular procedure, DTU8 may not run correctly.<o:p></o:p></span></p>
+
+<p style='margin-left:18.0pt;text-indent:-18.0pt;mso-char-indent-count:-1.5'><span
+lang=EN-US style='font-family:"Times New Roman";mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='font-family:"Times New Roman";mso-bidi-font-weight:bold'>
+
+<hr size=2 width="100%" align=center>
+
+</span></div>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Times New Roman";
+mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p align=right style='text-align:right'><span lang=EN-US style='font-family:
+"Times New Roman";mso-bidi-font-weight:bold'>Mar. 28, 2013<br>
+Copyright 2008, LAPIS Semiconductor Co., Ltd.<o:p></o:p></span></p>
+
+</div>
+
+</body>
+
+</html>
